@@ -7,7 +7,6 @@ header{
     flex-direction: row;
     width:100%;
     height: 200px;
-    background-color: rgb(240, 232, 221);
 
 }
 .container1{
@@ -39,4 +38,30 @@ header{
     font-size:larger;
     color: rgb(109, 109, 109);
     text-decoration:none;
+}
+.hyrja{
+    margin: 0;
+    background-image: url(Hyrja2.avif);
+    width: 100%;
+    height: 720px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    
+}
+.teksti{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 40%;
+    font-size: x-large;
+    line-height: 1.6;
+    font-family: ;
 }
