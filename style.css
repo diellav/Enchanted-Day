@@ -1,5 +1,5 @@
 body{
-    margin: 0px 0px;
+    margin: 0px;
 }
 
 header{
@@ -13,7 +13,6 @@ header{
     display: flex;
     flex-direction: row;
     width:100%;
-    align-items:center;
     padding: 0px 20px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -22,33 +21,77 @@ header{
 .titulli{
     display: flex;
     flex-direction: row;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;  
-     color:black;
+    font-family: "WindSong", sans-serif;
+    font-weight: 400px;
+    font-style:normal;
+    font-size: larger;
+    color:black;
     margin:10px;
 }
+
+
+/* navigation */
 
 .navigation{
     display:flex;
     flex-direction:row;
     justify-content:center;
-    padding:10px;
+    align-items: center;
 }
 .navigation a{
     margin: 15px;
+    padding:5px;
     font-size:x-large;
     color: rgb(109, 109, 109);
     text-decoration:none;
 }
+.navigation a:hover {   /*  hover */
+    border-radius: 5px;
+    text-decoration: underline ; 
+    color:rgb(171, 171, 171);
+}
+
+/*dropdown*/
+
+.dropdown{
+    position: relative;
+}
+.dropdown:hover .permbajtja{
+    display: flex;
+    flex-direction: column;
+}
+
+.permbajtja{
+    display: none;
+    position: absolute;
+    justify-content: center;
+    top: 120%; 
+    left:0%;
+    min-width: 160px;
+    width:300px;
+    height:fit-content;
+    background-color:rgb(244, 244, 242);
+    border-radius: 8px;;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    color:rgb(122, 122, 122);
+    line-height: 0.7;
+}
+.permbajtja a:hover{
+    text-decoration: underline;
+}
+
+ /* Pjesa e fotos ne qender*/
+
 .hyrja{
     margin: 0;
-    background-image: url(Hyrja2.avif);
+    background-image: url(couple4.avif);
     width: 100%;
-    height: 720px;
+    height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: start;
     
 }
@@ -56,24 +99,35 @@ header{
     display: flex;
     flex-direction: column;
     align-items:center;
-    margin: 20px;
-    padding: 10px;
-    color: white;
-    font-family:'Merriweather', serif;
+    padding: 60px;
     width: 40%;
     font-size: x-large;
     line-height: 1.6;
 }
+
+#welcome{
+    font-family: "WindSong";
+    color:rgb(189, 189, 189);
+    font-size: xx-large;
+    font-weight: 500;
+}
+#description{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color:rgb(189, 189, 189);
+}
+
+/* Kutite*/
+
 .container2{
     display: flex;
     flex-direction: row;
-    width:90%;
+    width:85%;
     align-items:center;
-    padding: 50px 50px;
+    padding: 40px;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 200px;
-    margin: 60px;
+    margin: 50px;
 }
 .kuti{
     display: flex;
@@ -82,14 +136,13 @@ header{
     margin: 10px;
     padding: 20px;
     color: black;
-    font-family:'Merriweather', serif;
     font-size: large;
     line-height: 1.6;
     text-align: center;
     border: 3px solid rgb(224, 201, 171);
     width: 15%;
     border-radius: 8px;
-    height: 200px;
+    height: 250px;
     line-height: 1.6;
 }
 #dizajn-sh{
@@ -101,3 +154,19 @@ header{
     padding: 10px 0; 
     width: 80%; 
 }
+
+.about{
+    display: flex;
+    justify-content: start;
+    margin:50px 70px;
+    padding:10px;
+    width:50%;
+    height:400px;
+    font-size: x-large;
+    font-style: italic;
+    flex-wrap: wrap;
+    line-height: 2;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
