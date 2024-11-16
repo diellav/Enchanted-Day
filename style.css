@@ -80,6 +80,33 @@ header{
     text-decoration: underline;
 }
 
+/* search bar */
+.search{
+    display:flex;
+    justify-content: end;
+}
+.inputi{
+    border-radius: 30px;
+    margin-right:10px;
+    padding:8px;
+}
+
+button{
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+button img{
+    width:28px;
+    height:28px;
+    border: none;
+    border-radius:50%;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+
  /* Pjesa e fotos ne qender*/
 
 .hyrja{
