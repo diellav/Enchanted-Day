@@ -157,16 +157,73 @@ header{
 
 .about{
     display: flex;
-    justify-content: start;
+    flex-direction: column;
     margin:50px 70px;
-    padding:10px;
+    padding:15px;
     width:50%;
-    height:400px;
+    height:250px;
     font-size: x-large;
     font-style: italic;
     flex-wrap: wrap;
     line-height: 2;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
+    border-left :5px solid #E5C9D7;
 }
+#kuota{
+    margin-top: 200px;
+    margin-right: 500px;
+    font-size: x-large;
+    font-style: italic;
+}
+.success{
+    display:flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 40px 40px;
+    
+}
+.stories img{
+    width: 300px;
+    height: 420px;
+    margin: 20px;
+    border-radius: 8px;
+}
+.stories{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.pershkrimi{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 5px;
+    width: 80%;
+    line-height: 1.5;
+    font-size: larger;
+    text-align: center;
+    color: black;
+}
+.stories a{
+    text-decoration: none;
+}
+.stories a:hover{
+    text-decoration: underline;
+    color: rgb(171, 171, 171);
+    
+}
+.stories img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.t1{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    font-style: italic;
+}
+
+
+
 
