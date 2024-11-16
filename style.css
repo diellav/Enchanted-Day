@@ -168,9 +168,10 @@ button img{
     text-align: center;
     border: 3px solid #E5C9D7;
     width: 15%;
-    border-radius: 8px;
+    border-radius: 15px;
     height: 250px;
     line-height: 1.6;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 .kuti a{
     text-decoration: none;
@@ -196,10 +197,10 @@ button img{
 .about{
     display: flex;
     flex-direction: column;
-    margin:50px 70px;
+    margin:150px 70px;
     padding:15px;
     width:50%;
-    height:250px;
+    height:auto;
     font-size: x-large;
     font-style: italic;
     flex-wrap: wrap;
@@ -207,12 +208,13 @@ button img{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     border-left :5px solid #E5C9D7;
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 #kuota{
-    margin-top: 200px;
-    margin-right: 500px;
-    font-size: x-large;
-    font-style: italic;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 0;
 }
 .success{
     display:flex;
@@ -254,6 +256,7 @@ button img{
 .stories img:hover{
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
+    box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
 }
 .t1{
     display: flex;
@@ -276,6 +279,7 @@ button img{
     object-fit: cover;
     padding: 10px;
     border: 2px, solid, #ce9ab4;
+    box-shadow: 0px 5px 16px #ce9ab4;
 
 }
 .explore a{
@@ -298,4 +302,118 @@ button img{
     height: 500px;
     align-items: center;
 
+}
+.artikuj{
+    margin: 20px 20px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f3eeef;
+}
+.artikuj img{
+    width: 290px;
+    height: 390px;
+    margin: 20px;
+    border:2px, solid, rgb(161, 161, 161);
+    border-radius: 8px;
+}
+.artikuj a{
+    text-decoration: none;
+}
+.artikuj a:hover{
+    text-decoration: underline;
+    color: rgb(171, 171, 171);
+    
+}
+.artikuj:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px 15px;
+    width:100%;
+    height:auto;
+    background-color:#fceef0;
+}
+.follow{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.social{
+    margin:0px 150px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:15px;
+}
+.social img{
+    width:35px;
+    margin:20px;
+}
+.fundi a{
+    text-decoration: none;
+    color: black;
+}
+.permbledhja{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color:#fceef0;
+}
+.permbledhja a{
+    margin: 5px 80px;
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+}
+h2{
+    margin: 20px 80px;  
+}
+
+.end{
+    background-color:#fceef0;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.tt{
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+    margin-left:100px;
+
+}
+#enchant{
+    font-family: "WindSong", sans-serif;
+    font-weight: 400px;
+    font-style:normal;
+    font-size: xx-large;
+    color:black;
+}
+#trademarks{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    line-height: 1.6;
+
+}
+
+.line{
+     width: 90%;
+     margin: auto;
+     border-top: 2px solid black;
+}
+
+#vije{
+    background-color: #fceef0;
+    padding:20px 0px;
 }
