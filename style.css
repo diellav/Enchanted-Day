@@ -166,11 +166,22 @@ button img{
     font-size: large;
     line-height: 1.6;
     text-align: center;
-    border: 3px solid rgb(224, 201, 171);
+    border: 3px solid #E5C9D7;
     width: 15%;
     border-radius: 8px;
     height: 250px;
     line-height: 1.6;
+}
+.kuti a{
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+}
+.container2 .kuti:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.container2 .kuti p {
+    transform: none;
 }
 #dizajn-sh{
     font-family:'Times New Roman', Times, serif;
@@ -250,7 +261,41 @@ button img{
     font-size: x-large;
     font-style: italic;
 }
+.explore{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 85%;
+}
 
+.shtesa img{
+    background-color:#E5C9D7 ;
+    width: 80px;
+    border-radius:10%;
+    object-fit: cover;
+    padding: 10px;
+    border: 2px, solid, #ce9ab4;
 
+}
+.explore a{
+    text-decoration: none;
+    font-size: x-large;
+    color: rgb(122, 122, 122);
+    text-align: center;
+}
+.shtesa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.vija{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fceef0;
+    height: 500px;
+    align-items: center;
 
-
+}
