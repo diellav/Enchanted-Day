@@ -199,9 +199,9 @@ button img{
     flex-direction: column;
     margin:150px 70px;
     padding:15px;
-    width:50%;
+    width:40%;    /*-------------------------------------*/
     height:auto;
-    font-size: x-large;
+    font-size: large;    /*-------------------------------------*/
     font-style: italic;
     flex-wrap: wrap;
     line-height: 2;
@@ -219,14 +219,15 @@ button img{
 .success{
     display:flex;
     flex-direction: row;
-    width: 70%;
-    margin: 40px 40px;
+    width:75%;         /*-------------------------------------*/
+    margin: 30px 0px;    /*-------------------------------------*/
     
 }
 .stories img{
-    width: 300px;
-    height: 420px;
+    width: 280px;   /*  --------------*/
+    height: 420px; /*  --------------*/
     margin: 20px;
+    margin-bottom:3px;  /*  --------------*/
     border-radius: 8px;
 }
 .stories{
@@ -304,20 +305,24 @@ button img{
 
 }
 .artikuj{
-    margin: 20px 20px;
-    padding: 10px;
+    width: calc(100%-4%);     /*  --------------*/
+    height: 420px;         /*  --------------*/
+    margin: 10px 20px;   /*  --------------*/
+    padding: 15px 20px;   /*  --------------*/
     border-radius: 15px;
     background-color: #f3eeef;
 }
 .artikuj img{
-    width: 290px;
-    height: 390px;
-    margin: 20px;
+    width: 200px;    /*  --------------*/
+    height: 300px;    /*  --------------*/
+    margin: 8px;   /*  --------------*/
+    margin-bottom:2px;
     border:2px, solid, rgb(161, 161, 161);
     border-radius: 8px;
 }
 .artikuj a{
     text-decoration: none;
+    font-size: medium;     /*  --------------*/
 }
 .artikuj a:hover{
     text-decoration: underline;
@@ -384,7 +389,6 @@ h2{
     flex-direction: row;
     justify-content: start;
 }
-
 .tt{
     display: flex;
     flex-direction: column;
