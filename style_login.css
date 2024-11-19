@@ -11,7 +11,7 @@ body{
 }
 .foto{
     width: 35% ;
-    height: 113%;
+    height: 100%;
 }
 .foto img{
     width: 100%;
@@ -30,14 +30,13 @@ body{
     justify-content: center;
     background-color:rgb(196, 196, 196);
     margin: 0%;
-    padding: 3.2%;
 }
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 45%;
     height: auto;
     background-color: white;
     border: rgb(160, 160, 160) solid 2px ;
