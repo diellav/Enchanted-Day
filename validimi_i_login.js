@@ -2,46 +2,36 @@
 document.addEventListener("DOMContentLoaded", function(event){
     
     console.log("Script loaded successfully!");
-    const buttSub=document.querySelector("form");
+    const form=document.querySelector("form");
+
     const validate=(event)=>{
         event.preventDefault();
         const useri=document.getElementById("user");
         const password=document.getElementById("pass");
 
-        if(useri.value===""){
-            alert("Sheno username! ");
-            useri.focus();
-            return false;
-        }
-        if(password.value===""){
-            alert("Ju lutem shtoni fjalkalimin");
-            password.focus();
-            return false;
-        }
 
 
         if(!useriValid(useri.value)){
-            alert("Ju lutem shtoni email valid");
+            alert("Please put a valid username!\n The username should contain letters, numbers and special characters such as:  _  . -  \n The length should be between 5-15 characters ");
             useri.focus();
             return false;
         }
      
 
         if(!passValid(password.value)){
-            alert("Ju lutem shtoni passwordin valid");
+            alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-10 characters ");
             password.focus();
             return false;
         }
-      
-        alert("Login submitted successfully!");
-        buttSub.submit();
+        window.location.href = "HomePage.html";
+   
       
     };
  
     
 
     const useriValid=(useri)=>{
-        const userRegex = /^[a-zA-Z0-9_-.]{5,15}$/;
+        const userRegex = /^[a-zA-Z0-9_.-]{5,15}$/;
         return userRegex.test(useri);
     };
        
@@ -51,5 +41,5 @@ document.addEventListener("DOMContentLoaded", function(event){
         };
 
    
-        buttSub.addEventListener('submit', validate);
+        form.addEventListener('submit', validate);
     });
