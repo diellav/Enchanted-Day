@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function(event){
     const validate=(event)=>{
         event.preventDefault();
         const useri=document.getElementById("user");
-        const password=document.getElementById("pass");
+        const newpassword=document.getElementById("new");
+        const confirm=document.getElementById("confirm");
 
 
 
@@ -18,12 +19,19 @@ document.addEventListener("DOMContentLoaded", function(event){
         }
      
 
-        if(!passValid(password.value)){
+        if(!newpassValid(newpassword.value)){
             alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-10 characters ");
             password.focus();
             return false;
         }
-        window.location.href = "HomePage.html";
+
+        if(confirm.value != newpassword.value){
+            alert("Passwords do not match! Please ensure the 'New Password' and 'Confirm Password' fields are the same.");
+            confirm.focus();
+            return false;
+        }
+      
+        window.location.href = "Log-in.html";
    
       
     };
@@ -35,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function(event){
         return userRegex.test(useri);
     };
        
-        const passValid=(password)=>{
-            const passRegex=/^[a-zA-Z0-9.?!@\$]{5,10}$/;
-            return passRegex.test(password);
+        const newpassValid=(newpassword)=>{
+            const newpassRegex=/^[a-zA-Z0-9.?!@\$]{5,10}$/;
+            return newpassRegex.test(newpassword);
         };
 
    

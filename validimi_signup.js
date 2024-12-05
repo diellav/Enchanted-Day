@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function(ngjarja){
     
     console.log("Script loaded successfully!");
-    const form=document.querySelector("form");
+    const form=document.getElementById("form");
 
     const validate=(ngjarja)=>{
         ngjarja.preventDefault();
@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
         const tel=document.getElementById("tel");
         const useri=document.getElementById("user");
         const password=document.getElementById("pass");
-
+     
+        
         if(!emriValid(emri.value)){
             alert("Please put a valid name and surname! ");
             emri.focus();
@@ -30,6 +31,12 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
         if(!emailValid(email.value)){
             alert("Please put a valid email! ");
             email.focus();
+            return false;
+        }
+
+        if(!telValid(tel.value)){
+            alert("Please put a valid phone number!");
+            tel.focus();
             return false;
         }
 
@@ -52,12 +59,12 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
  
 
     const emriValid=(emri) => {
-        const emriRegex = /^[a-zA-Z]{10,20}$/;
+        const emriRegex = /^[a-zA-Z ]{3,}$/;
         return emriRegex.test(emri);
     };  
 
     const emriPartnerValid=(emriPartner) => {
-        const emriPartnerRegex = /^[a-zA-Z]$/;
+        const emriPartnerRegex = /^[a-zA-Z ]{3,}$/;
         return emriPartnerRegex.test(emriPartner);
     };
 
@@ -67,6 +74,11 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
         return emailRegex.test(email);
     };
 
+
+    const telValid=(tel)=>{
+        const telRegex= /^\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?\d{4}$/;
+        return telRegex.test(tel);
+    };
     const useriValid=(useri)=>{
         const userRegex = /^[a-zA-Z0-9_.-]{5,15}$/;
         return userRegex.test(useri);
@@ -76,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
             const passRegex=/^[a-zA-Z0-9.?!@\$]{5,10}$/;
             return passRegex.test(password);
         };
-
    
         form.addEventListener('submit', validate);
     });

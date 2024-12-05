@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    height: auto;
+    height: 100%;
     width:100%;
     margin: 0;
     padding: 0;
@@ -32,22 +32,17 @@ body {
 .about_venue h3{
     width :50%;
 }
-
-
-
 .container2{
     display: flex;
-    flex-wrap:wrap;
-    width:90%;
-    height:auto;
-    padding: 2;
-    margin:0% 4%;
+    flex-wrap: wrap;
+    width:90%;;
+    padding: 2px;
+    margin:0% 2%;
     justify-content: space-evenly;
 }
 
 .venue{
     display: flex;
-    flex-wrap:wrap;
     align-items: center;
     flex-direction: column;
     width:300px;
