@@ -4,6 +4,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 header{
@@ -11,51 +12,54 @@ header{
     flex-direction: row;
     width:100%;
     height: 120px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3%;
 
 }
 .container1{
     display: flex;
     flex-direction: row;
     width:100%;
-    padding: 0px 20px;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 .titulli{
-    display: flex;
-    flex-direction: row;
     font-family: "WindSong", sans-serif;
     font-weight: 400px;
     font-style:normal;
     font-size: larger;
     color:black;
-    margin:10px;
+    margin:1% 2%;
+    display: flex;
+    height:5%;
+    
 }
 
 
-/* navigation */
+
 
 .navigation{
     display:flex;
     flex-direction:row;
     justify-content:center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .navigation a{
-    margin: 15px;
+    margin: 10px;
     padding:5px;
     font-size:x-large;
     color: rgb(109, 109, 109);
     text-decoration:none;
 }
-.navigation a:hover {   /*  hover */
+.navigation a:hover { 
     border-radius: 5px;
     text-decoration: underline ; 
     color:rgb(171, 171, 171);
 }
 
-/*dropdown*/
+
 
 .dropdown{
     position: relative;
@@ -84,7 +88,7 @@ header{
     text-decoration: underline;
 }
 
-/* search bar */
+
 .search{
     display:flex;
     justify-content: end;
@@ -114,7 +118,6 @@ button img{
  /* Pjesa e fotos ne qender*/
 
 .hyrja{
-    margin: 0;
     background-image: url(couple4.avif);
     width: 100vw;
     height: 700px;
@@ -154,31 +157,31 @@ button img{
     display: flex;
     flex-direction: row;
     width:100%;
+    height:auto;
     align-items:center;
     flex-wrap: wrap;
-    justify-content:space-evenly;
-    margin: 50px;
-    flex-wrap: wrap;
+    justify-content:center;
+    margin-top: 50px;
 }
 .kuti{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 8px;
-    padding: 20px;
+    margin: 1%;
+    padding: 8px;
     color: black;
     font-size: large;
     line-height: 1.6;
     text-align: center;
     border: 3px solid #E5C9D7;
-    width: 14%;
+    width: 20%;
     border-radius: 15px;
-    height: 250px;
-    line-height: 1.6;
+    height:300px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 .kuti a{
+    width:90%;
     text-decoration: none;
     color: rgb(122, 122, 122);
 }
@@ -191,11 +194,10 @@ button img{
 }
 #dizajn-sh{
     font-family:'Times New Roman', Times, serif;
-    font-size:x-large;
+    font-size:larger;
     color: rgb(122, 122, 122);
     text-align: center; 
     margin: 0 auto; 
-    padding: 10px 0; 
     width: 80%; 
 }
 
@@ -274,7 +276,7 @@ button img{
 .explore{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 10px;
     width: 85%;
     flex-wrap: wrap;
@@ -315,10 +317,10 @@ button img{
 
 }
 .artikuj{
-    width: calc(100%-4%);     /*  --------------*/
+    width: 20%;    /*  --------------*/
     height: 420px;         /*  --------------*/
     margin: 10px 20px;   /*  --------------*/
-    padding: 15px 20px;   /*  --------------*/
+    padding: 0px 20px;   /*  --------------*/
     border-radius: 15px;
     background-color: #f3eeef;
 }
@@ -345,11 +347,10 @@ button img{
     box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
 }
 
-
 .footer{
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding:20px 15px;
     width:100%;
@@ -359,37 +360,45 @@ button img{
 .follow{
     display:flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items:center;
+    flex-wrap: wrap;
+    width:100%;
+    height: auto;
 }
 .social{
-    margin:0px 150px;
+    margin:0px auto;
     display:flex;
     flex-direction: row;
     justify-content: center;
-    gap:15px;
+    width:auto;
 }
 .social img{
     width:35px;
-    margin:20px;
+    margin: 0px 10px;
 }
 .fundi a{
     text-decoration: none;
     color: black;
+    margin-left:0px;
+    display: flex;
 }
 .permbledhja{
     display:flex;
     flex-direction: column;
     justify-content: start;
     background-color:#fceef0;
+    flex-wrap: wrap;
+    padding:1%;
+    line-height: 1.3;
 }
 .permbledhja a{
-    margin: 5px 80px;
+    margin: 1% 4%;
     text-decoration: none;
     color: black;
     font-size: x-large;
 }
 h2{
-    margin: 20px 80px;  
+    margin: 8% 10%;  
 }
 
 .end{
@@ -397,13 +406,16 @@ h2{
     width:100%;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .tt{
     display: flex;
     flex-direction: column;
-    margin-top:30px;
-    margin-left:100px;
+    width:40%;
+    height:10%;
+    padding:2%;
+    flex-wrap: wrap;
 
 }
 #enchant{
@@ -416,18 +428,18 @@ h2{
 #trademarks{
     display: flex;
     flex-direction: column;
-    width:40%;
+    width:100%;
     line-height: 1.6;
+    flex-wrap: wrap;
 
 }
 
 .line{
      width: 90%;
-     margin: auto;
      border-top: 2px solid black;
 }
 
 #vije{
     background-color: #fceef0;
-    padding:20px 0px;
+    padding:1px;
 }

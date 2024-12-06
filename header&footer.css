@@ -4,16 +4,17 @@ header{
     flex-direction: row;
     width:100%;
     height: 120px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3%;
 
 }
 .container1{
-    display: flex;
-    flex-direction: row;
-    width:100%;
-    padding: 0px 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
 }
 .titulli{
     display: flex;
@@ -23,7 +24,9 @@ header{
     font-style:normal;
     font-size: larger;
     color:black;
-    margin:10px;
+    margin:1% 2%;
+    display: flex;
+    height:5%;
 }
 
 
@@ -34,9 +37,10 @@ header{
     flex-direction:row;
     justify-content:center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .navigation a{
-    margin: 15px;
+    margin: 10px;
     padding:5px;
     font-size:x-large;
     color: rgb(109, 109, 109);
@@ -107,32 +111,35 @@ button img{
                     margin:0px;
                     width:100%;
                 }*/
-                footer{
-                    height: auto;
-                    width:auto;
-                    margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    }
-                    .footer {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        align-items: center;
-                        padding: 20px 15px;
-                        width: 100%;
-                        background-color: #fceef0;
-                    }
+footer{
+    height: auto;
+    width:auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 15px;
+    width: 100%;
+    background-color: #fceef0;
+}
     .follow{
         display:flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items:center;
+        flex-wrap: wrap;
+        width:100%;
+        height: auto;
     }
     .social{
-        margin:0px 150px;
+        margin:0px auto;
         display:flex;
         flex-direction: row;
         justify-content: center;
@@ -140,26 +147,35 @@ button img{
     }
     .social img{
         width:35px;
-        margin:20px;
+        margin: 0px 10px;
+    }
+    .fundi{
+        font-size: x-large;
     }
     .fundi a{
         text-decoration: none;
+        font-size: large;
         color: black;
+        margin-left:0px;
+         display: flex;
     }
     .permbledhja{
         display:flex;
         flex-direction: column;
         justify-content: start;
         background-color:#fceef0;
+        flex-wrap: wrap;
+        padding:1%;
+        line-height: 1.3;
     }
     .permbledhja a{
-        margin: 5px 80px;
+        margin: 1% 4%;
         text-decoration: none;
         color: black;
         font-size: x-large;
     }
     h2{
-        margin: 20px 80px;  
+        margin: 8% 10%;  
     }
     
     .end{
@@ -167,14 +183,17 @@ button img{
         width:100%;
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
     
     .tt{
         display: flex;
         flex-direction: column;
-        margin-top:30px;
-        margin-left:100px;
+        width:40%;
+        height:10%;
+        padding:2%;
+        flex-wrap: wrap;
     
     }
     #enchant{
@@ -187,20 +206,20 @@ button img{
     #trademarks{
         display: flex;
         flex-direction: column;
-        width:40%;
+        width:100%;
         line-height: 1.6;
+        flex-wrap: wrap;
     
     }
     
     .line{
          width: 90%;
-         margin: auto;
          border-top: 2px solid black;
     }
     
     #vije{
         background-color: #fceef0;
-        padding:20px 0px;
+        padding:1%;
     }
     
     
