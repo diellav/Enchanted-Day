@@ -74,14 +74,17 @@
             <br><br><br>
             <br>
             
-
      <div id="slideshow">
             <div class="slide">
+            <div class="darker"></div>
                 <img name="mySlide" id="slides">
                 <!--<button onclick="change()">>>>>>></button> -->
+                <div class="mesazhi">
+                  <p> Hello World</p>
+                </div>
             </div>
      </div>
-
+     <br><br><br><br><br><br>
         <div class="t1"><h2>Most popular venues & vendors </h2></div>
         <div class="success">
             <div class="stories"><a href="#"><img src="Fotot/Foto7.jpg" alt="foto7"><p class="pershkrimi">Story1</p></a></div>
@@ -184,25 +187,25 @@
 
 
 
-    <script>
-        var i=0;
-        var imgArray=["Fotot/foto15.jpg",
-                   "Fotot/foto22.jpg"  ,
-                   "Fotot/foto8.jpg" ,
-                   "Fotot/foto23.jpg", 
-                    "Fotot/foto21.jpg"];
+        <script>
+            var i=0;
+            var imgArray=["Fotot/foto15.jpg",
+                    "Fotot/foto22.jpg"  ,
+                    "Fotot/foto8.jpg" ,
+                    "Fotot/foto23.jpg", 
+                        "Fotot/foto21.jpg"];
 
-        function change(){
-            document.getElementById('slides').src=imgArray[i];
-            if(i<imgArray.length-1){
-                i++;
-            }else{
-                i=0;
+            function change(){
+                document.getElementById('slides').src=imgArray[i];
+                if(i<imgArray.length-1){
+                    i++;
+                }else{
+                    i=0;
+                }
+                setTimeout("change()", 2800);
             }
-            setTimeout("change()", 2800);
-        }
-        document.body.addEventListener('load', change());
-    </script>
+            document.body.addEventListener('load', change());
+        </script>
 </body>
 </html>
 <!--Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>-->
