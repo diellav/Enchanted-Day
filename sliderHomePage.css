@@ -1,0 +1,26 @@
+#slideshow{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    height:auto;
+    margin:0 auto;
+}
+
+#slideshow img{
+    width:100vw;
+    height:95vh;;
+}
+
+#slides{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*button{
+    width:50%;
+    height: 50%;
+    font:200pt;
+    color: blueviolet;
+}*/

@@ -6,6 +6,7 @@
     <title>Enchanted Day</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-query-homepage.css">
+    <link rel="stylesheet" href="sliderHomePage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=WindSong&display=swap" rel="stylesheet">
@@ -57,6 +58,7 @@
                  
             </div>
         </div>
+
         <div class="container2">
             <div class="kuti"><a href="#"><p id="dizajn-sh">Services</p> <p>We offer services including  catering, photography, florists, decor and entertainment  </p></a></div>
             <div class="kuti"><a href="#"><p id="dizajn-sh">Planning tools</p><p>We will help you with your budget, guest list and seating chart and task  management</p></a></div>
@@ -73,15 +75,12 @@
             <br>
             
 
-        <div class="t1"><h2>Wedding stories to inspire</h2></div>
-        <div class="success">
-            <div class="stories"><a href="#"><img src="Fotot/Foto.jpg" alt="foto"><p class="pershkrimi">Story1</p></a></div>
-            <div class="stories"><a href="#"><img src="Fotot/Foto5.jpg" alt="foto5"><p class="pershkrimi">S2</p></a></div>
-            <div class="stories"><a href="#"><img src="Fotot/Foto9.jpg" alt="foto9"><p class="pershkrimi">S3</p></a></div>
-            <div class="stories"><a href="#"><img src="Fotot/Foto15.jpg" alt="foto15"><p class="pershkrimi">S4 </p></a></div>
-            <div class="stories"><a href="#"><img src="Fotot/Foto16.jpg" alt="foto16"><p  class="pershkrimi">S5</p></a></div>
-          <!--  <div class="stories"><a href="#"><img src="Fotot/Foto1.jpg" alt="foto1"><p>Story1</p></a></div>-->
-        </div>
+     <div id="slideshow">
+            <div class="slide">
+                <img name="mySlide" id="slides">
+                <!--<button onclick="change()">>>>>>></button> -->
+            </div>
+     </div>
 
         <div class="t1"><h2>Most popular venues & vendors </h2></div>
         <div class="success">
@@ -90,7 +89,7 @@
             <div class="stories"><a href="#"><img src="Fotot/Foto8.jpg" alt="foto8"><p class="pershkrimi">S3</p></a></div>
             <div class="stories"><a href="#"><img src="Fotot/Foto17.jpg" alt="foto17"><p class="pershkrimi">S4 </p></a></div>
             <div class="stories"><a href="#"><img src="Fotot/Foto18.jpg" alt="foto18"><p  class="pershkrimi">S5</p></a></div>
-          <!--  <div class="stories"><a href="#"><img src="Fotot/Foto1.jpg" alt="foto1"><p>Story1</p></a></div>-->
+
         </div>
         <br><br><br>
         <br><br><br>
@@ -100,9 +99,7 @@
         <div class="explore">
             <div class="shtesa"><a href="#"><img src="Fotot/arch.png" alt="arch"><p>Venues</p></a></div>
             <div class="shtesa"><a href="#"><img src="Fotot/utensils.png" alt="food"><p>Catering</p></a></div>
-            <div class="shtesa"><a href="#"><img src="Fotot/rose-alt.png" alt="flowers"><p>Florists</p></a></div>
-            <div class="shtesa"><a href="#"><img src="Fotot/camera.png" alt="photo"><p>Photography</p></a></div>
-            <div class="shtesa"><a href="#"><img src="Fotot/video-camera-alt.png" alt="video"><p>Videography</p></a></div>
+            <div class="shtesa"><a href="#"><img src="Fotot/camera.png" alt="photo"><p>Photo & Video</p></a></div>
             <div class="shtesa"><a href="#"><img src="Fotot/cake-wedding.png" alt="cake"><p>Cakes & desserts</p></a></div>
             <div class="shtesa"><a href="#"><img src="Fotot/decoration-flower.png" alt="decor"><p>Decoration</p></a></div>
             <div class="shtesa"><a href="#"><img src="Fotot/violin.png" alt="music"><p>Music</p></a></div>
@@ -119,7 +116,6 @@
             <div class="artikuj"><a href="#"><img src="Fotot/seating-guide.jpg" alt="foto8"><p class="pershkrimi">S3</p></a></div>
             <div class="artikuj"><a href="#"><img src="Fotot/dresses-guide.jpg" alt="foto17"><p class="pershkrimi">S4 </p></a></div>
             <div class="artikuj"><a href="#"><img src="Fotot/Foto4.jpg" alt="foto18"><p  class="pershkrimi">S5jd njvjlv jnjda jnjjdklja jnjaln jjlajlk kjkajjk</p></a></div>
-          <!--  <div class="stories"><a href="#"><img src="Fotot/Foto1.jpg" alt="foto1"><p>Story1</p></a></div>-->
         </div>
         </div>
 
@@ -185,6 +181,28 @@
 
   
     </footer>
+
+
+
+    <script>
+        var i=0;
+        var imgArray=["Fotot/foto15.jpg",
+                   "Fotot/foto22.jpg"  ,
+                   "Fotot/foto8.jpg" ,
+                   "Fotot/foto23.jpg", 
+                    "Fotot/foto21.jpg"];
+
+        function change(){
+            document.getElementById('slides').src=imgArray[i];
+            if(i<imgArray.length-1){
+                i++;
+            }else{
+                i=0;
+            }
+            setTimeout("change()", 2800);
+        }
+        document.body.addEventListener('load', change());
+    </script>
 </body>
 </html>
 <!--Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>-->
