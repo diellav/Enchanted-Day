@@ -2,13 +2,9 @@
     box-sizing: border-box;
 }
 body {
-    height: 100%;
     width:100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .about_venue{
@@ -48,7 +44,7 @@ body {
     width:300px;
     margin:13px;
     text-align: center;
-    border-radius: 8px;;
+    border-radius: 8px;
    
 }
 .container2 img:hover{
@@ -72,7 +68,7 @@ body {
         max-height: 120px;
         color: black;   
         font-size: large;
-        line-height: 1.2;
+        line-height: 0.5;
         transform: none;
 }
 .venue a{
