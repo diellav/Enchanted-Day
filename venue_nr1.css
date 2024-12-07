@@ -25,3 +25,38 @@ button {
     padding: 10px;
     cursor: pointer;
 }
+.slide{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width:90%;
+}
+
+.activ{
+    display: flex;
+}
+
+
+
+#para{
+    display: flex;
+    left:10px;
+}
+#pas{
+    display: flex;
+    right: 10px;
+}
+
+
+.butoni{
+    position: absolute;
+    font-size: 20px;
+    background: rgba(127, 127, 127, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10%;
+    padding: 0.5%;
+    cursor: pointer;
+}
+

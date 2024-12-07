@@ -62,10 +62,10 @@
                 <img src="Venue photos/city4.jpg" alt="Venue 5" class="fotot_veqanta">
                 <img src="Venue photos/city5.jpg" alt="Venue 6" class="fotot_veqanta">
             </div>
-            <button id="pas" onclick="">&#10094;</button>
-            <button id="para" onclick="">&#10094;</button>
-        </div>
 
+        </div>
+        <button class="butoni" id="pas" onclick="nderro(1)">&#10094;</button>
+            <button  class="butoni" id="para" onclick="nderro(-1)">&#10094;</button>
 
     </main>
 
@@ -126,4 +126,24 @@
     </div>  
     </footer>
 </body>
+<script>
+    let aktual = 0;
+    const slides = document.getElementsByClassName("slide");
+    
+    function nderro(rradha) {
+        slides[aktual].classList.remove("activ");
+        aktual += rradha;
+ 
+        if (aktual >= slides.length) {
+         aktual = 0;
+        } else if (aktual < 0) {
+         aktual = slides.length - 1;
+        }
+    
+        slides[aktual].classList.add("activ");
+    }
+    window.onload = () => {
+        slides[aktual].classList.add("activ");
+    };
+     </script>
 </html>
