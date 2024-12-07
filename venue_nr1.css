@@ -1,3 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#titulli{
+    font-size: xx-large;
+    margin: 2% 5%;
+}
+#adresa{
+    font-size: large;
+}
+p{
+    margin:10px;
+}
 #slideshow {
     position: relative;
     width: 100%;
@@ -14,16 +28,6 @@
     margin: 1px;
     border-radius: 10px;
     z-index: -1;
-}
-
-button {
-    position: absolute;
-    font-size: 20px;
-    background: rgba(127, 127, 127, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
 }
 .slide{
     display: none;
@@ -47,8 +51,6 @@ button {
     display: flex;
     right: 10px;
 }
-
-
 .butoni{
     position: absolute;
     font-size: 20px;
@@ -60,3 +62,55 @@ button {
     cursor: pointer;
 }
 
+.detaje{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: space-evenly;
+    height:60%;
+}
+
+.pershkrimi{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:50%;
+    height:60%;
+    margin:2% 4%;
+    font-size: large;
+    line-height: 1.6;
+}
+h3{
+    margin:0;
+    font-size: x-large;
+}
+.harta{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin:3%;
+    flex-wrap: wrap;
+}
+#map{
+    margin-bottom:5%;
+}
+.harta p{
+    font-size: large;
+}
+.detaje_tjera{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    width:30%;
+    height: 30%;
+    font-size: larger;
+    margin:0% 8%;
+    line-height: 1.5;
+}
+.vendi{
+    display: flex;
+    flex-direction: column;
+    margin:0px;
+}
