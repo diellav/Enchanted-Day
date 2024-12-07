@@ -1,0 +1,51 @@
+@media (max-width: 675px) {
+    .in {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .dekore {
+        width: 90%; 
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .dekore img {
+        width: 100%; 
+        height: auto; 
+        margin: 10px 0;
+    }
+
+    .inspiration {
+        text-align: center; 
+        font-size: large;
+    }
+}
+
+@media (min-width: 769px) {
+    .dekore {
+        width: 45%; 
+    }
+
+    .dekore img {
+        margin: 10px auto;
+    }
+}
+@media (max-width: 1024px){
+    .dekore {
+        width: 45%; 
+    }
+
+    .dekore img {
+        margin: 10px auto;
+    }
+}
+@media (min-width: 1440px) {
+    .dekore {
+        width: 16%;
+    }
+
+    .in {
+        margin: 50px auto;
+    }
+}
