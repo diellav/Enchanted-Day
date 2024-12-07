@@ -1,0 +1,27 @@
+#slideshow {
+    position: relative;
+    width: 100%;
+    height:40vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:5%;
+}
+.fotot_veqanta {
+    width: 32%;
+    height:40vh;
+    margin: 1px;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+button {
+    position: absolute;
+    font-size: 20px;
+    background: rgba(127, 127, 127, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
