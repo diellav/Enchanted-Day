@@ -1,0 +1,117 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fdecef;
+    color: #444;
+    line-height: 1.6;
+}
+.contactUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+.fotoback{
+    position: relative;
+    width: 100%;
+    max-width:800px ;
+    background: url('DecorationPhotos/foto10.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover ;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 30px;
+}
+.shadow{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 95vh;
+    background-color:rgba(255, 192, 203, 0.6);
+    z-index: 1;
+}
+
+.shkrimi{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size:large;
+    text-align: center;
+}
+
+.shkrimi h1 {
+    font-size: large;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.shkrimi p {
+    font-size: large;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: large;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.info a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forma {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.forma input{
+    width: 100%;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    box-sizing: border-box;
+}
+.forma textarea {
+    width: 100%;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    box-sizing: border-box;
+}
+
+.forma textarea {
+    height: 100px;
+    resize: none;
+}
+
+.forma button {
+    padding: 10px 20px;
+    background-color: #ff6f91;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.forma button:hover {
+    background-color: #ff4d6d;
+}
+
