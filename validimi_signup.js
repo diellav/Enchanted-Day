@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
         ngjarja.preventDefault();
         const emri=document.getElementById("emri");
         const emriPartner=document.getElementById("emriPartner");
-        const data=document.getElementById("data");
         const email=document.getElementById("email");
         const tel=document.getElementById("tel");
         const useri=document.getElementById("user");
