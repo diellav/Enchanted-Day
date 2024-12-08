@@ -41,7 +41,7 @@
                         <a href="#">Task Management</a> 
                     </div>
                 </div>
-                <a href="#">Contact Us</a>
+                <a href="ContactUs.html">Contact Us</a>
                 <a href="Log-in.html">Log in</a>
 
                 <form action="/search" method="get" class="search">
@@ -53,15 +53,25 @@
     </header>
     <main>
         <div class="inspiration"><h2>Decorating inspiration</h2></div>
-        <div class="in">
-            <div class="dekore"><img src="DecorationPhotos/foto1.jpg" alt="f1"><input type="checkbox" id ="checkbox"><p>Timeless Memories</p></div>
-            <div class="dekore"><img src="DecorationPhotos/foto2.jpg" alt="f2"><input type="checkbox" id ="checkbox"><p>Elegance Envisioned</p></div>
-            <div class="dekore"><img src="DecorationPhotos/foto3.jpg" alt="f3"><input type="checkbox" id ="checkbox"><p>Blooming Grace</p></div>
-            <div class="dekore"><img src="DecorationPhotos/foto4.jpg" alt="f4"><input type="checkbox" id ="checkbox"><p>Pearl Shore </p></div>
-            <div class="dekore"><img src="DecorationPhotos/foto6.jpg" alt="f5"><input type="checkbox" id ="checkbox"><p>Floral Elegance</p></div>
-            <div class="dekore"><img src="DecorationPhotos/foto9.jpg" alt="f6"><input type="checkbox" id ="checkbox"><p>Golden Moments</p></div>
-            <div class="dekore"><img src="DecorationPhotos/foto17.jpg" alt="f7"><input type="checkbox" id ="checkbox"><p>Forest Elegance</p></div>
+        <div id="slideshow">
+            <div class="slide" id="slides1">
+                <div class="dekore"><img src="DecorationPhotos/foto1.jpg" alt="f1"><p>Timeless Memories</p></div>
+                <div class="dekore"><img src="DecorationPhotos/foto2.jpg" alt="f2"><p>Elegance Envisioned</p></div>
+                <div class="dekore"><img src="DecorationPhotos/foto3.jpg" alt="f3"><p>Blooming Grace</p></div>
+                <div class="dekore"><img src="DecorationPhotos/foto4.jpg" alt="f4"><p>Pearl Shore </p></div>
+                <div class="dekore"><img src="DecorationPhotos/foto9.jpg" alt="f6"><p>Golden Moments</p></div>
+            </div>
+            <div class="slide" id="slides2">
+            <div class="dekore"><img src="DecorationPhotos/foto6.jpg" alt="f5"><p>Floral Elegance</p></div>
+            <div class="dekore"><img src="DecorationPhotos/foto9.jpg" alt="f6"><p>Golden Moments</p></div>
+            <div class="dekore"><img src="DecorationPhotos/foto17.jpg" alt="f7"><p>Forest Elegance</p></div>
+            <div class="dekore"><img src="DecorationPhotos/decoration_2.jpg" alt="f7"><p>Elegant Invites</p></div>
+            <div class="dekore"><img src="DecorationPhotos/decoration_1.jpg" alt="f7"><p>Table Bliss</p></div>
+            </div>
+        <button class="butoni" id="pas" onclick="nderro(1)">&#10094;</button>
+            <button  class="butoni" id="para" onclick="nderro(-1)">&#10094;</button>
         </div>
+       
         <div class="inspiration"><h2>Flowers & Archway</h2></div>
     <div class="in">
         <div class="dekore"><img src="DecorationPhotos/foto42.jpg" alt="f8"><input type="checkbox" id ="checkbox"><p>Garden Grace</p><p>Cost: 150$</p></div>
@@ -179,5 +189,25 @@
 
   
     </footer>
+    <script>
+        let aktual = 0;
+        const slides = document.getElementsByClassName("slide");
+        
+        function nderro(rradha) {
+            slides[aktual].classList.remove("activ");
+            aktual += rradha;
+     
+            if (aktual >= slides.length) {
+             aktual = 0;
+            } else if (aktual < 0) {
+             aktual = slides.length - 1;
+            }
+        
+            slides[aktual].classList.add("activ");
+        }
+        window.onload = () => {
+            slides[aktual].classList.add("activ");
+        };
+         </script>
 </body>
 </html>

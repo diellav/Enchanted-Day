@@ -5,30 +5,25 @@ body{
 .in{
     display:flex;
     flex-direction: row;
-    width:100%;  
+    width:97%;  
     flex-wrap: wrap;
     justify-content: space-around;
     margin:0px;
+    height:auto;
 
 }
 .dekore img{
-    width: 250px;   
+    width: 220px;   
     height: 400px; 
-    margin: 10px;
     margin-bottom:3px;  
     border-radius: 8px;
 }
 .dekore{
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    flex-wrap: wrap;
-}
-.dekore{
-    display: flex;
-    padding-left: 20px;
+    margin:10px;
     padding-top: 5px;
-    width: 18%;
+    width: 220px;
     line-height: 1.5;
     font-size: larger;
     flex-wrap: wrap;
@@ -43,6 +38,7 @@ body{
 .inspiration{
     font-size: x-large;
     font-style: italic;
+    margin: 0%;
 }
 .dekore input[type="checkbox"]{
     appearance: none;
@@ -58,4 +54,56 @@ body{
 }
 .dekore input[type="checkbox"]:checked{
     background-color: #888888;
+}
+
+
+#slideshow {
+    position: relative;
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:5% 0%;
+}
+.slide.dekore{
+    height:60vh;
+    border-radius: 10px;
+    z-index: -1;
+}
+.dekore img{
+    width:280px;
+}
+.slide{
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    width:100%;
+    gap:30px;
+}
+
+.activ{
+    display: flex;
+}
+
+
+
+#para{
+    display: flex;
+    left:2px;
+}
+#pas{
+    display: flex;
+    right: 12px;
+}
+.butoni{
+    position: absolute;
+    font-size: 20px;
+    background: rgba(127, 127, 127, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10%;
+    padding: 0.5%;
+    cursor: pointer;
 }

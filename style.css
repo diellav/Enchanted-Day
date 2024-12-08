@@ -24,7 +24,6 @@ body{
     align-items:center;
     padding: 60px;
     width: 40%;
-    font-size: x-large;
     line-height: 1.6;
 }
 
@@ -37,10 +36,11 @@ body{
 #description{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
+    font-size: larger;
     color:rgb(189, 189, 189);
+    width:100%;
 }
 
-/* Kutite*/
 
 .container2{
     display: flex;
@@ -59,10 +59,6 @@ body{
     justify-content: center;
     margin: 1%;
     padding: 8px;
-    color: black;
-    font-size: large;
-    line-height: 1.6;
-    text-align: center;
     border: 3px solid #E5C9D7;
     width: 20%;
     border-radius: 15px;
@@ -71,6 +67,9 @@ body{
 }
 .kuti a{
     width:90%;
+    font-size: large;
+    text-align: center;
+    line-height: 1.6;
     text-decoration: none;
     color: rgb(122, 122, 122);
 }
@@ -117,12 +116,12 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     width:100%;        
-    margin:0% 1%;   
+    margin:0%;   
 }
 .stories img{
     width: 280px;   
-    height: 420px; 
-    margin: 20px;
+    height: 350px; 
+    margin: 10px;
     margin-bottom:3px; 
     border-radius: 8px;
 }
@@ -131,6 +130,7 @@ body{
     flex-direction: column;
     justify-content: start;
     flex-wrap: wrap;
+    align-items: center;
 }
 .pershkrimi{
     display: flex;
@@ -144,6 +144,18 @@ body{
 }
 .stories a{
     text-decoration: none;
+}
+
+.stories p{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 6% 5%;
+    max-height: 120px;
+    color: black;   
+    font-size: large;
+    line-height: 0.5;
+    transform: none;
 }
 .stories a:hover{
     text-decoration: underline;
@@ -160,6 +172,11 @@ body{
     justify-content: center;
     font-size: x-large;
     font-style: italic;
+}
+.mesazhi #o1{
+    font-family: "WindSong", sans-serif;
+    font-size: xx-large;
+    font-weight: 500;
 }
 .explore{
     display: flex;
