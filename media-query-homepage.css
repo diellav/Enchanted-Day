@@ -6,14 +6,15 @@
     header{
         display:flex;
         flex-direction: column;
-        width:calc(100%-padding);
-        height: 120px;
+        width:100%;
+        height: 30vh;
     
     }
     .container1{
         display: flex;
         flex-direction: column;
         width:100%;
+        height: 30vh;
         justify-content: center;
         align-items: center;
     }
@@ -114,7 +115,7 @@
         width: 45%; 
          height: 200px; 
         line-height: 1.4;
-        font-size: 90%;
+        font-size: medium;
         line-height: 1.4;
        text-align: center;
     }
@@ -222,5 +223,13 @@ h2{
     margin-left: 5%;
 }
 
-
+@media (max-width:780px) {
+    .kuti{
+        padding:0px;
+        font-size: medium;
+    }
+}
+   
+    
+ 
 }
