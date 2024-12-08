@@ -101,23 +101,21 @@ h3{
 .detaje_tjera{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    align-items: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    width:30%;
+    width:100%;
     height: 30%;
     font-size: larger;
-    margin:0% 8%;
     line-height: 1.5;
 }
 .vendi{
     display: flex;
     flex-direction: column;
-    margin:0px;
+    margin:0%;
+    width:18%;
 }
 .booking {
-    position: absolute; 
-    top: 165%; 
-    left: 50%; 
     width: 40%; 
     padding: 20px;
     background-color: #f7f7f7;
@@ -178,4 +176,36 @@ h3{
 
 .regjistrimi .button:hover {
     background-color: #303233;
+}
+
+.reviews{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width:60%;
+    height:auto;
+    margin:5% 0%;
+    justify-self: center;
+    border: #818080 solid;
+    padding:3%;
+}
+.reviews img{
+    width:4%;
+    height:4%;
+    margin:2%;
+}
+.reviews h3{
+    display: flex;
+    align-items: center;
+    margin-bottom:2%;
+}
+.review_individuale{
+    border-bottom: #b3b3b3 solid;
+}
+#e_para{
+    border-top: #b3b3b3 solid;
+}
+#emri{
+    display: flex;
+    align-items: center;
 }
