@@ -33,6 +33,13 @@ body{
     font-size: larger;
     flex-wrap: wrap;
 }
+.dekore p {
+    text-align: center;             
+    font-weight: bold;       
+    color: #000000;          
+    margin-top: 0px;  
+    margin-bottom: 30%;     
+}
 .inspiration{
     font-size: x-large;
     font-style: italic;
