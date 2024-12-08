@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+main {
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 20px;
+}
+.titulli {
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.shkrimi {
+    margin-bottom: 30px;
+    font-size: large;
+    line-height: 1.6;
+    text-align: justify;
+}
+.photo {
+    display: flex; 
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 30px; 
+}
+.photo .ft img {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px; 
+}
+.pershkrim {
+    margin-bottom: 30px;
+}
+
+.pershkrim h3 {
+    font-size: x-large;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.pershkrim p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.pershkrim .ph {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px;
+}
+.pershkrim .ph img {
+    width: 350px; 
+    height: auto; 
+    border-radius: 10px; 
+    margin: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+    .titulli {
+        font-size: 24px; 
+        margin: 10px;
+    }
+
+    .shkrimi {
+        font-size: 16px; 
+    }
+
+    .photo {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .photo .ft img {
+        width: 100%; 
+        max-width: 400px; 
+        flex-direction: column;
+    }
+
+    .pershkrim .ph {
+        flex-direction: column; 
+    }
+    .pershkrim .ph img {
+        width: 100%; 
+        max-width: 300px;
+        margin: 10px 0; 
+    }
+    .pershkrim h3 {
+        font-size: 19px;
+    }
+
+    .pershkrim p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    main {
+        padding: 10px; 
+    }
+
+    .titulli {
+        font-size: 19px;
+    }
+
+    .shkrimi {
+        font-size: 14px;
+    }
+
+    .photo .ft img {
+        width: 100%; 
+        max-width: 280px;
+    }
+
+    .pershkrim h3 {
+        font-size: 19px;
+    }
+
+    .pershkrim p {
+        font-size: 12px;
+    }
+}
