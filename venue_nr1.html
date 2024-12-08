@@ -132,8 +132,17 @@
     </div>
     
 
-    <div class="book">
-        
+    <div class="booking">
+        <h3>Book Your Venue</h3>
+        <form action="/book" method="post" class="regjistrimi">
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <input type="date" id="event-date" name="event-date" required>
+            <input type="number" id="guest-number" name="guest-number" placeholder="Number of Guests"  required>
+            <textarea id="additional-details" name="additional-details" placeholder="Write additional details here..."></textarea>
+            <button type="submit" class="button">Book Now</button>
+        </form>
     </div>
 
 

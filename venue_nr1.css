@@ -114,3 +114,68 @@ h3{
     flex-direction: column;
     margin:0px;
 }
+.booking {
+    position: absolute; 
+    top: 165%; 
+    left: 50%; 
+    width: 40%; 
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.regjistrimi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 5%;
+}
+.regjistrimi input{
+    width: 95%; 
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.regjistrimi select{
+    width: 95%; 
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.regjistrimi textarea {
+    width: 95%; 
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.regjistrimi .button {
+    width: 95%;
+    padding: 12px;
+    font-size: large;
+    background-color: #4a4c4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.regjistrimi .button:hover {
+    background-color: #303233;
+}
