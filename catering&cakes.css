@@ -1,0 +1,81 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    width:100%;
+    height:100%;
+}
+main{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.about{
+    font-size: medium;
+    font-style: italic;
+    width:70%;
+    justify-self: center;
+    height:auto;
+    text-align: center;
+    line-height: 2;
+}
+#cater{
+    margin: 4%;
+    font-size: xx-large;
+    font-style: italic;
+}
+.catering{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height:auto;
+    width:auto;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width:99%;
+    height:60%;
+    margin-left:1%;
+   /* border: 2px solid #dbdbdb;
+    border-radius: 15px;
+    */
+    }
+
+.container img{
+    width:30%;
+    height: 50vh;
+    margin:1%;
+    border-radius: 15px;
+}
+.pershkrim{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    width:65%;
+    height:100%;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:90%;
+}
+.title b{
+    font-size: x-large;
+    font-style: italic;
+}
+.title p{
+    font-size: large;
+}
+.desc{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+    height:auto;
+}
+.desc ul{
+    width:25%;
+}
+

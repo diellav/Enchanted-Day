@@ -77,6 +77,7 @@ header{
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     color:rgb(122, 122, 122);
     line-height: 0.7;
+    z-index:2;
 }
 .permbajtja a:hover{
     text-decoration: underline;
