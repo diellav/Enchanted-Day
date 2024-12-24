@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+    color: #333;
+    text-align: center;
+}
+.photo {
+    background-image: url("Photos&Video/Foto1.jpg");
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shkrimi {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+}
+.titulli2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    margin: 40px 0 20px;
+}
+
+.shpjegim {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cmimi {
+    background-color: #f5e3ec;
+    border: 1px solid #929292;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cmimi p {
+    font-size: 24px;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.cmimi.special {
+    background-color: #f8c7e0;
+}
+.details {
+    padding: 40px;
+    background-color: #f8e9f0;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.details ul {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 20px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.details li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.package {
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.package h3 {
+    font-size: 18px;
+    color: #4d4d4d;
+}
+
+.package .price {
+    font-size: 24px;
+    color: #3a3a3a;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.package ul {
+    list-style: none;
+    padding: 0;
+}
+
+.package ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.package button {
+    background-color: #3f3f3f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.package button:hover {
+    background-color: #5c5c5c;
+}
+.paketa_combo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 900px;
+    background: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+.paketa_combo .package {
+    background-color: #f8f8f8;
+    padding: 30px;
+    width: 700px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.paketa_combo .package h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.paketa_combo .package .price {
+    font-size: 32px;
+    color: #000;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.paketa_combo .package ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.paketa_combo .package ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.paketa_combo .package button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.paketa_combo .package button:hover {
+    background-color: #666;
+}
+.text{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+.fotot{
+    display: flex;
+    flex-wrap: wrap;
+    width:90%;;
+    padding: 2px;
+    margin:0% 2%;
+    justify-content: space-evenly;
+}
+.inspirim{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:300px;
+    margin:13px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.inspirim img{
+    object-fit: cover;
+    width:300px;
+    height:360px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
