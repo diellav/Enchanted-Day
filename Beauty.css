@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+.main{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1.bb{
+    display: flex;
+    background: linear-gradient(to right,rgb(233, 233, 233),rgb(255,255,255,0.9)); 
+    border-radius: 3px;
+    border-left: solid 2px rgb(120, 100, 82);
+    margin-left: 50px;
+    padding: 0.5%;
+    
+}
+.txt{
+    font-size: medium;
+    width:70%;
+    justify-self: center;
+    height:auto;
+    text-align: center;
+    line-height: 2;
+    padding: 1%;
+    border-radius: 15px;
+    border-left:rgb(137, 81, 28) solid 2px;
+     background: linear-gradient(to right,rgb(231, 231, 231), rgb(255, 255, 255,0.5));
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; 
+    width: 80%; 
+    max-width: 1200px;
+    margin: auto; 
+}
+
+.box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+.beauty{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;  
+}
+.package {
+    background-color: rgba(226, 225, 224, 0.877);
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.package h3 {
+    font-size: 18px;
+    color: #000000;
+}
+.package .cmimi {
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.package ul {
+    list-style: none;
+    padding: 0;
+}
+
+.package ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.package button {
+    background-color: #646464;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.package button:hover {
+    background-color: #5c5c5c;
+}
+.dresses{
+    
+    font-size: x-large;
+    font-style: italic;
+    
+}
+.inspo{
+    display:flex;
+    flex-direction: row;
+    width:100%;  
+    flex-wrap: wrap;       
+    margin: 30px 0px; 
+}
+.fustana img{
+    width: 280px;   
+    height: 420px; 
+    margin: 20px;
+    margin-bottom:3px;  
+    border-radius: 8px;
+}
+.fustana{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.fustana{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 5px;
+    width: 18%;
+    line-height: 1.5;
+    font-size: larger;
+    flex-wrap: wrap;
+}
+.fustana input[type="checkbox"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-self: start;
+    display: flex;
+    margin-left: 8% ;
+}
+.fustana input[type="checkbox"]:checked{
+    background-color: #888888;
+}

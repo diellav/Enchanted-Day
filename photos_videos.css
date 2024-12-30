@@ -1,10 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
+*{
+    box-sizing: border-box;
+}
+body{
+    width:100%;
     margin: 0;
     padding: 0;
-    background-color: #fdfdfd;
-    color: #333;
-    text-align: center;
+}
+.main{
+    font-family: Arial, Helvetica, sans-serif;
 }
 .photo {
     background-image: url("Photos&Video/Foto1.jpg");
@@ -30,6 +33,12 @@ body {
     font-weight: bold;
     color: #000;
     margin: 40px 0 20px;
+    background: linear-gradient(to right, rgb(251, 241, 235), rgb(255, 255, 255, 0.9));
+    padding: 0.5%;
+    border-radius: 3px;
+    width: 30%;
+    border-left: solid 2px rgb(120, 100, 82);
+    margin-left: 50px; 
 }
 
 .shpjegim {
@@ -211,12 +220,16 @@ body {
     background-color: #666;
 }
 .text{
-    width: 80%;
-    margin: 20px auto;
+    font-size: medium;
+    width:70%;
+    justify-self: center;
+    height:auto;
     text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+    line-height: 2;
+    padding: 1%;
+    border-radius: 15px;
+    border-left:rgb(137, 81, 28) solid 2px;
+     background: linear-gradient(to right,rgb(251, 241, 235), rgb(255, 255, 255,0.5));
 }
 .fotot{
     display: flex;
