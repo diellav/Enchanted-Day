@@ -51,19 +51,19 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
             password.focus();
             return false;
         }
-        window.location.href = "HomePage.html";
+       form.submit();
    
       
     };
  
 
     const emriValid=(emri) => {
-        const emriRegex = /^[a-zA-Z ]{3,}$/;
+        const emriRegex = /^[a-zA-Z ]{3,255}$/;
         return emriRegex.test(emri);
     };  
 
     const emriPartnerValid=(emriPartner) => {
-        const emriPartnerRegex = /^[a-zA-Z ]{3,}$/;
+        const emriPartnerRegex = /^[a-zA-Z ]{3,255}$/;
         return emriPartnerRegex.test(emriPartner);
     };
 

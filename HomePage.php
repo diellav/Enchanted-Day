@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +40,10 @@
                     </div>
                 </div>
                 <a href="ContactUs.html">Contact Us</a>
+                <div class="dropdown">
                 <a href="SignUp.php">Sign Up</a>
+                <div class="permbajtja">
+                <a href="Signout.php">Sign Out</a></div></div>
 
                 <form action="/search" method="get" class="search">
                     <input type="text" name="search" placeholder="Search..." class="inputi">

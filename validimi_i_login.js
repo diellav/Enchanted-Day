@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function(event){
     
     console.log("Script loaded successfully!");
@@ -23,8 +22,9 @@ document.addEventListener("DOMContentLoaded", function(event){
             password.focus();
             return false;
         }
-        window.location.href = "HomePage.html";
-   
+       
+      form.submit();
+        
       
     };
  
@@ -39,7 +39,5 @@ document.addEventListener("DOMContentLoaded", function(event){
             const passRegex=/^[a-zA-Z0-9.?!@\$]{5,10}$/;
             return passRegex.test(password);
         };
-
-   
         form.addEventListener('submit', validate);
     });

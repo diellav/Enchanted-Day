@@ -1,3 +1,28 @@
+<?php
+session_start();
+include_once 'Databaza.php';
+include_once 'User.php';
+if ($_SERVER['REQUEST_METHOD']=='POST') {
+    $db = new Databaza();
+    $connection = $db->getConnection();
+    $user = new User($connection);
+   
+    if (!$connection) {
+        echo "<script>console.log('Database not connected');</script>";
+    }
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if ($user->login($username, $password)) {
+      header("Location: HomePage.php"); 
+      exit;
+    } 
+    else{
+        echo "<script>alert('" . $_SESSION['error'] . "');</script>";
+        
+    }
+   
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +39,10 @@
     <div class="login">
         <div class="container">
             <p class="txt">Log In to Enchanted</p>
-            <form action="HomePage.html" id="form" >
+            <form action="Log-in.php" method="POST" id="form">
                 <input type="text" name="username" placeholder="Username"required class="inputi" id="user">
                 <input type="password" name="password" placeholder="Password" required class="inputi"  id="pass">
-                <input type="submit" value="Login" class="sub" id="submit">
+                <input type="submit" value="Login" class="sub">
             </form>
             <br>
             <p>Remember me<input type="checkbox"></p>
@@ -27,7 +52,7 @@
             </div>
         </div>
     </div>
-
-    <script src="validimi_i_login.js"></script>
+    
+   <script src="validimi_i_login.js"></script>
 </body>
 </html>
