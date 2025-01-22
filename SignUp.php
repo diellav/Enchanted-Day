@@ -7,6 +7,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $connection = $db->getConnection();
     $user = new User($connection);
 
+
+    if (!$connection) {
+        die("Database connection failed.");
+    } else {
+        echo "Database connected successfully!";
+    }   
+
+
+    
     $name_surname = $_POST['Name_Surname'];
     $partner = $_POST['Partner_name_surname'];
     $email = $_POST['Email'];
@@ -14,13 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['Username'];
     $password = $_POST['Password'];
 
-    if ($user->signUp($name_surname, $partner, $email, $phone, $username, $password)) {
+    $signUpResult = $user->signUp($name_surname, $partner, $email, $phone, $username, $password);
+    if ( $signUpResult===true) {
         header("Location: Log-in.php"); 
         exit;
-    } else {
-        echo "Error registering user!";
+    } else if( $signUpResult==="Username already exists") {
+        echo "<script>alert('Username already exists');</script>";
+    } else if( $signUpResult==="Email already exists") {
+        echo "<script>alert('Email already exists');</script>";
+    }else{
+        echo "<script>alert('Error registering user! Please try again later.');</script>";
     }
-    var_dump($connection);
 }
 ?>
 
@@ -51,6 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </form>
             <br>
             <p>Remember me<input type="checkbox"></p>
+            
+           <p>Already an  User?<a href="Log-in.php" id = "log">LogIn</a></p>
         </div>
     </div>
     <script src="validimi_signup.js"></script>

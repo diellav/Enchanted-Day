@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
     <link rel="stylesheet" href="style_login.css">
-    <link rel="stylesheet" href="media_Log-In.css">
+    <link rel="stylesheet" href="media_Log-In.css">     
 </head>
 <body>
     <div class="foto">
@@ -47,8 +47,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
             <br>
             <p>Remember me<input type="checkbox"></p>
             <div class="signup">
-            <p> New User? <a href="SignUp.html">Sign Up</a></p>
-            <a href="Forgotten-psw.html"><p>Forgotten password?</p></a>
+            <a href="Forgotten-psw.php"><p>Forgotten password?</p></a>
             </div>
         </div>
     </div>

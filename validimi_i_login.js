@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event){
     };
        
         const passValid=(password)=>{
-            const passRegex=/^[a-zA-Z0-9.?!@\$]{5,10}$/;
+            const passRegex=/^[a-zA-Z0-9.?!@\$]{5,20}$/;
             return passRegex.test(password);
         };
         form.addEventListener('submit', validate);

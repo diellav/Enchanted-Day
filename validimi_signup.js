@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
     };
        
         const passValid=(password)=>{
-            const passRegex=/^[a-zA-Z0-9.?!@\$]{5,10}$/;
+            const passRegex=/^[a-zA-Z0-9.?!@\$]{5,20}$/;
             return passRegex.test(password);
         };
    

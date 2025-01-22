@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event){
      
 
         if(!newpassValid(newpassword.value)){
-            alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-10 characters ");
+            alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-20 characters ");
             password.focus();
             return false;
         }
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(event){
             return false;
         }
       
-        window.location.href = "Log-in.html";
+        window.location.href = "Log-in.php";
    
       
     };
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(event){
     };
        
         const newpassValid=(newpassword)=>{
-            const newpassRegex=/^[a-zA-Z0-9.?!@\$]{5,10}$/;
+            const newpassRegex=/^[a-zA-Z0-9.?!@\$]{5,20}$/;
             return newpassRegex.test(newpassword);
         };
 
