@@ -1,7 +1,6 @@
 <?php
 include_once 'Databaza.php';
 include_once 'User.php';
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db = new Databaza();
     $connection = $db->getConnection();
@@ -11,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!$connection) {
         die("Database connection failed.");
     } else {
-        echo "Database connected successfully!";
+        echo "<script>console.log('Database connected successfully!');</script>";
     }   
 
 

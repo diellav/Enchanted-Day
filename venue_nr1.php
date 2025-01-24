@@ -1,3 +1,34 @@
+<?php
+include_once 'Databaza.php';
+include_once 'BookingDatabase.php';
+
+session_start();
+if ($_SERVER['REQUEST_METHOD']=='POST') {
+    $db = new Databaza();
+    $connection = $db->getConnection();
+    $book = new BookingDatabase($connection);
+   
+    if (!$connection) {
+        echo "<script>console.log('Database not connected');</script>";
+    }
+
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $event_date = $_POST['event_date'];
+    $guest_number = $_POST['guest_number'];
+    $additional_details = $_POST['additional_details'];
+    if ($book->book($first_name, $last_name, $email, $event_date, $guest_number,$additional_details)) {
+        echo "<script>alert('Venue booked successfully!');</script>";
+    } 
+    else{
+        echo "<script>alert('" . $_SESSION['error'] . "');</script>";
+        
+    }
+   
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +104,7 @@
         <h3> About Brooklyn Winery </h3>
         <p>
         This boutique urban winery is set in the heart of Williamsburg,
-        one of the borough’s most vibrant and creative neighborhoods. 
+        one of the borough's most vibrant and creative neighborhoods. 
         Winemaker Conor McCormack works tirelessly to produce our premium 
         small batch wines, combining the quality of tradition with the freedom
         of innovation. Tour the winery to learn about how our wines are produced,
@@ -87,7 +118,7 @@
             Our venue features chic accents and lush backdrops, like our signature living plant wall. Multiple skylights throughout 
             the event space provide natural lighting and an airy, open feel. You and your partner will also enjoy the privacy of our wedding suite,
                 a room all your own, to relax and enjoy a few blissful moments together.
-            Brooklyn Winery’s space accommodates up to 300 people for a wedding with ceremony, cocktail hour, dinner and dancing.
+            Brooklyn Winery's space accommodates up to 300 people for a wedding with ceremony, cocktail hour, dinner and dancing.
                 Reserved entirely for you and your guests.
         </p>
         </div>
@@ -138,13 +169,13 @@
         </div>
         <div class="booking">
             <h3>Book Your Venue</h3>
-            <form action="/book" method="post" class="regjistrimi">
-                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            <form action="venue_nr1.php" method="POST" class="regjistrimi" id="form">
+                <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
-                <input type="date" id="event-date" name="event-date" required>
-                <input type="number" id="guest-number" name="guest-number" placeholder="Number of Guests"  required>
-                <textarea id="additional-details" name="additional-details" placeholder="Write additional details here..."></textarea>
+                <input type="date" id="event_date" name="event_date" required>
+                <input type="number" id="guest_number" name="guest_number" placeholder="Number of Guests"  required>
+                <textarea id="additional_details" name="additional_details" placeholder="Write additional details here..."></textarea>
                 <button type="submit" class="button">Book Now</button>
             </form>
         </div>
@@ -245,6 +276,7 @@
         </div>
     </div>  
     </footer>
+    <script src="validimi_i_bookingVenue.js"></script>
 </body>
 <script>
     let aktual = 0;

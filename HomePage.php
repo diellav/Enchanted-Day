@@ -1,4 +1,21 @@
+<?php
+session_start();
 
+if (!isset($_SESSION['username'])) {
+    echo "<script>
+        alert('Please sign up or log in to access this page.');
+        window.location.href = 'SignUp.php';
+    </script>";
+    exit;
+}
+else {
+    echo "<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    username=document.getElementById('signup');
+        username.textContent='".$_SESSION['username']."';});
+    </script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +58,7 @@
                 </div>
                 <a href="ContactUs.html">Contact Us</a>
                 <div class="dropdown">
-                <a href="SignUp.php">Sign Up</a>
+                <a href="SignUp.php" id="signup">Sign Up</a>
                 <div class="permbajtja">
                 <a href="Signout.php">Sign Out</a></div></div>
 

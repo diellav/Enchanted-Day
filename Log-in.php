@@ -1,7 +1,9 @@
 <?php
-session_start();
+
 include_once 'Databaza.php';
 include_once 'User.php';
+
+session_start();
 if ($_SERVER['REQUEST_METHOD']=='POST') {
     $db = new Databaza();
     $connection = $db->getConnection();
@@ -10,9 +12,12 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     if (!$connection) {
         echo "<script>console.log('Database not connected');</script>";
     }
+
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($user->login($username, $password)) {
+        $_SESSION['username'] = $username;
+        setcookie("logged_out", "", time() - 3600, "/", "", true, true);
       header("Location: HomePage.php"); 
       exit;
     } 

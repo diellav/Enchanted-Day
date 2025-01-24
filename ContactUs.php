@@ -1,3 +1,32 @@
+<?php
+include_once 'Databaza.php';
+include_once 'ContactDatabase.php';
+
+session_start();
+if ($_SERVER['REQUEST_METHOD']=='POST') {
+    $db = new Databaza();
+    $connection = $db->getConnection();
+    $contact = new ContactDatabase($connection);
+   
+    if (!$connection) {
+        echo "<script>console.log('Database not connected');</script>";
+    }
+
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    if ($contact->contact($name, $surname, $email, $message)) {
+        echo "<script>alert('Message sent successfully!');</script>";
+    } 
+    else{
+        echo "<script>alert('" . $_SESSION['error'] . "');</script>";
+        
+    }
+   
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +84,11 @@
                         <p><strong>Email:</strong> <a href="">enchantyourday@gmail.com</a></p>
                         <p><strong>Phone:</strong> +(1) 123-456-7899</p>
                 </div>
-                <form class="forma">
-                    <input type="text" placeholder="Your First Name" required>
-                    <input type="text" placeholder="Your Last Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
+                <form class="forma" method="POST" action="ContactUs.php" id="form">
+                    <input type="text"  id= "name" name="name" placeholder="Your First Name" required>
+                    <input type="text" id= "surname" name="surname" placeholder="Your Last Name" required>
+                    <input type="email" id= "email" name="email" placeholder="Your Email" required>
+                    <textarea  id= "message" name="message" placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -121,5 +150,6 @@
 
   
     </footer>
+    <script src="validimi_i_contact.js"></script>
 </body>
 </html>

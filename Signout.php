@@ -1,6 +1,7 @@
 <?php 
 session_start();
- session_destroy(); 
- header("Location: Log-in.php");
- exit;
+session_unset();
+session_destroy();
+header("Location: SignUp.php");
+exit;
  ?>

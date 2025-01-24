@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(event){
             return false;
         }
       
-        window.location.href = "Log-in.php";
+        form.submit();
    
       
     };
