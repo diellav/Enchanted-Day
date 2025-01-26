@@ -7,7 +7,7 @@ class User{
         $this->conn = $db;
     }
 
-    public function signUp($name_surname, $partner, $email, $phone, $username, $password) {
+    public function signUp($id, $name_surname, $partner, $email, $phone, $username, $password) {
         $check_Username = "SELECT id FROM {$this->table_name} WHERE Username = :username LIMIT 1";
         $check_stmt = $this->conn->prepare($check_Username);
         $check_stmt->bindParam(':username', $username);
@@ -25,11 +25,11 @@ class User{
         if ($check_stmt2->rowCount() > 0) {
             return "Email already exists";
         }
-        $query = "INSERT INTO {$this->table_name} (Name_Surname, Partner_name_surname, Email, Phone_number, Username, Password) VALUES (:Name_Surname, :Partner_name_surname, :Email,  :Phone_number, :Username, :Password)";
+        $query = "INSERT INTO {$this->table_name} (id, Name_Surname, Partner_name_surname, Email, Phone_number, Username, Password) VALUES (:id, :Name_Surname, :Partner_name_surname, :Email,  :Phone_number, :Username, :Password)";
 
         $stmt = $this->conn->prepare($query);
 
-
+        $stmt->bindParam(':id', $id);
         $stmt->bindParam(':Name_Surname', $name_surname);
         $stmt->bindParam(':Partner_name_surname', $partner);
         $stmt->bindParam(':Email', $email);
@@ -69,6 +69,61 @@ class User{
             $_SESSION['error'] = 'Error executing query';
             return false;
         }  
-        }
+    }
+    public function getAllUsers() {
+        $conn = $this->conn;
+
+        $sql = "SELECT * FROM user";
+
+        $statement = $conn->query($sql); 
+        $users = $statement->fetchAll(PDO::FETCH_ASSOC); 
+
+        return $users; 
+    }
+
+    
+    function getUserById($id) {
+        $conn = $this->conn;
+
+     
+        $sql = "SELECT * FROM user WHERE id='$id'";
+
+        $statement = $conn->query($sql); 
+        $user = $statement->fetch(); 
+
+        return $user;
+    }
+
+    
+    function updateUser($id, $name_surname, $partner, $email, $phone, $username, $password) {
+        $conn = $this->conn;
+
+
+        $sql = "UPDATE user SET Name_Surname=?, Partner_name_surname=?, Email=?, Phone_number=?, Username=? ,Password=? WHERE id=?";
+
+        $statement = $conn->prepare($sql); 
+
+      
+        $statement->execute([$name_surname, $partner, $email, $phone, $username, $password , $id]);
+
+      
+        echo "<script>alert('Update was successful');</script>";
+    }
+
+    
+    function deleteUser($id) {
+        $conn = $this->conn;
+
+      
+        $sql = "DELETE FROM user WHERE id=?";
+
+        $statement = $conn->prepare($sql); 
+
+       
+        $statement->execute([$id]);
+
+       
+        echo "<script>alert('Delete was successful');</script>";
+    }
 }
 ?>

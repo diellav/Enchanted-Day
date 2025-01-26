@@ -1,5 +1,5 @@
 <?php
-include_once 'Databaza.php';
+include_once 'Database/Databaza.php';
 include_once 'User.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db = new Databaza();
@@ -8,12 +8,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if (!$connection) {
-        die("Database connection failed.");
+        echo "<script>console.log('Database failed successfully!');</script>";
     } else {
         echo "<script>console.log('Database connected successfully!');</script>";
     }   
 
-
+ 
+    if (empty($_POST['Name_Surname']) || empty($_POST['Partner_name_surname']) || empty($_POST['Email']) ||
+            empty($_POST['Phone_number']) || empty($_POST['Username']) || empty($_POST['Password'])) {
+                echo "<script>alert('Fill all fields.');</script>";
+    } else {
     
     $name_surname = $_POST['Name_Surname'];
     $partner = $_POST['Partner_name_surname'];
@@ -22,7 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['Username'];
     $password = $_POST['Password'];
 
-    $signUpResult = $user->signUp($name_surname, $partner, $email, $phone, $username, $password);
+    $id = $username . rand(100, 999);
+
+    $signUpResult = $user->signUp($id, $name_surname, $partner, $email, $phone, $username, $password);
     if ( $signUpResult===true) {
         header("Location: Log-in.php"); 
         exit;
@@ -33,6 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }else{
         echo "<script>alert('Error registering user! Please try again later.');</script>";
     }
+
+        }
+    
 }
 ?>
 
@@ -59,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="tel" name="Phone_number" placeholder="Phone number" required class="inputi" id="tel">
                 <input type="text" name="Username" placeholder="Username" required class="inputi" id="user">
                 <input type="password" name="Password" placeholder="Password" required class="inputi" id="pass">
-                <input type="submit" value="Sign_Up" class="sub">
+                <input type="submit" name="formaEsubmitit" value="Sign_Up" class="sub">
             </form>
             <br>
             <p>Remember me<input type="checkbox"></p>

@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Databaza.php';
+include_once 'Database/Databaza.php';
 include_once 'User.php';
 
 session_start();

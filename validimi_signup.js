@@ -17,40 +17,41 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
         if(!emriValid(emri.value)){
             alert("Please put a valid name and surname! ");
             emri.focus();
-            return false;
+            return ;
         }
 
         if(!emriPartnerValid(emriPartner.value)){
             alert("Please put a valid name and surname for your partner! ");
             emriPartner.focus();
-            return false;
+            return ;
         }
 
 
         if(!emailValid(email.value)){
             alert("Please put a valid email! ");
             email.focus();
-            return false;
+            return ;
         }
 
         if(!telValid(tel.value)){
             alert("Please put a valid phone number!");
             tel.focus();
-            return false;
+            return ;
         }
 
         if(!useriValid(useri.value)){
             alert("Please put a valid username!\n The username should contain letters, numbers and special characters such as:  _  . -  \n The length should be between 5-15 characters ");
             useri.focus();
-            return false;
+            return ;
         }
      
 
         if(!passValid(password.value)){
             alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-10 characters ");
             password.focus();
-            return false;
+            return ;
         }
+        console.log("Form submitted successfully!");
        form.submit();
    
       
