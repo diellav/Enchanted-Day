@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
     echo "<script>
         alert('Please sign up or log in to access this page.');
         window.location.href = 'SignUp.php';
@@ -14,6 +14,12 @@ else {
     username=document.getElementById('signup');
         username.textContent='".$_SESSION['username']."';});
     </script>";
+}
+
+if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
+    $_SESSION['admin'] = true;
+} else {
+    $_SESSION['admin'] = false;
 }
 ?>
 <!DOCTYPE html>
@@ -38,6 +44,9 @@ else {
             </div>
 
             <div class="navigation">
+            <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == true): ?>
+                            <a href="View/Dashboard.php">Dashboard</a>
+                        <?php endif; ?>
                 <a href="HomePage.html">Home</a>
                 <div class="dropdown">
                     <a href="#">Services</a>

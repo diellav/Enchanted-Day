@@ -6,7 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $connection = $db->getConnection();
     $user = new User($connection);
 
-
+if (!isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === false) {
+    header("Location: SignUp.php"); 
+    exit;
+}
     if (!$connection) {
         echo "<script>console.log('Database failed successfully!');</script>";
     } else {

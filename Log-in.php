@@ -16,10 +16,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($user->login($username, $password)) {
+        $_SESSION['logged_in'] = true; 
         $_SESSION['username'] = $username;
+            header("Location: HomePage.php"); 
+            exit();
         setcookie("logged_out", "", time() - 3600, "/", "", true, true);
-      header("Location: HomePage.php"); 
-      exit;
     } 
     else{
         echo "<script>alert('" . $_SESSION['error'] . "');</script>";

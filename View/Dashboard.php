@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if (isset($_SESSION['username']) || $_SESSION['username']=="admin") {
+echo "<script>alert('Welcome, admin!');</script>";
+}else{
+    header("Location: ../HomePage.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +55,7 @@
             </tr>
             ";
         }
+        echo "<html><a href='../Signout.php'>SignOut</a></html>"
         ?>
     </table>
 </body>
