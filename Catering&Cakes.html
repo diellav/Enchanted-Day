@@ -34,8 +34,7 @@
                 <div class="dropdown">
                     <a href="#">Planner</a>
                     <div class="permbajtja">
-                        <a href="#">Budget</a>
-                        <a href="#">Guest List</a> 
+                        <a href="Budget.php">Budget</a>
                     </div>
                 </div>
                 <a href="ContactUs.html">Contact Us</a>
@@ -64,7 +63,7 @@
     <div class="container">
             <img src="Catering&Cakes_photos/beef-menu.jpg" alt="Beef Menu">
             <div class="pershkrim">
-            <div class="title"><p><b>Beef Luxury</b></p><p>Add to List<input type="radio" name="menu"></p></div>
+            <div class="title"><p><b>Beef Luxury</b></p><p>Add to List<input type="checkbox" id ="checkbox1"></p></div>
             <p>Indulge in a variety of expertly prepared beef dishes, 
             crafted to bring richness and elegance to your wedding celebration.</p>
             <div class="desc">
@@ -107,7 +106,7 @@
                 <li>Iced Tea or Lemonade</li>
                 <li>Mocktails</li>
             </ul>
-            <ul><h3><p>Price per person: 55$</p></h3>
+            <ul><h3><p class="price">Price per person: 55$</p></h3>
             <textarea name="Customize" id="textarea">Add details</textarea>
             </ul>
             </div>
@@ -121,7 +120,7 @@
     <div class="container">
                 <img src="Catering&Cakes_photos/chicken-delights.jpg" alt="Chicken Menu">
                 <div class="pershkrim">
-                <div class="title"><p><b>Chicken Delights</b></p><p>Add to List<input type="radio" name="menu"></p></div>
+                <div class="title"><p><b>Chicken Delights</b></p><p>Add to List<input type="checkbox" id ="checkbox2"></p></div>
                 <p>Indulge in a selection of premium chicken dishes crafted to suit every taste and elevate your wedding dining experience.</p>
                 <div class="desc">
                     
@@ -161,7 +160,7 @@
                 <li>Freshly Brewed Iced Tea</li>
                 <li>Fruity Mocktail Blend</li>
             </ul>
-            <ul><h3><p>Price per person: 65$</p></h3>
+            <ul><h3><p class="price">Price per person: 65$</p></h3>
                 <textarea name="Customize" id="textarea">Add details</textarea>
                 </ul>
              </div>
@@ -173,7 +172,7 @@
         <div class="container">
             <img src="Catering&Cakes_photos/seafood.jpg" alt="Seafood menu">
             <div class="pershkrim">
-            <div class="title"><p><b>Exquisite Seafood Menu</b></p><p>Add to List<input type="radio" name="menu"></p></div>
+            <div class="title"><p><b>Exquisite Seafood Menu</b></p><p>Add to List<input type="checkbox" id ="checkbox3"></p></div>
             <p>Indulge in a selection of premium chicken dishes crafted to suit every taste and elevate your wedding dining experience.</p>
             <div class="desc">
                         
@@ -216,7 +215,7 @@
                 <li>Virgin Mojitos </li>
                 <li>Iced Peach Tea </li>
             </ul>
-            <ul><h3><p>Price per person: 80$</p></h3>
+            <ul><h3><p class="price">Price per person: 80$</p></h3>
                 <textarea name="Customize" id="textarea">Add details</textarea>
                 </ul>
         </div>
@@ -230,7 +229,7 @@
     <div class="container">
                     <img src="Catering&Cakes_photos/vegetarian.jpg" alt="Vegetarian Menu">
                     <div class="pershkrim">
-                    <div class="title"><p><b>Vegetarian & Vegan</b></p><p>Add to List<input type="radio" name="menu"></p></div>
+                    <div class="title"><p><b>Vegetarian & Vegan</b></p><p>Add to List<input type="checkbox" id ="checkbox4"></p></div>
                     <p>Delight in our plant-based menu, featuring vibrant appetizers, hearty mains, fresh sides, and artisanal drinks.</p>
                     <div class="desc">
                         
@@ -273,7 +272,7 @@
                 <li>Lavender Lemonade</li>
                 <li>Spiced Chai Iced Tea</li>
             </ul>
-            <ul><h3><p>Price per person: 50$</p></h3>
+            <ul><h3><p class="price">Price per person: 50$</p></h3>
                 <textarea name="Customize" id="textarea">Add details</textarea>
                 </ul>
         </div>
@@ -286,7 +285,7 @@
         <div class="container">
             <img src="Catering&Cakes_photos/international.jpg" alt="Vegetarian Menu">
             <div class="pershkrim">
-            <div class="title"><p><b>International Cuisine</b></p><p>Add to List<input type="radio" name="menu"></p></div>
+            <div class="title"><p><b>International Cuisine</b></p><p>Add to List<input type="checkbox" id ="checkbox5"></p></div>
             <p>Embark on a global culinary journey with an international wedding menu inspired by diverse cuisines to celebrate love and culture.</p>
             <div class="desc">
                 
@@ -332,7 +331,7 @@
                 <li>Horchata (Mexican)</li>
                 <li>Iced Jasmine Tea (Chinese)</li>
             </ul>
-            <ul><h3><p>Price per person: 70$</p></h3>
+            <ul><h3><p class="price">Price per person: 70$</p></h3>
                 <textarea name="Customize" id="textarea">Add details</textarea>
                 </ul>
 </div>
@@ -351,23 +350,23 @@
     <div class="tortat"> 
         <div class="cake">
             <img src="Catering&Cakes_photos/chocolatecake.jpg" alt="Chocolate cake">
-            <p>Chocolate<input type="radio" name="torte" ></p>     
+            <p class="name">Chocolate</p><p class="price">80</p><input type="checkbox" id="checkbox6">   
         </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/vanillacake.jpg" alt="Vanilla cake">
-         <p>Vanilla<input type="radio" name="torte"></p>
+        <p class="name">Vanilla</p><p class="price">80</p><input type="checkbox" id="checkbox7">
      </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/redvelvetcake.jpg" alt="Red Velvet cake">
-         <p>Red Velvet<input type="radio" name="torte"></p>
+        <p class="name">Red Velvet</p><p class="price">80</p><input type="checkbox" id="checkbox8">
     </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/hazelnutcake.jpg" alt="Hazelnut cake">
-        <p>Hazelnut<input type="radio" name="torte"></p>
+        <p class="name">Hazelnut</p><p class="price">80</p><input type="checkbox" id="checkbox9">
     </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/lemoncake.jpg" alt="Lemon cake">
-        <p>Lemon<input type="radio" name="torte"></p>
+        <p class="name">Lemon</p><p class="price">80</p><input type="checkbox" id="checkbox10">
     </div>
 </div>
 
@@ -375,38 +374,38 @@
 <div class="filling">
     <div class="fill">
         <img src="Catering&Cakes_photos/caramel.jpg" alt="Salted Caramel filling">
-        <p>Salted Caramel<input type="radio" name="torte"></p>
+        <p class="name">Salted Caramel</p><p class="price">90</p><input type="checkbox" id="checkbox11">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/chocolate_filling.jpg" alt="Chocolate filling">
-        <p>Chocolate<input type="radio" name="torte"></p>
+        <p class="name">Chocolate</p><p class="price">90</p><input type="checkbox" id="checkbox12">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/fruits.jpg" alt="Fruits filling">
-        <p>Fruits<input type="radio" name="torte"></p>
+        <p class="name">Fruits</p><p class="price">90</p><input type="checkbox" id="checkbox13">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/buttercream.jpg" alt="Buttercream filling">
-        <p>Buttercream<input type="radio" name="torte"></p>
+        <p class="name">Buttercream</p><p class="price">90</p><input type="checkbox" id="checkbox14">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/lemon.jpg" alt="Lemon custard filling">
-        <p>Lemon custard<input type="radio" name="torte"></p>
+        <p class="name">Lemon custard</p><p class="price">90</p><input type="checkbox" id="checkbox15">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/swiss.jpg" alt="Meringue filling">
-         <p>Meringue<input type="radio" name="torte"></p>
+        <p class="name">Meringue</p><p>90</p><input type="checkbox" id="checkbox16">
     </div>
 </div>
 
     <h2>Cake size</h2>
 
     <div class="tiers">
-   <div class="tier"><input type="radio" name="tier"><p>Two tiers ~40$</p></div>
-   <div class="tier"><input type="radio" name="tier"><p>Three tiers ~70$</p></div>
-   <div class="tier"><input type="radio" name="tier"><p>Four tiers ~110$</p></div>
-   <div class="tier"><input type="radio" name="tier"><p>Five tiers ~150$</p></div>
-   <div class="tier"><input type="radio" name="tier"><p>6+ tiers ~200$</p></div>
+        <div class="tier"><p class="name">Two tiers </p><p class="price">40$</p><input type="checkbox" id="checkbox17"></div>
+        <div class="tier"><p class="name">Three tiers</p> <p class="price">70$</p><input type="checkbox" id="checkbox18"></div>
+        <div class="tier"><p class="name">Four tiers </p><p class="price">110$</p><input type="checkbox" id="checkbox19"></div>
+        <div class="tier"><p class="name">Five tiers </p> <p class="price">150$</p><input type="checkbox" id="checkbox20"></div>
+        <div class="tier"><p class="name">6+ tiers</p> <p class="price">200$</p><input type="checkbox" id="checkbox21"></div>
    </div>
 <br><br>
    <h2>Design </h2>
@@ -414,27 +413,27 @@
     <div class="tortat"> 
     <div class="cake">
         <img src="Catering&Cakes_photos/elegantcake.jpg" alt="Modern Bliss">
-        <p>Modern Bliss ~60$<input type="radio" name="torte"></p>     
+        <p class="name">Modern Bliss</p><p class="price">60$</p><input type="checkbox" id="checkbox22">     
     </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/vintagecake.jpg"alt="Vintage royalty">
-        <p>Royalty ~75$<input type="radio" name="torte"></p>
+        <p class="name">Royalty </p><p class="price">75$</p><input type="checkbox" id="checkbox23">
      </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/white floral.jpg" alt="Classic White">
-        <p>Classic White ~40$<input type="radio" name="torte"></p>
+        <p class="name">Classic White</p> <p class="price">40$</p><input type="checkbox" id="checkbox24">
     </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/traditionalcake.jpg" alt="Classic Pink">
-        <p>Classic Pink ~55$<input type="radio" name="torte"></p>
+        <p class="name">Classic Pink </p><p class="price">55$</p><input type="checkbox" id="checkbox25">
     </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/pinkrosecake.jpg" alt="Rose Dream">
-        <p>Rose Dream ~70$<input type="radio" name="torte"></p>
+        <p class="name">Rose Dream </p><p class="price">70$</p><input type="checkbox" id="checkbox26">
     </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/elegant2.jpg" alt="Elegance">
-        <p>Elegance ~60$<input type="radio" name="torte"></p>
+        <p class="name">Elegance</p> <p class="price">60$</p><input type="checkbox" id="checkbox27">
     </div>
     </div>
 
@@ -442,7 +441,9 @@
 
 
 </div>
-
+<div class="myCart">
+    <button id="saveCart" type="button">Save to Cart</button>
+</div>
     </main>
     
 
@@ -500,5 +501,72 @@
 
   
     </footer>
+    <script>
+ 
+        document.getElementById('saveCart').addEventListener('click', function () {
+            const itemsSelektuara = []; // Array to store selected items
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked'); // Get all checked checkboxes
+        
+            checkboxes.forEach(checkbox => {
+                const id = checkbox.id.replace('checkbox', ''); // Get the checkbox ID
+                const prindi = checkbox.closest('.cake') || checkbox.closest('.fill') || checkbox.closest('.tier'); // Get the parent div
+                
+                // Ensure the parent div is valid
+                if (prindi) {
+                    const emri = prindi.querySelector('p.name') ? prindi.querySelector('p.name').innerText : ''; // Get the name
+                    const cmimi = prindi.querySelector('p.price') ? parseFloat(prindi.querySelector('p.price').innerText.replace('$', '').trim()) : 0; // Get the price
+                    
+                    // For items that are not tier (like cake and filling), get the image source
+                    const foto = prindi.classList.contains('tier') ? '' : prindi.querySelector('img') ? prindi.querySelector('img').src : '';
+        
+                    // If we have valid data, push it to the itemsSelektuara array
+                    if (emri && cmimi > 0) {
+                        itemsSelektuara.push({ id: id, name: emri, cost: cmimi, image: foto });
+                    }
+                }
+            });
+        
+            // If there are selected items, create and submit the form
+            if (itemsSelektuara.length > 0) {
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = 'Budget.php';
+        
+                // Add hidden inputs for each selected item
+                itemsSelektuara.forEach(item => {
+                    const inputId = document.createElement('input');
+                    inputId.type = 'hidden';
+                    inputId.name = 'item_id[]';
+                    inputId.value = item.id;
+                    form.appendChild(inputId);
+        
+                    const inputName = document.createElement('input');
+                    inputName.type = 'hidden';
+                    inputName.name = 'item_name[]';
+                    inputName.value = item.name;
+                    form.appendChild(inputName);
+        
+                    const inputCost = document.createElement('input');
+                    inputCost.type = 'hidden';
+                    inputCost.name = 'item_cost[]';
+                    inputCost.value = item.cost;
+                    form.appendChild(inputCost);
+        
+                    const inputImage = document.createElement('input');
+                    inputImage.type = 'hidden';
+                    inputImage.name = 'item_image[]';
+                    inputImage.value = item.image;
+                    form.appendChild(inputImage);
+                });
+        
+                // Append the form and submit it
+                document.body.appendChild(form);
+                form.submit();
+            } else {
+                alert('Please select at least one item!');
+            }
+        });
+
+    </script>
 </body>
 </html>

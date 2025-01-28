@@ -56,6 +56,8 @@ class User{
                     session_start();
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['username'] = $row['Username'];
+                    $_SESSION['email'] = $row['Email'];
+                    
                     return true;
                 } else {
                     $_SESSION['error'] = 'Incorrect password';
