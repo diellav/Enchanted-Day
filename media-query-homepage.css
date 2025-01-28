@@ -129,12 +129,19 @@
         align-items: center;
         padding: 2%;
          width:95%;
-         height:85%;
+         height:75%;
     }
     
     .shtesa img{
         width: 60px;
     }
+    .shtesa{
+        width:10%;
+        height: 40%;
+        align-items: center;
+        margin:1%;
+    }
+
     
     .explore a{
         font-size: small;
@@ -149,8 +156,10 @@
         padding: 6px;
     }
 .artikuj img{
+    display: flex;
     width: 100%; 
-    height: 50%; 
+    align-self: center; 
+
 }
 .artikuj a{
     font-size: small;
@@ -212,6 +221,7 @@ h2{
     line-height: 1;
     margin-left: 5%;
 }
+
 
 @media (max-width:780px) {
     .kuti{

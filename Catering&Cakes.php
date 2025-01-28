@@ -13,40 +13,34 @@
 </head>
 <body>
 
-    <header>
-        <div class="container1">
-            <div class="titulli">
-                <h1>Enchanted Day</h1>
-            </div>
-
-            <div class="navigation">
-                <a href="HomePage.html">Home</a>
-                <div class="dropdown">
-                    <a href="#">Services</a>
-                    <div class="permbajtja">
-                        <a href="Venues.html">Venues</a>
-                        <a href="Catering&Cakes.html">Catering & Cakes</a>
-                        <a href="Photos&Videos.html">Photo & Video</a>
-                        <a href="Decorating.html">Decoration</a>
-                        <a href="Beauty.html">Beauty</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="#">Planner</a>
-                    <div class="permbajtja">
-                        <a href="Budget.php">Budget</a>
-                    </div>
-                </div>
-                <a href="ContactUs.html">Contact Us</a>
-                <a href="Log-in.html">Log in</a>
-
-                <form action="/search" method="get" class="search">
-                    <input type="text" name="search" placeholder="Search..." class="inputi">
-                    <button type="submit"><img src="Fotot/search.png" ></button>
-                </form>
-            </div>
-        </div>
+<header>
+        <?php include_once 'header.php'?>
     </header>
+
+    <?php
+    session_start();
+
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
+        echo "<script>
+            alert('Please sign up or log in to access this page.');
+            window.location.href = 'SignUp.php';
+        </script>";
+        exit;
+    }
+    else {
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+        username=document.getElementById('signup');
+            username.textContent='".$_SESSION['username']."';});
+        </script>";
+    }
+    
+if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
+    echo "<script>alert('You are the admin!');</script>";
+    echo "<script>window.location.href='HomePage.php';</script>";
+    exit; 
+}
+    ?>
     <main>
 
         <div class="about"><h1>Catering & Cakes</h1><h4>
@@ -448,91 +442,35 @@
     
 
     <footer>
-        <div class="footer">
-
-            <div class="follow">
-            <h1>Enchant your special day.</h1>
-                <div class="social">
-            <a href="https://www.instagram.com/"><img src="Fotot/black-instagram-icon.png"></a>    
-             <a href="https://www.facebook.com/"><img src="Fotot/facebook-app-round-icon.png"></a>    
-             <a href="https://x.com"><img src="Fotot/x-social-media-logo-icon.png"></a>    
-             <a href="https://www.pinterest.com"><img src="Fotot/pinterest-round-icon.png"></a> 
-             <a href="https://www.tiktok.com"><img src="Fotot/tiktok-icon.png"></a> </div>
-
-            <h2 class="fundi">Contact Us : <a href="#">enchantyourday@gmail.com</a></h1> 
-            </div>
-
-        </div>
-        
-        <div id="vije">
-        <hr class="line"></div> 
-    <div class="end">
-        <div class="permbledhja">
-            <h2>Services</h2>
-            <a href="Venues.html">Venues</a>
-            <a href="Catering&Cakes.html">Catering & Cakes</a>
-            <a href="Photos&Videos.html">Photo & Video</a>
-            <a href="Decorating.html">Decoration</a>
-            <a href="Beauty.html">Beauty</a>
-        </div>
-
-        <div class="permbledhja">
-            <h2>Planner</h2>
-            <a href="#">Budget</a>
-            <a href="#">Guest List</a>
-        </div>
-
-
-        <div class="permbledhja">
-            <h2>Follow us:</h2>
-            <a href="https://www.instagram.com/">Instagram</a>
-            <a href="https://www.facebook.com/">Facebook</a>
-            <a href="https://x.com">X</a>
-            <a href="https://www.pinterest.com">Pinterest</a>
-            <a href="https://www.tiktok.com">TikTok</a>
-        </div>
-
-        <div class="tt">
-            <h1 id="enchant">Enchanted Day</h1>
-            <p id="trademarks">© 2024 Enchanted Day. All rights reserved. Website photography courtesy of our talented partners. Enchanted Day™, the Enchanted logo, and related marks are trademarks and service marks of Enchanted Day Inc. in the USA and beyond.
-                Crafted with care and creativity to make your moments magical.</p>
-        </div>
-    </div>
-
-  
+    <?php include_once 'footer.php'?>
     </footer>
     <script>
  
         document.getElementById('saveCart').addEventListener('click', function () {
-            const itemsSelektuara = []; // Array to store selected items
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked'); // Get all checked checkboxes
+            const itemsSelektuara = []; 
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked'); 
         
             checkboxes.forEach(checkbox => {
                 const id = checkbox.id.replace('checkbox', ''); // Get the checkbox ID
-                const prindi = checkbox.closest('.cake') || checkbox.closest('.fill') || checkbox.closest('.tier'); // Get the parent div
-                
-                // Ensure the parent div is valid
+                const prindi = checkbox.closest('.cake') || checkbox.closest('.fill') || checkbox.closest('.tier'); 
+            
                 if (prindi) {
-                    const emri = prindi.querySelector('p.name') ? prindi.querySelector('p.name').innerText : ''; // Get the name
-                    const cmimi = prindi.querySelector('p.price') ? parseFloat(prindi.querySelector('p.price').innerText.replace('$', '').trim()) : 0; // Get the price
-                    
-                    // For items that are not tier (like cake and filling), get the image source
+                    const emri = prindi.querySelector('p.name') ? prindi.querySelector('p.name').innerText : '';
+                    const cmimi = prindi.querySelector('p.price') ? parseFloat(prindi.querySelector('p.price').innerText.replace('$', '').trim()) : 0; 
                     const foto = prindi.classList.contains('tier') ? '' : prindi.querySelector('img') ? prindi.querySelector('img').src : '';
-        
-                    // If we have valid data, push it to the itemsSelektuara array
+
                     if (emri && cmimi > 0) {
                         itemsSelektuara.push({ id: id, name: emri, cost: cmimi, image: foto });
                     }
                 }
             });
         
-            // If there are selected items, create and submit the form
+
             if (itemsSelektuara.length > 0) {
                 const form = document.createElement('form');
                 form.method = 'POST';
                 form.action = 'Budget.php';
         
-                // Add hidden inputs for each selected item
                 itemsSelektuara.forEach(item => {
                     const inputId = document.createElement('input');
                     inputId.type = 'hidden';
@@ -558,8 +496,6 @@
                     inputImage.value = item.image;
                     form.appendChild(inputImage);
                 });
-        
-                // Append the form and submit it
                 document.body.appendChild(form);
                 form.submit();
             } else {

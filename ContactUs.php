@@ -1,5 +1,5 @@
 <?php
-include_once 'Databaza.php';
+include_once 'Database/Databaza.php';
 include_once 'ContactDatabase.php';
 
 session_start();
@@ -37,41 +37,34 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     <link rel="stylesheet" href="header&footer.css">
 </head>
 <body>
-    <header>
-        <div class="container1">
-            <div class="titulli">
-                <h1>Enchanted Day</h1>
-            </div>
-
-            <div class="navigation">
-                <a href="HomePage.html">Home</a>
-                <div class="dropdown">
-                    <a href="#">Services</a>
-                    <div class="permbajtja">
-                        <a href="Venues.html">Venues</a>
-                        <a href="Catering&Cakes.html">Catering & Cakes</a>
-                        <a href="Photos&Videos.html">Photo & Video</a>
-                        <a href="Decorating.html">Decoration</a>
-                        <a href="Beauty.html">Beauty</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="#">Planner</a>
-                    <div class="permbajtja">
-                        <a href="#">Budget</a>
-                        <a href="#">Guest List</a>
-                    </div>
-                </div>
-                <a href="ContactUs.html">Contact Us</a>
-                <a href="Log-in.html">Log in</a>
-
-                <form action="/search" method="get" class="search">
-                    <input type="text" name="search" placeholder="Search..." class="inputi">
-                    <button type="submit"><img src="Fotot/search.png" ></button>
-                </form>
-            </div>
-        </div>
+<header>
+        <?php include_once 'header.php'?>
     </header>
+
+    <?php
+
+
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
+        echo "<script>
+            alert('Please sign up or log in to access this page.');
+            window.location.href = 'SignUp.php';
+        </script>";
+        exit;
+    }
+    else {
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+        username=document.getElementById('signup');
+            username.textContent='".$_SESSION['username']."';});
+        </script>";
+    }
+    
+if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
+    echo "<script>alert('You are the admin!');</script>";
+    echo "<script>window.location.href='HomePage.php';</script>";
+    exit; 
+}
+    ?>
     <div class="contactUs">
         <div class="fotoback">
             <div class="shadow"></div>
@@ -96,59 +89,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     </div>
 
     <footer>
-        <div class="footer">
-
-            <div class="follow">
-            <h1>Enchant your special day.</h1>
-                <div class="social">
-            <a href="#"><img src="Fotot/black-instagram-icon.png"></a>    
-             <a href="#"><img src="Fotot/facebook-app-round-icon.png"></a>    
-             <a href="#"><img src="Fotot/x-social-media-logo-icon.png"></a>    
-             <a href="#"><img src="Fotot/pinterest-round-icon.png"></a> 
-             <a href="#"><img src="Fotot/tiktok-icon.png"></a> </div>
-
-            <h2 class="fundi">Contact Us : <a href="#">enchantyourday@gmail.com</a></h1> 
-            </div>
-
-        </div>
-
-        <div id="vije">
-        <hr class="line"></div> 
-    <div class="end">
-        <div class="permbledhja">
-            <h2>Services</h2>
-            <a href="Venues.html">Venues</a>
-            <a href="Catering&Cakes.html">Catering & Cakes</a>
-            <a href="Photos&Videos.html">Photo & Video</a>
-            <a href="Decorating.html">Decoration</a>
-            <a href="Beauty.html">Beauty</a>
-        </div>
-
-        <div class="permbledhja">
-            <h2>Planner</h2>
-            <a href="#">Budget</a>
-            <a href="#">Guest List</a>
-        </div>
-
-
-        <div class="permbledhja">
-            <h2>Follow us:</h2>
-            <a href="https://www.instagram.com/">Instagram</a>
-            <a href="https://www.facebook.com/">Facebook</a>
-            <a href="https://x.com">X</a>
-            <a href="https://www.pinterest.com">Pinterest</a>
-            <a href="https://www.tiktok.com">TikTok</a>
-        </div>
-
-        <div class="tt">
-            <h1 id="enchant">Enchanted Day</h1>
-            <p id="trademarks">© 2024 Enchanted Day. All rights reserved. Website photography courtesy of our talented partners. Enchanted Day™, the Enchanted logo, and related marks are trademarks and service marks of Enchanted Day Inc. in the USA and beyond.
-                Crafted with care and creativity to make your moments magical.</p>
-        </div>
-        
-    </div>
-
-  
+    <?php include_once 'footer.php'?>
     </footer>
     <script src="validimi_i_contact.js"></script>
 </body>

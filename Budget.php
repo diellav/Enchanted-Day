@@ -1,13 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header&footer.css">
+    <link rel="stylesheet" href="media-query-homepage.css">
+    <style> 
+       body{
+        margin:0px;
+        padding:0px;
+       }
+.cart-container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 15%;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-item p {
+    margin: 5px 0;
+    font-size: larger;
+    color:  rgb(26, 26, 26);
+}
+.remove {
+    background-color: rgb(200, 197, 197);
+    border: solid 2px;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item img {
+        width: 60%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .cart-item p {
+    align-self:flex-start;
+    font-size:large;
+}
+.remove {
+    font-size: small;
+}
+}
+    </style>
+</head>
+<body>
 <?php
+include_once 'header.php';
 include_once "Database/Databaza.php";
 include_once "Cart.php";
 session_start();
 
-// Kontrollo nëse përdoruesi është administrator dhe ndalo qasjen
+
 if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
     echo "<script>alert('You are the admin!');</script>";
     echo "<script>window.location.href='HomePage.php';</script>";
-    exit;  // Shtuar exit për t'u siguruar që kodi ndalet këtu
+    exit; 
+}
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
+    echo "<script>
+        alert('Please sign up or log in to access this page.');
+        window.location.href = 'SignUp.php';
+    </script>";
+    exit;
+}
+else {
+    echo "<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    username=document.getElementById('signup');
+        username.textContent='".$_SESSION['username']."';});
+    </script>";
 }
 
 $db = new Databaza();
@@ -51,7 +138,7 @@ if (count($items_mycart) > 0) {
         echo "<p>Cost: $" . $item['item_cost'] . "</p>";
         echo "<form method='post' action='Budget.php'>";
         echo "<input type='hidden' name='remove_item_id' value='" . $item['item_id'] . "'>";
-        echo "<button type='submit'>Remove</button>";
+        echo "<button type='submit' class='remove'>Remove</button>";
         echo "</form>";
         echo "</div>";
     }
@@ -59,3 +146,9 @@ if (count($items_mycart) > 0) {
     echo "<p>Your cart is empty.</p>";
 }
 ?>
+<footer>
+    <?php include_once 'footer.php';?>
+</footer>
+</body>
+</html>
+
