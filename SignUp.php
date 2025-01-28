@@ -65,12 +65,12 @@ if (!isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === false) {
         <div class="container">
             <p class="txt">Sign Up to Enchanted</p>
             <form action="SignUp.php" id="form" method ="POST">
-                <input type="text" name="Name_Surname" placeholder="Name and Surname" required class="inputi" id="emri">
-                <input type="text" name="Partner_name_surname" placeholder="Partner name and surname" required class="inputi" id="emriPartner">
-                <input type="text" name="Email" placeholder="Email" required class="inputi" id="email">
-                <input type="tel" name="Phone_number" placeholder="Phone number" required class="inputi" id="tel">
-                <input type="text" name="Username" placeholder="Username" required class="inputi" id="user">
-                <input type="password" name="Password" placeholder="Password" required class="inputi" id="pass">
+                <input type="text" name="Name_Surname" placeholder="Name and Surname"  class="inputi" id="emri">
+                <input type="text" name="Partner_name_surname" placeholder="Partner name and surname"  class="inputi" id="emriPartner">
+                <input type="text" name="Email" placeholder="Email"  class="inputi" id="email">
+                <input type="tel" name="Phone_number" placeholder="Phone number"  class="inputi" id="tel">
+                <input type="text" name="Username" placeholder="Username"  class="inputi" id="user">
+                <input type="password" name="Password" placeholder="Password"  class="inputi" id="pass">
                 <input type="submit" name="formaEsubmitit" value="Sign_Up" class="sub">
             </form>
             <br>

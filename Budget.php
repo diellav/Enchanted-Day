@@ -130,8 +130,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 $items_mycart = $cart->getCartItems();
 
+$totali = 0;
+
 if (count($items_mycart) > 0) {
     foreach ($items_mycart as $item) {
+        $totali += $item['item_cost']; 
         echo "<div class='cart-item'>";
         echo "<img src='" . $item['item_image'] . "' alt='" . $item['item_name'] . "'>";
         echo "<p>" . $item['item_name'] . "</p>";
@@ -142,9 +145,12 @@ if (count($items_mycart) > 0) {
         echo "</form>";
         echo "</div>";
     }
+
+    echo "<h2>Total Budget: $" . number_format($totali, 2) . "</h2>";
 } else {
     echo "<p>Your cart is empty.</p>";
 }
+
 ?>
 <footer>
     <?php include_once 'footer.php';?>

@@ -55,7 +55,8 @@ echo "<script>alert('Welcome, admin!');</script>";
             </tr>
             ";
         }
-        echo "<html><a href='../Signout.php'>SignOut</a></html>"
+        echo "<html><a href='../Signout.php'>SignOut</a></html>";
+        echo "<html><a href='Contact.php'>View contact</a></html>";
         ?>
     </table>
 </body>

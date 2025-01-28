@@ -133,7 +133,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         <h1 class="bb">Make-up packages</h1>
         <div class="beauty">
         <div class="package">
-            <h3>The Bridal Radiance Package</h3>
+            <h3 class="name">The Bridal Radiance Package</h3>
             <p class="cmimi">$300-$400</p>
             <ul>
                 <li>Includes: Full makeup application for the bride, including a flawless base, soft smokey eyes or natural glam, and a long-lasting lip color.</li>
@@ -144,7 +144,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         </div>
 
         <div class="package">
-            <h3>Bridal Party Glam Package</h3>
+            <h3 class="name">Bridal Party Glam Package</h3>
             <p class="cmimi">$750-$1000(based on the number of people)</p>
             <ul>
                 <li>Includes: Makeup for the bride and up to 4 bridesmaids or family members, with a choice of natural or bold looks.</li>
@@ -155,7 +155,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         </div>
 
         <div class="package">
-            <h3>Elegant Bridal Beauty Package</h3>
+            <h3 class="name">Elegant Bridal Beauty Package</h3>
             <p class="cmimi">$600-$800</p>
             <ul>
                 <li>Includes: Full bridal makeup and hairstyling, plus makeup for 1-2 bridesmaids.</li>
@@ -166,7 +166,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         </div>
 
         <div class="package">
-            <h3> The VIP Bridal Experience Package</h3>
+            <h3 class="name"> The VIP Bridal Experience Package</h3>
             <p class="cmimi">$1200-$1500</p>
             <ul>
                 <li>Includes: Full makeup and hairstyling for the bride, plus makeup for up to 3 bridesmaids.</li>
@@ -177,7 +177,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         </div>
 
         <div class="package">
-            <h3>  Destination Wedding Glam Package</h3>
+            <h3 class="name">  Destination Wedding Glam Package</h3>
             <p class="cmimi">$400-$600</p>
             <ul>
                 <li>Includes: Travel-friendly makeup application and hairstyling for the bride.</li>
@@ -190,48 +190,48 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
     <br><br><br>
     <h1 class="bb">Bridal Dresses</h1>
     <div class="inspo">
-        <div class="fustana"><img src="Dresses/foto1.jpg" alt="f1"><input type="checkbox" id ="checkbox"><p>Ethereal Elegance ~2,600$</p></div>
-        <div class="fustana"><img src="Dresses/foto4.jpg" alt="f4"><input type="checkbox" id ="checkbox"><p>Delicate Grace ~1,700$</p></div>
-        <div class="fustana"><img src="Dresses/foto5.jpg" alt="f5"><input type="checkbox" id ="checkbox"><p>Timeless Romance ~2,500$</p></div>
-        <div class="fustana"><img src="Dresses/foto6.jpg" alt="f6"><input type="checkbox" id ="checkbox"><p>Romantic Whimsy ~1,800$</p></div>
-        <div class="fustana"><img src="Dresses/foto7.jpg" alt="f7"><input type="checkbox" id ="checkbox"><p>Garden Dream ~2,800$</p></div>
-        <div class="fustana"><img src="Dresses/foto8.jpg" alt="f8"><input type="checkbox" id ="checkbox"><p>Gilded Glamour ~2,500$</p></div>
-        <div class="fustana"><img src="Dresses/foto9.jpg" alt="f9"><input type="checkbox" id ="checkbox"><p>Modern Muse ~1,500$</p></div>
-        <div class="fustana"><img src="Dresses/foto10.jpg" alt="f10"><input type="checkbox" id ="checkbox"><p>Royal Grace ~3,200$</p></div>
-        <div class="fustana"><img src="Dresses/foto11.jpg" alt="f11"><input type="checkbox" id ="checkbox"><p>Vintage Charm ~1,200$</p></div>
-        <div class="fustana"><img src="Dresses/foto13.jpg" alt="f13"><input type="checkbox" id ="checkbox"><p>Dainty Delight ~750$</p></div>
+        <div class="fustana"><img src="Dresses/foto1.jpg" alt="f1"><input type="checkbox" id ="checkbox1"><p>Ethereal Elegance ~2600$</p></div>
+        <div class="fustana"><img src="Dresses/foto4.jpg" alt="f4"><input type="checkbox" id ="checkbox2"><p>Delicate Grace ~1700$</p></div>
+        <div class="fustana"><img src="Dresses/foto5.jpg" alt="f5"><input type="checkbox" id ="checkbox3"><p>Timeless Romance ~2500$</p></div>
+        <div class="fustana"><img src="Dresses/foto6.jpg" alt="f6"><input type="checkbox" id ="checkbox4"><p>Romantic Whimsy ~1800$</p></div>
+        <div class="fustana"><img src="Dresses/foto7.jpg" alt="f7"><input type="checkbox" id ="checkbox5"><p>Garden Dream ~2800$</p></div>
+        <div class="fustana"><img src="Dresses/foto8.jpg" alt="f8"><input type="checkbox" id ="checkbox6"><p>Gilded Glamour ~2500$</p></div>
+        <div class="fustana"><img src="Dresses/foto9.jpg" alt="f9"><input type="checkbox" id ="checkbox7"><p>Modern Muse ~1500$</p></div>
+        <div class="fustana"><img src="Dresses/foto10.jpg" alt="f10"><input type="checkbox" id ="checkbox8"><p>Royal Grace ~3200$</p></div>
+        <div class="fustana"><img src="Dresses/foto11.jpg" alt="f11"><input type="checkbox" id ="checkbox9"><p>Vintage Charm ~1200$</p></div>
+        <div class="fustana"><img src="Dresses/foto13.jpg" alt="f13"><input type="checkbox" id ="checkbox10"><p>Dainty Delight ~750$</p></div>
     </div>
         <br><br><br>
         <h1 class="bb">Groom's Suits</h1>
         <div class="inspo">
-            <div class="fustana"><img src="Dresses/foto14.jpg" alt="f1"><input type="checkbox" id ="checkbox"><p>Crisp Classic ~300$</p></div>
-            <div class="fustana"><img src="Dresses/foto15.jpg" alt="f4"><input type="checkbox" id ="checkbox"><p>Simply Black ~400$</p></div>
-            <div class="fustana"><img src="Dresses/foto16.jpg" alt="f5"><input type="checkbox" id ="checkbox"><p>Relaxed Charm ~320$</p></div>
-            <div class="fustana"><img src="Dresses/foto24.jpg" alt="f6"><input type="checkbox" id ="checkbox"><p>Earthy Elegance ~340$</p></div>
-            <div class="fustana"><img src="Dresses/foto18.jpg" alt="f7"><input type="checkbox" id ="checkbox"><p>Modern Gray ~410$</p></div>
-            <div class="fustana"><img src="Dresses/foto19.jpg" alt="f8"><input type="checkbox" id ="checkbox"><p>Neutral Beige ~280$</p></div>
-            <div class="fustana"><img src="Dresses/foto20.jpg" alt="f9"><input type="checkbox" id ="checkbox"><p>Navy Neat ~330$</p></div>
-            <div class="fustana"><img src="Dresses/foto21.jpg" alt="f10"><input type="checkbox" id ="checkbox"><p>Timeless White ~420$</p></div>
-            <div class="fustana"><img src="Dresses/foto22.jpg" alt="f11"><input type="checkbox" id ="checkbox"><p>Rich Burgundy ~450$</p></div>
-            <div class="fustana"><img src="Dresses/foto23.jpg" alt="f13"><input type="checkbox" id ="checkbox"><p>Emerald Ease ~350$</p></div>
+            <div class="fustana"><img src="Dresses/foto14.jpg" alt="f1"><input type="checkbox" id ="checkbox11"><p>Crisp Classic ~300$</p></div>
+            <div class="fustana"><img src="Dresses/foto15.jpg" alt="f4"><input type="checkbox" id ="checkbox12"><p>Simply Black ~400$</p></div>
+            <div class="fustana"><img src="Dresses/foto16.jpg" alt="f5"><input type="checkbox" id ="checkbox13"><p>Relaxed Charm ~320$</p></div>
+            <div class="fustana"><img src="Dresses/foto24.jpg" alt="f6"><input type="checkbox" id ="checkbox14"><p>Earthy Elegance ~340$</p></div>
+            <div class="fustana"><img src="Dresses/foto18.jpg" alt="f7"><input type="checkbox" id ="checkbox15"><p>Modern Gray ~410$</p></div>
+            <div class="fustana"><img src="Dresses/foto19.jpg" alt="f8"><input type="checkbox" id ="checkbox16"><p>Neutral Beige ~280$</p></div>
+            <div class="fustana"><img src="Dresses/foto20.jpg" alt="f9"><input type="checkbox" id ="checkbox17"><p>Navy Neat ~330$</p></div>
+            <div class="fustana"><img src="Dresses/foto21.jpg" alt="f10"><input type="checkbox" id ="checkbox18"><p>Timeless White ~420$</p></div>
+            <div class="fustana"><img src="Dresses/foto22.jpg" alt="f11"><input type="checkbox" id ="checkbox19"><p>Rich Burgundy ~450$</p></div>
+            <div class="fustana"><img src="Dresses/foto23.jpg" alt="f13"><input type="checkbox" id ="checkbox20"><p>Emerald Ease ~350$</p></div>
         </div>
         <br><br><br>
         <h1 class="bb">Bridesmaid's Dresses</h1>
         <div class="inspo">
-            <div class="fustana"><img src="Dresses/foto25.jpg" alt="f1"><input type="checkbox" id ="checkbox"><p>Sage Serenity ~200$ (per person)</p></div>
-            <div class="fustana"><img src="Dresses/foto26.jpg" alt="f4"><input type="checkbox" id ="checkbox"><p>Sunset Hues ~120$ (per person)</p></div>
-            <div class="fustana"><img src="Dresses/foto27.jpg" alt="f5"><input type="checkbox" id ="checkbox"><p>Peony Perfection ~150$ (per person)</p></div>
-            <div class="fustana"><img src="Dresses/foto28.jpg" alt="f6"><input type="checkbox" id ="checkbox"><p>Silk Wine ~180$ (per person)</p></div>
-            <div class="fustana"><img src="Dresses/foto29.jpg" alt="f7"><input type="checkbox" id ="checkbox"><p>Golden Sunshine ~100$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto25.jpg" alt="f1"><input type="checkbox" id ="checkbox21"><p>Sage Serenity ~200$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto26.jpg" alt="f4"><input type="checkbox" id ="checkbox22"><p>Sunset Hues ~120$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto27.jpg" alt="f5"><input type="checkbox" id ="checkbox23"><p>Peony Perfection ~150$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto28.jpg" alt="f6"><input type="checkbox" id ="checkbox24"><p>Silk Wine ~180$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto29.jpg" alt="f7"><input type="checkbox" id ="checkbox25"><p>Golden Sunshine ~100$ (per person)</p></div>
         </div>
         <br><br><br>
         <h1 class="bb">Groomsmen Attire</h1>
         <div class="inspo">
-            <div class="fustana"><img src="Dresses/foto30.jpg" alt="f1"><input type="checkbox" id ="checkbox"><p>Crisp Ivory ~180$ (per person)</p></div>
-            <div class="fustana"><img src="Dresses/foto31.jpg" alt="f4"><input type="checkbox" id ="checkbox"><p>Soft Taupe ~120$ (per person)</p></div>
-            <div class="fustana"><img src="Dresses/foto33.jpg" alt="f5"><input type="checkbox" id ="checkbox"><p>Rustic Earth ~150$ (per person)</p></div>
-            <div class="fustana"><img src="Dresses/foto32.jpg" alt="f6"><input type="checkbox" id ="checkbox"><p>Classic Sage ~190$ (per person)</p></div>
-            <div class="fustana"><img src="Dresses/foto34.jpg" alt="f7"><input type="checkbox" id ="checkbox"><p>Timeless Blue ~200$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto30.jpg" alt="f1"><input type="checkbox" id ="checkbox26"><p>Crisp Ivory ~180$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto31.jpg" alt="f4"><input type="checkbox" id ="checkbox27"><p>Soft Taupe ~120$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto33.jpg" alt="f5"><input type="checkbox" id ="checkbox28"><p>Rustic Earth ~150$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto32.jpg" alt="f6"><input type="checkbox" id ="checkbox29"><p>Classic Sage ~190$ (per person)</p></div>
+            <div class="fustana"><img src="Dresses/foto34.jpg" alt="f7"><input type="checkbox" id ="checkbox30"><p>Timeless Blue ~200$ (per person)</p></div>
         </div>
 
         
@@ -297,9 +297,96 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
     <button type="submit">Submit Measurements</button>
 </form>
 </div>
+<div class="myCart">
+    <button id="saveCart">Save to Cart</button>
+</div>
     </main>
     <footer>
     <?php include_once 'footer.php'?>
     </footer>
+    <script> 
+     document.getElementById('saveCart').addEventListener('click', function () {
+    const itemsSelektuara = [];
+
+    document.querySelectorAll('.package').forEach(divPaketes => {
+        const button = divPaketes.querySelector('.butoni');
+        if (button) {
+            const emripaketes = divPaketes.querySelector('h3').innerText;
+            const cmimipaketes = parseFloat(divPaketes.querySelector('.cmimi').innerText.replace('$', '').replace('-', '').trim());
+            const pershkrimi = divPaketes.querySelector('ul').innerText;
+            const imazhi = "image-path-placeholder"; 
+            itemsSelektuara.push({
+                name: emripaketes,
+                cost: cmimipaketes,
+                description: pershkrimi,
+                image: imazhi
+            });
+        }
+    });
+
+    document.querySelectorAll('.inspo input[type="checkbox"]:checked').forEach(checkbox => {
+        const id = checkbox.id.replace('checkbox', '');
+        const name = checkbox.parentElement.querySelector('p').innerText;
+        const cost = parseFloat(checkbox.parentElement.querySelector('p').innerText.split('~')[1].replace('$', '').trim());
+        const image = checkbox.parentElement.querySelector('img').src;
+
+        itemsSelektuara.push({ id, name, cost, image });
+    });
+
+    const floket = document.querySelector('input[name="hair"]:checked');
+    if (floket) {
+        const floketcontain = floket.closest('.stili');
+        const floketemri = floketcontain.querySelector('p').innerText;
+        const floketimazhi = floketcontain.querySelector('img').src;
+
+        const hairId = `hair-${Array.from(document.querySelectorAll('input[name="hair"]')).indexOf(floket)}`;
+
+        itemsSelektuara.push({
+            id: hairId,
+            name: floketemri,
+            cost: 0, 
+            image: floketimazhi
+        });
+    }
+
+    if (itemsSelektuara.length > 0) {
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'Budget.php';
+
+        itemsSelektuara.forEach(item => {
+            const inputId = document.createElement('input');
+            inputId.type = 'hidden';
+            inputId.name = 'item_id[]';
+            inputId.value = item.id || '';
+            form.appendChild(inputId);
+
+            const inputName = document.createElement('input');
+            inputName.type = 'hidden';
+            inputName.name = 'item_name[]';
+            inputName.value = item.name;
+            form.appendChild(inputName);
+
+            const inputCost = document.createElement('input');
+            inputCost.type = 'hidden';
+            inputCost.name = 'item_cost[]';
+            inputCost.value = item.cost;
+            form.appendChild(inputCost);
+
+            const inputImage = document.createElement('input');
+            inputImage.type = 'hidden';
+            inputImage.name = 'item_image[]';
+            inputImage.value = item.image;
+            form.appendChild(inputImage);
+        });
+
+        document.body.appendChild(form);
+        form.submit();
+    } else {
+        alert('Please select at least one item!');
+    }
+});
+
+    </script>
 </body>
 </html>
