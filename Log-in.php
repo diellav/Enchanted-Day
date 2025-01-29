@@ -1,9 +1,10 @@
 <?php
-
+session_start();
 include_once 'Database/Databaza.php';
 include_once 'User.php';
-
-session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 if ($_SERVER['REQUEST_METHOD']=='POST') {
     $db = new Databaza();
     $connection = $db->getConnection();
@@ -18,6 +19,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     if ($user->login($username, $password)) {
         $_SESSION['logged_in'] = true; 
         $_SESSION['username'] = $username;
+        if ($username == "admin") {
+            $_SESSION['admin'] = true;
+        }
             header("Location: HomePage.php"); 
             exit();
         setcookie("logged_out", "", time() - 3600, "/", "", true, true);

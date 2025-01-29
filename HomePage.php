@@ -16,11 +16,6 @@ else {
     </script>";
 }
 
-if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
-    $_SESSION['admin'] = true;
-} else {
-    $_SESSION['admin'] = false;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

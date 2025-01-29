@@ -67,8 +67,8 @@ class User{
             else {
                 if ( $username== "admin" && $password == "admin123") {
                     $_SESSION['username'] = "admin";
-                    return true; 
                     $_SESSION['error'] = 'Welcome admin!';
+                    return true; 
             }
                 $_SESSION['error'] = 'Username does not exist';
                 return false;

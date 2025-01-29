@@ -35,7 +35,7 @@
         </script>";
     }
     
-if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
+if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     echo "<script>alert('You are the admin!');</script>";
     echo "<script>window.location.href='HomePage.php';</script>";
     exit; 
@@ -57,7 +57,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
     <div class="container">
             <img src="Catering&Cakes_photos/beef-menu.jpg" alt="Beef Menu">
             <div class="pershkrim">
-            <div class="title"><p><b>Beef Luxury</b></p><p>Add to List<input type="checkbox" id ="checkbox1"></p></div>
+            <div class="title"><p p class='name'><b>Beef Luxury</b></p><p>Add to List<input type="checkbox" id ="checkbox1"></p></div>
             <p>Indulge in a variety of expertly prepared beef dishes, 
             crafted to bring richness and elegance to your wedding celebration.</p>
             <div class="desc">
@@ -114,7 +114,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
     <div class="container">
                 <img src="Catering&Cakes_photos/chicken-delights.jpg" alt="Chicken Menu">
                 <div class="pershkrim">
-                <div class="title"><p><b>Chicken Delights</b></p><p>Add to List<input type="checkbox" id ="checkbox2"></p></div>
+                <div class="title"><p class='name'><b>Chicken Delights</b></p><p>Add to List<input type="checkbox" id ="checkbox2"></p></div>
                 <p>Indulge in a selection of premium chicken dishes crafted to suit every taste and elevate your wedding dining experience.</p>
                 <div class="desc">
                     
@@ -166,7 +166,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         <div class="container">
             <img src="Catering&Cakes_photos/seafood.jpg" alt="Seafood menu">
             <div class="pershkrim">
-            <div class="title"><p><b>Exquisite Seafood Menu</b></p><p>Add to List<input type="checkbox" id ="checkbox3"></p></div>
+            <div class="title"><p p class='name'><b>Exquisite Seafood Menu</b></p><p>Add to List<input type="checkbox" id ="checkbox3"></p></div>
             <p>Indulge in a selection of premium chicken dishes crafted to suit every taste and elevate your wedding dining experience.</p>
             <div class="desc">
                         
@@ -223,7 +223,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
     <div class="container">
                     <img src="Catering&Cakes_photos/vegetarian.jpg" alt="Vegetarian Menu">
                     <div class="pershkrim">
-                    <div class="title"><p><b>Vegetarian & Vegan</b></p><p>Add to List<input type="checkbox" id ="checkbox4"></p></div>
+                    <div class="title"><p p class='name'><b>Vegetarian & Vegan</b></p><p>Add to List<input type="checkbox" id ="checkbox4"></p></div>
                     <p>Delight in our plant-based menu, featuring vibrant appetizers, hearty mains, fresh sides, and artisanal drinks.</p>
                     <div class="desc">
                         
@@ -279,7 +279,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         <div class="container">
             <img src="Catering&Cakes_photos/international.jpg" alt="Vegetarian Menu">
             <div class="pershkrim">
-            <div class="title"><p><b>International Cuisine</b></p><p>Add to List<input type="checkbox" id ="checkbox5"></p></div>
+            <div class="title"><p p class='name'><b>International Cuisine</b></p><p>Add to List<input type="checkbox" id ="checkbox5"></p></div>
             <p>Embark on a global culinary journey with an international wedding menu inspired by diverse cuisines to celebrate love and culture.</p>
             <div class="desc">
                 
@@ -451,13 +451,13 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
             const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked'); 
         
             checkboxes.forEach(checkbox => {
-                const id = checkbox.id.replace('checkbox', ''); // Get the checkbox ID
-                const prindi = checkbox.closest('.cake') || checkbox.closest('.fill') || checkbox.closest('.tier'); 
+                const id = checkbox.id.replace('checkbox', '');
+                const prindi = checkbox.closest('.cake') || checkbox.closest('.fill') || checkbox.closest('.tier') || checkbox.closest('.container');
             
                 if (prindi) {
                     const emri = prindi.querySelector('p.name') ? prindi.querySelector('p.name').innerText : '';
-                    const cmimi = prindi.querySelector('p.price') ? parseFloat(prindi.querySelector('p.price').innerText.replace('$', '').trim()) : 0; 
-                    const foto = prindi.classList.contains('tier') ? '' : prindi.querySelector('img') ? prindi.querySelector('img').src : '';
+                    const cmimi = prindi.querySelector('p.price') ? parseFloat(prindi.querySelector('p.price').innerText.replace('Price per person:', '').replace('$', '').trim()): 0; 
+                    const foto = prindi.querySelector('img')  ? prindi.querySelector('img').src : 'Fotot/cake_logo.jpg';
 
                     if (emri && cmimi > 0) {
                         itemsSelektuara.push({ id: id, name: emri, cost: cmimi, image: foto });

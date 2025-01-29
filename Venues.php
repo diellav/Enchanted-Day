@@ -10,15 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=WindSong&display=swap" rel="stylesheet">
+    <style> 
+    #edit{
+        display:flex;
+        width:fit-content;
+        margin-top:40px;
+        margin-left:5%;
+        text-decoration:none;
+        color:black;
+        font-size:larger;
+        border: 2px solid rgb(173, 173, 173);
+        background-color:rgb(236, 234, 234);
+        padding:0.5%;
+        border-radius: 5px;
+    }
+   </style>
 </head>
 <body>
-    <header>
-        <?php include_once 'header.php'?>
-    </header>
-
     <?php
     session_start();
 
+    include_once 'header.php';
     if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
         echo "<script>
             alert('Please sign up or log in to access this page.');
@@ -32,12 +44,6 @@
         username=document.getElementById('signup');
             username.textContent='".$_SESSION['username']."';});
         </script>";
-    }
-
-    if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
-        echo "<script>alert('You are the admin!');</script>";
-        echo "<script>window.location.href='HomePage.php';</script>";
-        exit; 
     }
 
     $servername = "localhost";
@@ -57,6 +63,10 @@
     if ($result->num_rows > 0) {
         $kategoria = '';
         
+        if(isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
+            echo "<a href='shtimi_venues.php' id='edit'>Edit Venues +</a>";
+        }
+      
         echo "<div class='about_venue'><h1>Wedding Venues</h1><h4>
                 Explore our handpicked selection of stunning hotels,
                 exclusive estates, elegant venues, and fine dining restaurants perfect for your wedding celebration.</h4></div>";

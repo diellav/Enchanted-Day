@@ -6,7 +6,7 @@ class BookingDatabase{
     public function __construct($db) {
         $this->conn = $db;
     }
-    public function book($first_name, $last_name, $email, $event_date, $guest_number,$additional_details,$userId) {
+    public function book($first_name, $last_name, $email, $event_date, $guest_number,$additional_details) {
         if ($_SESSION['email'] !== $email) {
             $_SESSION['error'] = 'You can only book a venue with your own email address.';
             return false;

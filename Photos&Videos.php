@@ -34,7 +34,7 @@
         </script>";
     }
     
-if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
+if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     echo "<script>alert('You are the admin!');</script>";
     echo "<script>window.location.href='HomePage.php';</script>";
     exit; 
@@ -53,17 +53,17 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         <div>Find the ideal photography package that suits your wedding day.
              We offer flexible options ranging from intimate 2-hour sessions to complete 10-hour coverage.
              Every package includes full access to your edited images and an online gallery for easy viewing and sharing.</div>
-        <div class="cmimi"><a href="#"></a>2 Hours Photography<br><p>390$</p></div>
-        <div class="cmimi"><a href="#"></a>3 Hours Photography<br><p>470$</p></div>
-        <div class="cmimi"><a href="#"></a>4 Hours Photography<br><p>570$</p></div>
-        <div class="cmimi"><a href="#"></a>5 Hours Photography<br><p>670$</p></div>
-        <div class="cmimi"><a href="#"></a>6 Hours Photography<br><p>770$</p></div>
-        <div class="cmimi"><a href="#"></a>7 Hours Photography<br><p>870$</p></div>
-        <div class="cmimi"><a href="#"></a>8 Hours Photography<br><p>950$</p></div>
-        <div class="cmimi"><a href="#"></a>9 Hours Photography<br><p>1050$</p></div>
-        <div class="cmimi"><a href="#"></a>10 Hours Photography<br><p>1150$</p></div>
-        <div class="cmimi special"><a href="#"></a>Add an Extra Hour<br><p>100$</p></div>
-        <div class="cmimi special"><a href="#"></a>Pre-Wedding Shoot<br><p>350$</p></div>
+        <div class="cmimi"><p>2 Hours Photography</p><br><p class="price">390$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi"><p>3 Hours Photography</p><br><p class="price">470$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi"><p>4 Hours Photography</p><br><p class="price">570$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi"><p>5 Hours Photography</p><br><p class="price">670$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi"><p>6 Hours Photography</p><br><p class="price">770$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi"><p>7 Hours Photography</p><br><p class="price">870$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi"><p>8 Hours Photography</p><br><p class="price">950$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi"><p>9 Hours Photography</p><br><p class="price">1050$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi"><p>10 Hours Photography</p><br><p class="price">1150$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi special"><p>Add an Extra Hour</p><br><p class="price">100$</p><input type="button" value="Add to list"></div>
+        <div class="cmimi special"><p>Pre-Wedding Shoot</p><br><p class="price">350$</p><input type="button" value="Add to list"></div>
     </div>
 
     <div class="details">
@@ -84,7 +84,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
          Enjoy drone footage, social media teasers, and a full wedding video album to relive your day forever.</p></div>
     <div class="video">
         <div class="package">
-            <h3>The "Highlights" Film Package</h3>
+            <p>The Highlights Film Package</p>
             <p class="price">1190$</p>
             <ul>
                 <li>Up to 10 hours of filming (until a few songs after your First Dance)</li>
@@ -94,10 +94,10 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
                 <li>Travel expenses included</li>
                 <li>VAT included</li>
             </ul>
-            <button><a href="#"></a>Add to list</button>
+            <input type="button" value="Add to list">
         </div>
         <div class="package">
-            <h3>The "Aerosmith" Film Package</h3>
+            <p>The Aerosmith Film Package</p>
             <p class="price">2390$</p>
             <ul>
                 <li>Up to 10 hours of filming (until after your First Dance)</li>
@@ -111,10 +111,10 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
                 <li>1 Videographer</li>
                 <li>All travel and VAT included</li>
             </ul>
-            <button><a href="#"></a>Add to list</button>
+            <input type="button" value="Add to list">
         </div>
         <div class="package">
-            <h3>The "At The Movies" Film Package</h3>
+            <p>The At The Movies Film Package</p>
             <p class="price">1490$</p>
             <ul>
                 <li>Up to 10 hours of filming (until after your First Dance)</li>
@@ -126,13 +126,13 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
                 <li>All travel and VAT included</li>
                 <li>150$ deposit required</li>
             </ul>
-            <button><a href="#"></a>Add to list</button>
+            <input type="button" value="Add to list">
         </div>
     </div>
     <h1 class="titulli2">Photo & Video Combo Package</h1>
     <div class="paketa_combo">
         <div class="package">
-            <h3>The "Complete Memories" Package</h3>
+            <p>The Complete Memories Package</p>
             <p class="price">2990$</p>
             <ul>
                 <li>Up to 8 hours of photography and videography coverage.</li>
@@ -145,8 +145,11 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
                 <li>All travel expenses within the USA and VAT included.</li>
                 <li>Guest, Groom and Bridal party arrivals</li>
             </ul>
-            <button><a href="#"></a>Add to list</button>
+            <input type="button" value="Add to list">
         </div>
+    </div>
+    <div class="myCart">
+        <button id="saveCart">Save to Cart</button>
     </div>
     <h1 class="titulli2">Photos that we have taken</h1>
     <div class="fotot">
@@ -165,5 +168,63 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
     <footer>
     <?php include_once 'footer.php'?>
     </footer>
+    <script>
+  
+
+  const itemsSelektuara = []; 
+  let idCounter = 200;
+document.querySelectorAll('div input[type="button"]').forEach(button => { 
+    button.addEventListener('click', function() {
+        const prindi = this.closest('div'); 
+        const emri = prindi.querySelector('p').innerText.trim(); 
+        const cmimi = parseFloat(prindi.querySelector('.price').innerText.replace('$', '').trim()); 
+        const id = idCounter++;
+        const imazhi = 'Fotot/wedding_camera.jpg'; 
+
+        itemsSelektuara.push({ id: id, name: emri, cost: cmimi ,image:imazhi});
+        console.log('Item added:', { id: id, name: emri, cost: cmimi,image:imazhi });
+    });
+});
+
+document.getElementById('saveCart').addEventListener('click', function() {
+    console.log('Cart items:', itemsSelektuara);
+    if (itemsSelektuara.length > 0) {
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'Budget.php';
+
+        itemsSelektuara.forEach(item => {
+            const inputiId = document.createElement('input');
+            inputiId.type = 'hidden';
+            inputiId.name = 'item_id[]';
+            inputiId.value = item.id;
+            form.appendChild(inputiId);
+
+            const inputiEmri = document.createElement('input');
+            inputiEmri.type = 'hidden';
+            inputiEmri.name = 'item_name[]';
+            inputiEmri.value = item.name;
+            form.appendChild(inputiEmri);
+
+            const inputiCmimi = document.createElement('input');
+            inputiCmimi.type = 'hidden';
+            inputiCmimi.name = 'item_cost[]';
+            inputiCmimi.value = item.cost;
+            form.appendChild(inputiCmimi);
+
+            const inputiFoto = document.createElement('input');
+            inputiFoto.type = 'hidden';
+            inputiFoto.name = 'item_image[]';
+            inputiFoto.value = item.image;
+            form.appendChild(inputiFoto);
+        });
+        document.body.appendChild(form);
+        form.submit();
+    } else {
+        alert('Please select at least one item!');
+    }
+});
+
+         </script>
 </body>
 </html>

@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include_once 'Database/Databaza.php';
 include_once 'User.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -6,10 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $connection = $db->getConnection();
     $user = new User($connection);
 
-if (!isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === false) {
-    header("Location: SignUp.php"); 
-    exit;
-}
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
     if (!$connection) {
         echo "<script>console.log('Database failed successfully!');</script>";
     } else {

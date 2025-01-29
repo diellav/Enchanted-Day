@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         </script>";
     }
     
-if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
+if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     echo "<script>alert('You are the admin!');</script>";
     echo "<script>window.location.href='HomePage.php';</script>";
     exit; 
@@ -160,7 +160,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
         </div>
         <div class="booking">
             <h3>Book Your Venue</h3>
-            <form action="venue_nr1.php" method="POST" class="regjistrimi" id="form">
+            <form action="venue_nr1.php#form" method="POST" class="regjistrimi" id="form">
                 <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
                 <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
