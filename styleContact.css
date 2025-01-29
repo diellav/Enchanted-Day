@@ -117,4 +117,9 @@ body{
 .forma button:hover {
     background-color: #ff4d6d;
 }
+@media (max-width: 480px) {
+    .contactUs{
+        margin-top: 20%;
+    }
+}
 

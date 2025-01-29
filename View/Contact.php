@@ -1,12 +1,18 @@
 <?php
 include_once '../Database/Databaza.php';
 include_once 'Databaza_kontakt.php';
+echo " <link rel='stylesheet' href='../Dashboard.css'>";
 
 $db = new Databaza();
 $connection = $db->getConnection();
 
 $kontakt = new Databaza_kontakt($connection);
 $kontaktet = $kontakt->getAllUsers();
+
+echo "<html><a href='../Signout.php' id='signout'>SignOut</a></html>";
+echo "<html><a href='Dashboard.php' id='contact'>View Users</a></html>";
+echo "<html><a href='Cart_Dashboard.php' id='cart'>View Cart</a></html>"; 
+echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
 
 echo "<table border='1'>
 <tr>

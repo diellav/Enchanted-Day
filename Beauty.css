@@ -135,17 +135,17 @@ li {
     justify-content: center;
 }
 .fustana img{
-    width: 280px;   
-    height: 420px; 
+    width: 100%;   
+    height: 400px; 
     margin-bottom:3px;  
     border-radius: 8px;
 }
 .fustana{
     display: flex;
-    flex-direction: column;
     justify-content: start;
     flex-wrap: wrap;
-    width: 18%;
+    width: 16%;
+    height: 500px;
     margin:1%;
     line-height: 1.5;
     font-size: larger;
@@ -184,9 +184,8 @@ li {
     display: flex;
     flex-direction: row;
     width:100%;
-    height:60vh;
+    height: 50%;
     justify-content: space-evenly;
-    align-items: start;
     flex-wrap: wrap;
     margin:0%;
 
@@ -251,4 +250,85 @@ input[type="number"] {
     border: solid 2px rgb(86, 86, 86);
     border-radius: 10px;
     font-size: small;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        flex-direction: column; 
+    }
+
+    .box {
+        width: 100%; 
+    }
+
+    .package {
+        width: 80%; 
+    }
+
+    .beauty {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fustana {
+        width: 30%;
+        height: 400px;
+    }
+
+    .fustana img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .stili {
+        width: 45%;
+        height: auto;
+    }
+
+    .measurements form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .measure {
+        width: 80%;
+        height: 40%;
+        margin-top: 10%;
+
+    }
+
+    .measurements button {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .bb {
+        width: 90%; 
+        text-align: center;
+    }
+
+    .package {
+        width: 100%;
+    }
+    .fustana img{
+        height: 200px;
+
+    }
+    .fustana{
+        width: 40%;
+        height: 300px;
+    }
+    .stili {
+        width: 100%;
+    }
+
+    .measure {
+        width: 100%;
+    }
+
+    .measurements button {
+        width: 80%;
+    }
 }

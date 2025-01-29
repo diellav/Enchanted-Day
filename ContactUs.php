@@ -35,6 +35,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     <title>Contact_Us</title>
     <link rel="stylesheet" href="styleContact.css">
     <link rel="stylesheet" href="header&footer.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=WindSong&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>

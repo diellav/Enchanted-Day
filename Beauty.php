@@ -305,20 +305,30 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     <?php include_once 'footer.php'?>
     </footer>
     <script> 
-     document.getElementById('saveCart').addEventListener('click', function () {
+     document.querySelectorAll('.butoni').forEach(button => {
+    button.addEventListener('click', function () {
+        this.classList.toggle('selected'); 
+    });
+});
+
+document.getElementById('saveCart').addEventListener('click', function () {
     const itemsSelektuara = [];
 
     document.querySelectorAll('.package').forEach(divPaketes => {
-        const button = divPaketes.querySelector('.butoni');
-        if (button) {
+        const button = divPaketes.querySelector('.butoni'); 
+
+        let paketaId =400;
+
+        if (button && button.classList.contains('selected')) { 
+            const idpaketes = paketaId++;
             const emripaketes = divPaketes.querySelector('h3').innerText;
             const cmimipaketes = parseFloat(divPaketes.querySelector('.cmimi').innerText.replace('$', '').replace('-', '').trim());
-            const pershkrimi = divPaketes.querySelector('ul').innerText;
-            const imazhi = "image-path-placeholder"; 
+            const imazhi = "Fotot/makeover.png"; 
+
             itemsSelektuara.push({
+                id: idpaketes,
                 name: emripaketes,
                 cost: cmimipaketes,
-                description: pershkrimi,
                 image: imazhi
             });
         }
@@ -328,7 +338,8 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
         const id = checkbox.id.replace('checkbox', '');
         const name = checkbox.parentElement.querySelector('p').innerText;
         const cost = parseFloat(checkbox.parentElement.querySelector('p').innerText.split('~')[1].replace('$', '').trim());
-        const image = checkbox.parentElement.querySelector('img').src;
+        const image = checkbox.parentElement.querySelector('img') ? checkbox.parentElement.querySelector('img').src : 'Fotot/cake_logo.jpg';
+
 
         itemsSelektuara.push({ id, name, cost, image });
     });
@@ -339,12 +350,13 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
         const floketemri = floketcontain.querySelector('p').innerText;
         const floketimazhi = floketcontain.querySelector('img').src;
 
-        const hairId = `hair-${Array.from(document.querySelectorAll('input[name="hair"]')).indexOf(floket)}`;
+        let idfloket=300;
+        const hairId = idfloket++;
 
         itemsSelektuara.push({
             id: hairId,
             name: floketemri,
-            cost: 0, 
+            cost: 35, 
             image: floketimazhi
         });
     }

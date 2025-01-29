@@ -14,6 +14,7 @@ echo "<script>alert('Welcome, admin!');</script>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="../Dashboard.css">
     <title>Document</title>
 </head>
 <body>
@@ -50,14 +51,18 @@ echo "<script>alert('Welcome, admin!');</script>";
                 <td>$perdoruesi[Phone_number]</td> 
                 <td>$perdoruesi[Username]</td> 
                 <td>$perdoruesi[Password]</td> 
-                <td><a href='Edit.php?id=$perdoruesi[id]'>Edit</a></td> 
-                <td><a href='Delete.php?id=$perdoruesi[id]'>Delete</a></td>
+                <td><a href='Edit.php?id=$perdoruesi[id]' id='edit'>Edit</a></td> 
+                <td><a href='Delete.php?id=$perdoruesi[id]' id='delete'>Delete</a></td>
             </tr>
             ";
         }
-        echo "<html><a href='../Signout.php'>SignOut</a></html>";
-        echo "<html><a href='Contact.php'>View contact</a></html>";
+        echo "<html><a href='../Signout.php' id='signout'>SignOut</a></html>";
+        echo "<html><a href='Contact.php' id='contact'>View contact</a></html>";
+        echo "<html><a href='Cart_Dashboard.php' id='cart'>View cart</a></html>";
+        echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
+
         ?>
     </table>
+
 </body>
 </html>
