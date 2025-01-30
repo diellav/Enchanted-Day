@@ -160,7 +160,7 @@ if (count($items_mycart) > 0) {
         echo "</form>";
         echo "</div>";
     }
-
+    $_SESSION['total']= $totali;
     echo "<h2>Total Budget: $" . number_format($totali, 2) . "</h2>";
     echo "<form method='POST' action='Budget.php'>
 <label for='guests'>Number of Guests:</label>
@@ -172,7 +172,7 @@ if (count($items_mycart) > 0) {
 <button type='submit'>Update Total</button>
 </form>
 ";
-    echo "<button><a href='Payment.php'><h3>Pay Now</h3></a></button>";
+    echo "<button><a href='Pay.php'><h3>Pay Now</h3></a></button>";
 } else {
     echo "<p>Your cart is empty.</p>";
 }

@@ -1,29 +1,31 @@
 <?php
 include_once '../Database/Databaza.php';
-include_once 'Databaza_Cart.php';
+include_once 'Databaza_Pay.php';
 echo " <link rel='stylesheet' href='../Dashboard.css'>";
 
 $db = new Databaza();
 $connection = $db->getConnection();
 
-$karta = new Databaza_Cart($connection);
-$kartat = $karta->getAllFromCart();
+$karta = new Databaza_Pay($connection);
+$kartat = $karta->getAllFromPay();
 echo "<html><a href='../Signout.php' id='signout'>SignOut</a></html>";
 echo "<html><a href='Dashboard.php' id='contact'>View Users</a></html>";
 echo "<html><a href='Contact.php' id='cart'>View Contact</a></html>"; 
-echo "<html><a href='Payments_Dashboard.php' id='cart'>View Payments</a></html>"; 
+echo "<html><a href='Cart_Dashboard.php' id='cart'>View Cart</a></html>"; 
 echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
 echo "<html><a href='Venues_Dashboard.php' id='contact'>View Booked Venues</a></html>";
 
 echo "<table border='1'>
 <tr>
     <th>id</th>
-    <th>item_id</th>
-    <th>item_name</th>
-    <th>item_cost</th>
-    <th>user_id</th>
-    <th>added_at</th>
-    <th>item_image</th>
+    <th>name_surname</th>
+    <th>method</th>
+    <th>card_number</th>
+    <th>expiration_year</th>
+    <th>security_Code</th>
+    <th>address</th>
+    <th>total</th>
+    <th>userId</th>
 </tr>";
 
 foreach ($kartat as $perdoruesi) {
@@ -31,12 +33,14 @@ foreach ($kartat as $perdoruesi) {
     "
     <tr>
         <td>{$perdoruesi['id']}</td>
-        <td>{$perdoruesi['item_id']}</td> 
-        <td>{$perdoruesi['item_name']}</td> 
-        <td>{$perdoruesi['item_cost']}</td> 
-        <td>{$perdoruesi['user_id']}</td> 
-        <td>{$perdoruesi['added_at']}</td> 
-        <td>{$perdoruesi['item_image']}</td> 
+        <td>{$perdoruesi['name_surname']}</td> 
+        <td>{$perdoruesi['method']}</td> 
+        <td>{$perdoruesi['card_number']}</td> 
+        <td>{$perdoruesi['expiration_year']}</td> 
+        <td>{$perdoruesi['security_Code']}</td> 
+        <td>{$perdoruesi['address']}</td> 
+        <td>{$perdoruesi['total']}</td> 
+        <td>{$perdoruesi['userId']}</td> 
     </tr>
     ";
 }
