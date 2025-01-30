@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     $event_date = $_POST['event_date'];
     $guest_number = $_POST['guest_number'];
     $additional_details = $_POST['additional_details'];
+    $venue=$_SESSION['venue'];
     if ($book->book($first_name, $last_name, $email, $event_date, $guest_number,$additional_details)) {
         echo "<script>alert('Venue booked successfully!');</script>";
     } 
@@ -73,6 +74,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     <main>
         <div id="titulli">
             <p> Brooklyn Winery </p>
+            <?php $_SESSION['venue']='Brooklyn Winery' ;?>
             <p id="adresa">61 Guernsey St, Brooklyn, NY 11222, United States</p>
          </div>
         <div id="slideshow">

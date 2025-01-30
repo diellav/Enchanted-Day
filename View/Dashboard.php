@@ -60,6 +60,7 @@ echo "<script>alert('Welcome, admin!');</script>";
         echo "<html><a href='Contact.php' id='contact'>View contact</a></html>";
         echo "<html><a href='Cart_Dashboard.php' id='cart'>View cart</a></html>";
         echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
+        echo "<html><a href='Venues_Dashboard.php' id='contact'>View Booked Venues</a></html>";
 
         ?>
     </table>

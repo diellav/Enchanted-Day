@@ -12,8 +12,8 @@ class BookingDatabase{
             return false;
         }
         $userId=$_SESSION['user_id'];
-
-        $query = "INSERT INTO {$this->table_name} (first_name, last_name, email, event_date,guest_number,additional_details, user_id) VALUES (:first_name, :last_name, :email,  :event_date, :guest_number,:additional_details, :userId)";
+        $venue=$_SESSION['venue'];
+        $query = "INSERT INTO {$this->table_name} (first_name, last_name, email, event_date,guest_number,additional_details, user_id,venue) VALUES (:first_name, :last_name, :email,  :event_date, :guest_number,:additional_details, :userId, :venue)";
 
         $stmt = $this->conn->prepare($query);
         
@@ -24,6 +24,7 @@ class BookingDatabase{
         $stmt->bindParam(':guest_number', $guest_number);
         $stmt->bindParam(':additional_details', $additional_details);
         $stmt->bindParam(':userId', $userId); 
+        $stmt->bindParam(':venue', $venue); 
         if ($stmt->execute()) {
             return true;
         }
