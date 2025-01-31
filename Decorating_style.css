@@ -38,7 +38,9 @@ body{
 .inspiration{
     font-size: x-large;
     font-style: italic;
-    margin: 0%;
+    margin-left:20px;
+    background: linear-gradient(to right, rgb(238, 228, 220), rgba(255, 255, 255, 1));
+    width:40%;
 }
 .dekore input[type="checkbox"]{
     appearance: none;

@@ -54,9 +54,9 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
             </p>
             <p>
                 Determining your wedding budget is the most important part of wedding planning because it will affect every decision and purchase you make from now until your big day.
-                Setting a wedding budget can feel overwhelming, and while there is certainly a lot to consider, it doesn’t need to be stressful.
-                Which is exactly why we’ve created this article. In it, we'll go over everything you need to know about wedding budgets, including typical wedding budget breakdowns, 
-                what your wedding budget needs to account for, sample budget, and the best tips and strategies for stretching your budget as far as it will go. So pull up a spreadsheet and let’s get started.
+                Setting a wedding budget can feel overwhelming, and while there is certainly a lot to consider, it doesn't need to be stressful.
+                Which is exactly why we've created this article. In it, we'll go over everything you need to know about wedding budgets, including typical wedding budget breakdowns, 
+                what your wedding budget needs to account for, sample budget, and the best tips and strategies for stretching your budget as far as it will go. So pull up a spreadsheet and let's get started.
             </p>   
         </div>
         <div class="photo">
@@ -69,7 +69,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
             <p><strong>WHAT YOU CAN ACTUALLY AFFORD</strong></p>
             <p>
                 When determining your budget, be sure to factor in both daily expenses such as rent or mortgage, car payments, or debt you might be paying off as well as costs on the horizon such as a down payment on a home,
-                medical expenses, or even other weddings you’ll be attending. Doing so will help you create a more realistic wedding budget, and will make sure you aren’t overextending yourself where it really counts.
+                medical expenses, or even other weddings you'll be attending. Doing so will help you create a more realistic wedding budget, and will make sure you aren't overextending yourself where it really counts.
             </p>
             <div class="ph"><img src="Guide/foto4.jpg" alt="foto4"></div>
         </div>
@@ -81,16 +81,16 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
             </p>
             <p>
                 That being said, the average cost of a wedding in the United States in 2024 is $33,000. 
-                But just because that number is the average, doesn’t necessarily mean it is a realistic budget for you.
+                But just because that number is the average, doesn't necessarily mean it is a realistic budget for you.
                 For example, weddings in states like Rhode Island, New York, and California typically cost more than the average, while weddings in states like Utah, Kentucky, and Alaska cost less.
-                Furthermore, the type of wedding you want to throw, the time of year you’re hoping to have it, and how many guests you’d like to include will all have an impact on what a “realistic” wedding budget might be.
+                Furthermore, the type of wedding you want to throw, the time of year you're hoping to have it, and how many guests you'd like to include will all have an impact on what a “realistic” wedding budget might be.
             </p>
             <p>This is why it is so important to do the prep work we discussed in the section above to get clear about what you can spend making your dream wedding come to life.</p>
             <div class="ph"><img src="Guide/foto5.jpg" alt="foto5"></div>
             <p><strong>Wedding Budget Breakdown</strong></p>
-            <p>To help you figure out how much you’ll need to allocate for the various aspects of the celebration, such as catering, attire, flowers, music, etc., we’re sharing the average wedding budget breakdown below.</p>
-            <p>   Keep in mind, though, that these are just averages, which is why the percentages in this list don’t add up to 100. How you choose to divvy up your own wedding budget is entirely up to you (along with whoever else is paying for the wedding). 
-                You may choose to spend more or less in certain areas, and that’s totally fine. Your wedding costs, and the amount of budget you allocate to each, will also vary depending on where you’re getting married and the size of your guest list.</p>
+            <p>To help you figure out how much you'll need to allocate for the various aspects of the celebration, such as catering, attire, flowers, music, etc., we're sharing the average wedding budget breakdown below.</p>
+            <p>   Keep in mind, though, that these are just averages, which is why the percentages in this list don't add up to 100. How you choose to divvy up your own wedding budget is entirely up to you (along with whoever else is paying for the wedding). 
+                You may choose to spend more or less in certain areas, and that's totally fine. Your wedding costs, and the amount of budget you allocate to each, will also vary depending on where you're getting married and the size of your guest list.</p>
             <p>But use these average wedding budget percentages as a starting point and then customize them to create your own.</p>
         </div>
     </div>

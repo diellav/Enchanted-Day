@@ -2,7 +2,7 @@
 session_start();
 
 include_once 'Database/Databaza.php';
-include_once 'Payment.php';
+include_once 'Database/Payment.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db = new Databaza();
     $connection = $db->getConnection();

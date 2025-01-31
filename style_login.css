@@ -60,7 +60,7 @@ body{
     
 }
 .sub{
-    width: 25%;
+    width: fit-content;
     padding: 2%;
     margin-top: 2%;
     border-radius: 10px;

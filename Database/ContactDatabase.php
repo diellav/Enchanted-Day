@@ -22,7 +22,16 @@ class ContactDatabase{
         return false;
        
     }
-
+    public function getAllUsers() {
+        $conn = $this->conn;
+    
+        $sql = "SELECT * FROM contact";
+    
+        $statement = $conn->query($sql); 
+        $contact = $statement->fetchAll(PDO::FETCH_ASSOC); 
+    
+        return $contact; 
+        }
 }
 
 ?>

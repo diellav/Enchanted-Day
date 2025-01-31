@@ -10,6 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=WindSong&display=swap" rel="stylesheet">
     <title>Document</title>
+    <style> 
+    #saveCart{
+        display:flex;
+        width:fit-content;
+        margin-top:40px;
+        margin-left:5%;
+        text-decoration:none;
+        color:black;
+        font-size:larger;
+        border: 2px solid rgb(173, 173, 173);
+        background-color:rgb(236, 234, 234);
+        padding:0.5%;
+        border-radius: 5px;
+    }
+   </style>
 </head>
 <body>
 <header>

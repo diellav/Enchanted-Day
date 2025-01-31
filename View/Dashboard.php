@@ -67,7 +67,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
         echo "<html><a href='Contact.php' id='contact'>View contact</a></html>";
         echo "<html><a href='Payments_Dashboard.php' id='cart'>View Payments</a></html>"; 
         echo "<html><a href='Cart_Dashboard.php' id='cart'>View cart</a></html>";
-        echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
+        echo "<html><a href='lista_venues.php' id='cart'>View Venues</a></html>"; 
         echo "<html><a href='Venues_Dashboard.php' id='contact'>View Booked Venues</a></html>";
         echo "<html><a href='Measurements_dashboard.php' id='contact'>View Measurements</a></html>";
 

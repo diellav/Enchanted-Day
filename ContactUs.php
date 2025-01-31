@@ -1,6 +1,6 @@
 <?php
 include_once 'Database/Databaza.php';
-include_once 'ContactDatabase.php';
+include_once 'Database/ContactDatabase.php';
 
 session_start();
 if ($_SERVER['REQUEST_METHOD']=='POST') {

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
         }
 
         if(!telValid(tel.value)){
-            alert("Please put a valid phone number!");
+            alert("Please put a valid phone number! It should be in the format of XXX-XXX-XXXX");
             tel.focus();
             return ;
         }
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
      
 
         if(!passValid(password.value)){
-            alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-10 characters ");
+            alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-20 characters ");
             password.focus();
             return ;
         }

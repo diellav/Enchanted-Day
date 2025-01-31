@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once '../Database/Databaza.php';
-include_once 'Databaza_Cart.php';
+include_once '../Database/Cart.php';
 echo " <link rel='stylesheet' href='../Dashboard.css'>";
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
     echo "<script>
@@ -12,14 +12,15 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
 }
 $db = new Databaza();
 $connection = $db->getConnection();
+$userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 
-$karta = new Databaza_Cart($connection);
+$karta = new Cart($connection,$userId);
 $kartat = $karta->getAllFromCart();
 echo "<html><a href='../Signout.php' id='signout'>SignOut</a></html>";
 echo "<html><a href='Dashboard.php' id='contact'>View Users</a></html>";
 echo "<html><a href='Contact.php' id='cart'>View Contact</a></html>"; 
 echo "<html><a href='Payments_Dashboard.php' id='cart'>View Payments</a></html>"; 
-echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
+echo "<html><a href='lista_venues.php' id='cart'>View Venues</a></html>"; 
 echo "<html><a href='Venues_Dashboard.php' id='contact'>View Booked Venues</a></html>";
 echo "<html><a href='Measurements_dashboard.php' id='contact'>View Measurements</a></html>";
 

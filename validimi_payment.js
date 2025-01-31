@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
         }
 
         if(!addressValid(address.value)){
-            alert("Please put a valid address! It should be more than 10 characters long");
+            alert("Please put a valid address! It should be more than 5 characters long");
             address.focus();
             return ;
         }
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
     };
 
     const addressValid=(address)=>{
-        const addressRegex = /^[a-zA-Z0-9_.-]{10,255}$/;
+        const addressRegex = /^[a-zA-Z0-9_.&$#'" -]{5,}$/;
         return addressRegex.test(address);
     };
 

@@ -25,14 +25,14 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM venues";
 $result = $conn->query($sql);
 
-echo " <link rel='stylesheet' href='Dashboard.css'>";
+echo " <link rel='stylesheet' href='../Dashboard.css'>";
 
 echo "<html><a href='../Signout.php' id='signout'>SignOut</a></html>";
 echo "<html><a href='Dashboard.php' id='cart'>View Users</a></html>";
 echo "<html><a href='Contact.php' id='contact'>View contact</a></html>";
 echo "<html><a href='Payments_Dashboard.php' id='cart'>View Payments</a></html>"; 
 echo "<html><a href='Venues_Dashboard.php' id='cart'>View Booked Venues</a></html>"; 
-echo "<html><a href='View/Cart_Dashboard.php' id='cart'>View cart</a></html>";
+echo "<html><a href='Cart_Dashboard.php' id='cart'>View cart</a></html>";
 echo "<html><a href='shtimi_venues.php' id='cart'>Add venues</a></html>";
 echo "<html><a href='Measurements_dashboard.php' id='contact'>View Measurements</a></html>";
 

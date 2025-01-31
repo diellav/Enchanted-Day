@@ -10,6 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=WindSong&display=swap" rel="stylesheet">
     <title>Beauty</title>
+    <style> 
+    #saveCart{
+        display:flex;
+        width:fit-content;
+        margin-top:40px;
+        margin-left:5%;
+        margin-bottom:40px;
+        text-decoration:none;
+        color:black;
+        font-size:larger;
+        border: 2px solid rgb(173, 173, 173);
+        background-color:rgb(236, 234, 234);
+        padding:0.5%;
+        border-radius: 5px;
+    }
+   </style>
 </head>
 <body>
 <header>
@@ -41,7 +57,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
 
 if ($_SERVER['REQUEST_METHOD']=='POST') {
     include_once 'Database/Databaza.php';
-    include_once 'MeasureDatabase.php';
+    include_once 'Database/MeasureDatabase.php';
     $db = new Databaza();
     $connection = $db->getConnection();
     $measure = new MeasureDatabase($connection);
@@ -68,8 +84,7 @@ $userId=$_SESSION['user_id'];
 $measureResult = $measure->addMeasurements($userId, $bride_bust, $bride_waist, $bride_hips, $groom_chest, $groom_waist, $groom_hips,
 $bridesmaids_bust,$bridesmaids_waist,$bridesmaids_hips,$groomsmen_chest,$groomsmen_waist,$groomsmen_hips);
     if ( $measureResult===true) {
-        echo "<script>alert('Measurements saved successfully!');</script>";
-        header("Location: Beauty.php"); 
+        echo "<script>alert('Measurements saved successfully!'); window.location.href = 'Beauty.php'</script>";
         exit;
     } else{
         echo "<script>alert('Error submitting measurements! Please try again later.');</script>";

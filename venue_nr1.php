@@ -1,6 +1,6 @@
 <?php
 include_once 'Database/Databaza.php';
-include_once 'BookingDatabase.php';
+include_once 'Database/BookingDatabase.php';
 
 session_start();
 if ($_SERVER['REQUEST_METHOD']=='POST') {

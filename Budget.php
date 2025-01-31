@@ -48,7 +48,51 @@
     font-size: medium;
     border-radius: 5px;
 }
+#update {
+    display:flex;
+    flex-direction: column;
+    margin: 5px 80px;
+    padding: 15px;
+    width: 500px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
 
+#update input{
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+#update button {
+    background-color:rgb(214, 164, 171);
+    color: white;
+    border: none;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: larger;
+    border-radius: 5px;
+} 
+button a{
+        display:flex;
+        width:fit-content;
+        margin-top:40px;
+        margin-left:100px;
+        margin-bottom:50px;
+        text-decoration:none;
+        color:black;
+        font-size:larger;
+        border: 2px solid rgb(173, 173, 173);
+        background-color:rgb(236, 234, 234);
+        padding:0.5%;
+        border-radius: 5px;
+    }
+    button a h3 {
+    margin: 0;
+}
 @media (max-width: 768px) {
     .cart-item {
         flex-direction: column;
@@ -75,7 +119,7 @@
 <?php
 include_once 'header.php';
 include_once "Database/Databaza.php";
-include_once "Cart.php";
+include_once "Database/Cart.php";
 session_start();
 
 
@@ -162,7 +206,7 @@ if (count($items_mycart) > 0) {
     }
     $_SESSION['total']= $totali;
     echo "<h2>Total Budget: $" . number_format($totali, 2) . "</h2>";
-    echo "<form method='POST' action='Budget.php'>
+    echo "<form method='POST' action='Budget.php' id='update'>
 <label for='guests'>Number of Guests:</label>
 <input type='number' id='guests' name='guests' value='1' min='1' required><br>
 <label for='guests'>Number of Bridesmaids:</label>
@@ -174,7 +218,7 @@ if (count($items_mycart) > 0) {
 ";
     echo "<button><a href='Pay.php'><h3>Pay Now</h3></a></button>";
 } else {
-    echo "<p>Your cart is empty.</p>";
+    echo "<h2 style='italic'>Your cart is empty.</h2>";
 }
 
 ?>

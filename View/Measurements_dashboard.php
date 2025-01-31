@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once '../Database/Databaza.php';
-include_once '../MeasureDatabase.php';
+include_once '../Database/MeasureDatabase.php';
 echo " <link rel='stylesheet' href='../Dashboard.css'>";
     if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
         echo "<script>
@@ -20,7 +20,7 @@ echo "<html><a href='Dashboard.php' id='contact'>View Users</a></html>";
 echo "<html><a href='Contact.php' id='cart'>View Contact</a></html>"; 
 echo "<html><a href='Payments_Dashboard.php' id='cart'>View Payments</a></html>"; 
 echo "<html><a href='Cart_Dashboard.php' id='cart'>View Cart</a></html>"; 
-echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
+echo "<html><a href='lista_venues.php' id='cart'>View Venues</a></html>"; 
 echo "<html><a href='Venues_dashboard.php' id='cart'>View Booked Venues</a></html>"; 
 
 echo "<table border='1'>

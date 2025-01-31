@@ -141,7 +141,8 @@ body{
     align-items: center;
 }
 
-.package button {
+button, 
+input[type="button"] {
     background-color: #3f3f3f;
     color: #fff;
     border: none;
@@ -152,9 +153,6 @@ body{
     margin-top: 15px;
 }
 
-.package button:hover {
-    background-color: #5c5c5c;
-}
 .paketa_combo {
     display: flex;
     flex-wrap: wrap;

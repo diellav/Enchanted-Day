@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event){
      
 
         if(!passValid(password.value)){
-            alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-10 characters ");
+            alert("Please put a valid password!\n The password should contain letters, numbers and special characters such as: ? ! . @ $ \n The length should be between 5-20 characters ");
             password.focus();
             return false;
         }

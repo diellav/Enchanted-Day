@@ -23,5 +23,15 @@ class Cart {
         $stmt->execute([$this->userId]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function getAllFromCart() {
+        $conn = $this->conn;
+    
+        $sql = "SELECT * FROM cart";
+    
+        $statement = $conn->query($sql); 
+        $cart = $statement->fetchAll(PDO::FETCH_ASSOC); 
+    
+        return $cart; 
+        }
 }
 ?>

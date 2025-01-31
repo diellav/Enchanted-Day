@@ -32,5 +32,15 @@ private $conn;
         return false;
        
     }
+    public function getAllFromPay() {
+        $conn = $this->conn;
+    
+        $sql = "SELECT * FROM payments";
+    
+        $statement = $conn->query($sql); 
+        $payment = $statement->fetchAll(PDO::FETCH_ASSOC); 
+    
+        return $payment; 
+        }
 }
 ?>
