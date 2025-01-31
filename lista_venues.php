@@ -1,4 +1,12 @@
 <?php 
+session_start();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
+    echo "<script>
+        alert('Please sign up or log in to access this page.');
+        window.location.href = 'SignUp.php';
+    </script>";
+    exit;
+}
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -26,6 +34,7 @@ echo "<html><a href='Payments_Dashboard.php' id='cart'>View Payments</a></html>"
 echo "<html><a href='Venues_Dashboard.php' id='cart'>View Booked Venues</a></html>"; 
 echo "<html><a href='View/Cart_Dashboard.php' id='cart'>View cart</a></html>";
 echo "<html><a href='shtimi_venues.php' id='cart'>Add venues</a></html>";
+echo "<html><a href='Measurements_dashboard.php' id='contact'>View Measurements</a></html>";
 
 echo "<h2>Venues list</h2>";
 if ($result->num_rows > 0) {

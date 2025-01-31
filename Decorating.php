@@ -64,61 +64,61 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
        
         <div class="inspiration"><h2>Flowers & Archway</h2></div>
     <div class="in">
-        <div class="dekore"><img src="DecorationPhotos/foto42.jpg" alt="f8"><input type="checkbox" id ="checkbox1"><p>Garden Grace</p><p>150</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto43.jpg" alt="f9"><input type="checkbox" id ="checkbox2"><p>Rosewood Memories</p><p>180</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto44.jpg" alt="f10"><input type="checkbox" id ="checkbox3"><p>Eternal Blossom</p><p>350</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto45.jpg" alt="f11"><input type="checkbox" id ="checkbox4"><p>Petal Perfect </p><p>100</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto46.jpg" alt="f12"><input type="checkbox" id ="checkbox5"><p>Amour in Bloom</p><p>290</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto47.jpg" alt="f13"><input type="checkbox" id ="checkbox6"><p>Rose Quartz </p><p>2300</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto48.jpg" alt="f14"><input type="checkbox" id ="checkbox7"><p>Ethereal Blooms</p><p>500</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto49.jpg" alt="f14"><input type="checkbox" id ="checkbox8"><p>Bloom Royale</p><p>450</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto50.jpg" alt="f14"><input type="checkbox" id ="checkbox9"><p>Chrysanthemum Charm</p><p>250</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto51.jpg" alt="f14"><input type="checkbox" id ="checkbox10"><p>Blossom Aura</p><p>250</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto42.jpg" alt="f8"><input type="checkbox" id ="checkbox1"><p>Garden Grace</p><p>150 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto43.jpg" alt="f9"><input type="checkbox" id ="checkbox2"><p>Rosewood Memories</p><p>180 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto44.jpg" alt="f10"><input type="checkbox" id ="checkbox3"><p>Eternal Blossom</p><p>350 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto45.jpg" alt="f11"><input type="checkbox" id ="checkbox4"><p>Petal Perfect </p><p>100 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto46.jpg" alt="f12"><input type="checkbox" id ="checkbox5"><p>Amour in Bloom</p><p>290 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto47.jpg" alt="f13"><input type="checkbox" id ="checkbox6"><p>Rose Quartz </p><p>2300 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto48.jpg" alt="f14"><input type="checkbox" id ="checkbox7"><p>Ethereal Blooms</p><p>500 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto49.jpg" alt="f14"><input type="checkbox" id ="checkbox8"><p>Bloom Royale</p><p>450 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto50.jpg" alt="f14"><input type="checkbox" id ="checkbox9"><p>Chrysanthemum Charm</p><p>250 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto51.jpg" alt="f14"><input type="checkbox" id ="checkbox10"><p>Blossom Aura</p><p>250 $</p></div>
     </div>
         <div class="inspiration"><h2>Couple Table</h2></div>
     <div class="in">
-        <div class="dekore"><img src="DecorationPhotos/foto10.jpg" alt="f24"><input type="checkbox" id ="checkbox11"><p>Harmony </p><p>450</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto11.jpg" alt="f24"><input type="checkbox" id ="checkbox12"><p>Wildflower</p><p>550</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto32.jpg" alt="f24"><input type="checkbox" id ="checkbox13"><p>Cherished Hearts</p><p>600</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto33.jpg" alt="f24"><input type="checkbox" id ="checkbox14"><p>Together in Bloom</p><p>450</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto34.jpg" alt="f24"><input type="checkbox" id ="checkbox15"><p>Enchanted Duo Decor</p><p>420</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto10.jpg" alt="f24"><input type="checkbox" id ="checkbox11"><p>Harmony </p><p>450 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto11.jpg" alt="f24"><input type="checkbox" id ="checkbox12"><p>Wildflower</p><p>550 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto32.jpg" alt="f24"><input type="checkbox" id ="checkbox13"><p>Cherished Hearts</p><p>600 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto33.jpg" alt="f24"><input type="checkbox" id ="checkbox14"><p>Together in Bloom</p><p>450 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto34.jpg" alt="f24"><input type="checkbox" id ="checkbox15"><p>Enchanted Duo Decor</p><p>420 $</p></div>
     </div>
     <div class="inspiration"><h2>Dinnerware</h2></div>
     <div class="in">
-        <div class="dekore"><img src="DecorationPhotos/foto36.jpg" alt="f8"><input type="checkbox" id ="checkbox16"><p>Aurora Gold</p><p>50</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto37.jpg" alt="f9"><input type="checkbox" id ="checkbox17"><p>Golden Luxe</p><p>90</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto38.jpg" alt="f10"><input type="checkbox" id ="checkbox18"><p>Golden Radiance</p><p>150</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto40.jpg" alt="f12"><input type="checkbox" id ="checkbox19"><p>Moonlit Silver</p><p>80</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto41.jpg" alt="f13"><input type="checkbox" id ="checkbox20"><p>Majestic Gold</p><p>70</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto36.jpg" alt="f8"><input type="checkbox" id ="checkbox16"><p>Aurora Gold</p><p>50 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto37.jpg" alt="f9"><input type="checkbox" id ="checkbox17"><p>Golden Luxe</p><p>90 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto38.jpg" alt="f10"><input type="checkbox" id ="checkbox18"><p>Golden Radiance</p><p>150 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto40.jpg" alt="f12"><input type="checkbox" id ="checkbox19"><p>Moonlit Silver</p><p>80 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto41.jpg" alt="f13"><input type="checkbox" id ="checkbox20"><p>Majestic Gold</p><p>70 $</p></div>
     </div>
     <div class="inspiration"><h2>Details</h2></div>
     <div class="in">
-        <div class="dekore"><img src="DecorationPhotos/foto5.jpg" alt="f8"><input type="checkbox" id ="checkbox21"><p>Costumed mirror</p><p>120</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto7.jpg" alt="f9"><input type="checkbox" id ="checkbox22"><p>Costumed glass</p><p>90</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto8.jpg" alt="f10"><input type="checkbox" id ="checkbox23"><p>Costumed mirror</p><p>250</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto12.jpg" alt="f11"><input type="checkbox" id ="checkbox24"><p>Wedding bar</p><p>250</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto13.jpg" alt="f12"><input type="checkbox" id ="checkbox25"><p>Mirror seating chart</p><p>50</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto14.jpg" alt="f13"><input type="checkbox" id ="checkbox26"><p>Wedding gifts</p><p>60</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto15.jpg" alt="f14"><input type="checkbox" id ="checkbox27"><p>Wedding gifts</p><p>50</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto16.jpg" alt="f15"><input type="checkbox" id ="checkbox28"><p>Sparkles</p><p>30</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto18.jpg" alt="f16"><input type="checkbox" id ="checkbox29"><p>Love songs</p><p>70</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto5.jpg" alt="f8"><input type="checkbox" id ="checkbox21"><p>Costumed mirror</p><p>120 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto7.jpg" alt="f9"><input type="checkbox" id ="checkbox22"><p>Costumed glass</p><p>90 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto8.jpg" alt="f10"><input type="checkbox" id ="checkbox23"><p>Costumed mirror</p><p>250 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto12.jpg" alt="f11"><input type="checkbox" id ="checkbox24"><p>Wedding bar</p><p>250 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto13.jpg" alt="f12"><input type="checkbox" id ="checkbox25"><p>Mirror seating chart</p><p>50 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto14.jpg" alt="f13"><input type="checkbox" id ="checkbox26"><p>Wedding gifts</p><p>60 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto15.jpg" alt="f14"><input type="checkbox" id ="checkbox27"><p>Wedding gifts</p><p>50 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto16.jpg" alt="f15"><input type="checkbox" id ="checkbox28"><p>Sparkles</p><p>30 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto18.jpg" alt="f16"><input type="checkbox" id ="checkbox29"><p>Love songs</p><p>70 $</p></div>
     </div>
     <div class="inspiration"><h2>Backyard Wedding</h2></div>
     <div class="in">
-        <div class="dekore"><img src="DecorationPhotos/foto19.jpg" alt="f17"><input type="checkbox" id ="checkbox30"><p>Secret Garden Memories</p><p>300</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto20.jpg" alt="f18"><input type="checkbox" id ="checkbox31"><p>Woodland Whispers</p><p>450</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto28.jpg" alt="f18"><input type="checkbox" id ="checkbox32"><p>Rustic Elegance</p><p>500</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto29.jpg" alt="f18"><input type="checkbox" id ="checkbox33"><p>Lush Love Decor</p><p>450</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto30.jpg" alt="f18"><input type="checkbox" id ="checkbox34"><p>Vows Under the Trees</p><p>550</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto19.jpg" alt="f17"><input type="checkbox" id ="checkbox30"><p>Secret Garden Memories</p><p>300 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto20.jpg" alt="f18"><input type="checkbox" id ="checkbox31"><p>Woodland Whispers</p><p>450 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto28.jpg" alt="f18"><input type="checkbox" id ="checkbox32"><p>Rustic Elegance</p><p>500 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto29.jpg" alt="f18"><input type="checkbox" id ="checkbox33"><p>Lush Love Decor</p><p>450 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto30.jpg" alt="f18"><input type="checkbox" id ="checkbox34"><p>Vows Under the Trees</p><p>550 $</p></div>
     </div>
 
     <div class="inspiration"><h2>Traditional Weddings</h2></div>
     <div class="in">
-        <div class="dekore"><img src="DecorationPhotos/foto21.jpg" alt="f19"><input type="checkbox" id ="checkbox35"><p>Oriental Elegance</p><p>650</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto22.jpg" alt="f20"><input type="checkbox" id ="checkbox36"><p>Traditional Turban</p><p>450</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto23.jpg" alt="f21"><input type="checkbox" id ="checkbox37"><p>Ubuntu Love </p><p>750</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto24.jpg" alt="f22"><input type="checkbox" id ="checkbox38"><p>Romance Under the Matryoshka</p><p>350</p></div>
-        <div class="dekore"><img src="DecorationPhotos/foto25.jpg" alt="f23"><input type="checkbox" id ="checkbox39"><p>Sakura Serenity</p><p>550</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto21.jpg" alt="f19"><input type="checkbox" id ="checkbox35"><p>Oriental Elegance</p><p>650 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto22.jpg" alt="f20"><input type="checkbox" id ="checkbox36"><p>Traditional Turban</p><p>450 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto23.jpg" alt="f21"><input type="checkbox" id ="checkbox37"><p>Ubuntu Love </p><p>750 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto24.jpg" alt="f22"><input type="checkbox" id ="checkbox38"><p>Romance Under the Matryoshka</p><p>350 $</p></div>
+        <div class="dekore"><img src="DecorationPhotos/foto25.jpg" alt="f23"><input type="checkbox" id ="checkbox39"><p>Sakura Serenity</p><p>550 $</p></div>
     </div>
 
     <div class="myCart">

@@ -1,8 +1,15 @@
 <?php
+session_start();
 include_once '../Database/Databaza.php';
 include_once 'Databaza_Cart.php';
 echo " <link rel='stylesheet' href='../Dashboard.css'>";
-
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
+    echo "<script>
+        alert('Please sign up or log in to access this page.');
+        window.location.href = 'SignUp.php';
+    </script>";
+    exit;
+}
 $db = new Databaza();
 $connection = $db->getConnection();
 
@@ -14,6 +21,7 @@ echo "<html><a href='Contact.php' id='cart'>View Contact</a></html>";
 echo "<html><a href='Payments_Dashboard.php' id='cart'>View Payments</a></html>"; 
 echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
 echo "<html><a href='Venues_Dashboard.php' id='contact'>View Booked Venues</a></html>";
+echo "<html><a href='Measurements_dashboard.php' id='contact'>View Measurements</a></html>";
 
 echo "<table border='1'>
 <tr>

@@ -32,8 +32,7 @@ header("Pragma: no-cache");
     $userId = $_SESSION['user_id'];
     $paymentResult = $payment->pay($name_surname, $method, $card_number, $expiration_year, $security_Code, $address, $userId);
     if ( $paymentResult===true) {
-        echo "<script>alert('Payment successful!');</script>";
-        header("Location: Budget.php"); 
+        echo "<script>alert('Payment successful!');  window.location.href = 'Budget.php';</script>";
         exit;
     }else{
         echo "<script>alert('Error processing payment! Please try again later.');</script>";

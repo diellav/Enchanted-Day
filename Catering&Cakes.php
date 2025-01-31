@@ -344,23 +344,23 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     <div class="tortat"> 
         <div class="cake">
             <img src="Catering&Cakes_photos/chocolatecake.jpg" alt="Chocolate cake">
-            <p class="name">Chocolate</p><p class="price">80</p><input type="checkbox" id="checkbox6">   
+            <p class="name">Chocolate</p><p class="price">55$</p><input type="checkbox" id="checkbox6">   
         </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/vanillacake.jpg" alt="Vanilla cake">
-        <p class="name">Vanilla</p><p class="price">80</p><input type="checkbox" id="checkbox7">
+        <p class="name">Vanilla</p><p class="price">50$</p><input type="checkbox" id="checkbox7">
      </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/redvelvetcake.jpg" alt="Red Velvet cake">
-        <p class="name">Red Velvet</p><p class="price">80</p><input type="checkbox" id="checkbox8">
+        <p class="name">Red Velvet</p><p class="price">60$</p><input type="checkbox" id="checkbox8">
     </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/hazelnutcake.jpg" alt="Hazelnut cake">
-        <p class="name">Hazelnut</p><p class="price">80</p><input type="checkbox" id="checkbox9">
+        <p class="name">Hazelnut</p><p class="price">55$</p><input type="checkbox" id="checkbox9">
     </div>
     <div class="cake">
         <img src="Catering&Cakes_photos/lemoncake.jpg" alt="Lemon cake">
-        <p class="name">Lemon</p><p class="price">80</p><input type="checkbox" id="checkbox10">
+        <p class="name">Lemon</p><p class="price">60$</p><input type="checkbox" id="checkbox10">
     </div>
 </div>
 
@@ -368,27 +368,27 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
 <div class="filling">
     <div class="fill">
         <img src="Catering&Cakes_photos/caramel.jpg" alt="Salted Caramel filling">
-        <p class="name">Salted Caramel</p><p class="price">90</p><input type="checkbox" id="checkbox11">
+        <p class="name">Salted Caramel</p><p class="price">40$</p><input type="checkbox" id="checkbox11">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/chocolate_filling.jpg" alt="Chocolate filling">
-        <p class="name">Chocolate</p><p class="price">90</p><input type="checkbox" id="checkbox12">
+        <p class="name">Chocolate</p><p class="price">45$</p><input type="checkbox" id="checkbox12">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/fruits.jpg" alt="Fruits filling">
-        <p class="name">Fruits</p><p class="price">90</p><input type="checkbox" id="checkbox13">
+        <p class="name">Fruits</p><p class="price">30$</p><input type="checkbox" id="checkbox13">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/buttercream.jpg" alt="Buttercream filling">
-        <p class="name">Buttercream</p><p class="price">90</p><input type="checkbox" id="checkbox14">
+        <p class="name">Buttercream</p><p class="price">40$</p><input type="checkbox" id="checkbox14">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/lemon.jpg" alt="Lemon custard filling">
-        <p class="name">Lemon custard</p><p class="price">90</p><input type="checkbox" id="checkbox15">
+        <p class="name">Lemon custard</p><p class="price">55$</p><input type="checkbox" id="checkbox15">
     </div>
     <div class="fill">
         <img src="Catering&Cakes_photos/swiss.jpg" alt="Meringue filling">
-        <p class="name">Meringue</p><p>90</p><input type="checkbox" id="checkbox16">
+        <p class="name">Meringue</p><p>60$</p><input type="checkbox" id="checkbox16">
     </div>
 </div>
 

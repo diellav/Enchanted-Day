@@ -1,10 +1,17 @@
 <?php 
 session_start();
 if (isset($_SESSION['username']) || $_SESSION['username']=="admin") {
-echo "<script>alert('Welcome, admin!');</script>";
+echo "<h2 style='italic'>Welcome, admin!</h2>";
 }else{
     header("Location: ../HomePage.php");
     exit();
+}
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
+    echo "<script>
+        alert('Please sign up or log in to access this page.');
+        window.location.href = 'SignUp.php';
+    </script>";
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -62,6 +69,7 @@ echo "<script>alert('Welcome, admin!');</script>";
         echo "<html><a href='Cart_Dashboard.php' id='cart'>View cart</a></html>";
         echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
         echo "<html><a href='Venues_Dashboard.php' id='contact'>View Booked Venues</a></html>";
+        echo "<html><a href='Measurements_dashboard.php' id='contact'>View Measurements</a></html>";
 
         ?>
     </table>

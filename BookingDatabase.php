@@ -31,6 +31,16 @@ class BookingDatabase{
         return false;
        
     }
+    public function getAllFromBookVenues() {
+        $conn = $this->conn;
+    
+        $sql = "SELECT * FROM booking_venue";
+    
+        $statement = $conn->query($sql); 
+        $bookVenue = $statement->fetchAll(PDO::FETCH_ASSOC); 
+    
+        return $bookVenue; 
+        }
 
 }
 

@@ -18,7 +18,6 @@
 
     <?php
     session_start();
-
     if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
         echo "<script>
             alert('Please sign up or log in to access this page.');
@@ -38,6 +37,43 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     echo "<script>alert('You are the admin!');</script>";
     echo "<script>window.location.href='HomePage.php';</script>";
     exit; 
+}
+
+if ($_SERVER['REQUEST_METHOD']=='POST') {
+    include_once 'Database/Databaza.php';
+    include_once 'MeasureDatabase.php';
+    $db = new Databaza();
+    $connection = $db->getConnection();
+    $measure = new MeasureDatabase($connection);
+   
+    if (!$connection) {
+        echo "<script>console.log('Database not connected');</script>";
+    }
+
+ 
+$bride_bust = $_POST['bride_bust'] ?? null;
+$bride_waist = $_POST['bride_waist']?? null;
+$bride_hips = $_POST['bride_hips']?? null;
+$groom_chest = $_POST['groom_chest']?? null;
+$groom_waist = $_POST['groom_waist']?? null;
+$groom_hips = $_POST['groom_hips']?? null;
+$bridesmaids_bust = $_POST['bridesmaids_bust']?? null;
+$bridesmaids_waist = $_POST['bridesmaids_waist']?? null;
+$bridesmaids_hips = $_POST['bridesmaids_hips']?? null;
+$groomsmen_chest = $_POST['groomsmen_chest']?? null;
+$groomsmen_waist = $_POST['groomsmen_waist']?? null;
+$groomsmen_hips = $_POST['groomsmen_hips']?? null;
+$userId=$_SESSION['user_id'];
+
+$measureResult = $measure->addMeasurements($userId, $bride_bust, $bride_waist, $bride_hips, $groom_chest, $groom_waist, $groom_hips,
+$bridesmaids_bust,$bridesmaids_waist,$bridesmaids_hips,$groomsmen_chest,$groomsmen_waist,$groomsmen_hips);
+    if ( $measureResult===true) {
+        echo "<script>alert('Measurements saved successfully!');</script>";
+        header("Location: Beauty.php"); 
+        exit;
+    } else{
+        echo "<script>alert('Error submitting measurements! Please try again later.');</script>";
+    }
 }
     ?>
     <main>
@@ -260,46 +296,47 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     </div>
 </div>
 <br><br><br>
+<div class="myCart">
+    <button id="saveCart">Save to Cart</button>
+</div>
 <h1 class="bb">Measurements</h1>
 <div class="measurements">
-<form action="">
+<form action="Beauty.php" id="form" method="POST">
     <div class="measure">
         <b>Bride's Measurements</b>
         <br><br>
-        <p>Bust (cm):</p><input type="number" required>
-        <p>Waist (cm):</p><input type="number" required>
-        <p>Hips (cm):</p> <input type="number" required>
+        <p>Bust (cm):</p><input type="number"name="bride_bust" >
+        <p>Waist (cm):</p><input type="number" name="bride_waist">
+        <p>Hips (cm):</p> <input type="number" name="bride_hips">
     </div>
 
     <div class="measure">
         <b>Groom's Measurements</b>
         <br><br>
-        <p>Chest (cm):</p><input type="number" required>
-        <p>Waist (cm):</p> <input type="number" required>
-        <p>Hips (cm):</p> <input type="number" required>
+        <p>Chest (cm):</p><input type="number" name="groom_chest">
+        <p>Waist (cm):</p> <input type="number" name="groom_waist">
+        <p>Hips (cm):</p> <input type="number" name="groom_hips">
     </div>
 
     <div class="measure">
         <b>Bridesmaids Measurements</b>
         <br><br>
-        <p>Bust (cm):</p><input type="number" required>
-        <p>Waist (cm):</p><input type="number" required>
-        <p>Hips (cm):</p> <input type="number" required>
+        <p>Bust (cm):</p><input type="number" name="bridesmaids_bust">
+        <p>Waist (cm):</p><input type="number"name="bridesmaids_waist" >
+        <p>Hips (cm):</p> <input type="number"name="bridesmaids_hips" >
     </div>
     <div class="measure">
         <b>Groomsmen Measurements</b>
         <br><br>
-        <p>Chest (cm):</p><input type="number" required>
-        <p>Waist (cm):</p> <input type="number" required>
-        <p>Hips (cm):</p> <input type="number" required>
+        <p>Chest (cm):</p><input type="number"name="groomsmen_chest" >
+        <p>Waist (cm):</p> <input type="number" name="groomsmen_waist" >
+        <p>Hips (cm):</p> <input type="number" name="groomsmen_hips">
     </div>
 
     <button type="submit">Submit Measurements</button>
 </form>
 </div>
-<div class="myCart">
-    <button id="saveCart">Save to Cart</button>
-</div>
+
     </main>
     <footer>
     <?php include_once 'footer.php'?>
@@ -400,5 +437,6 @@ document.getElementById('saveCart').addEventListener('click', function () {
 });
 
     </script>
+    <script src='validimi_i_measurements.js'></script>
 </body>
 </html>

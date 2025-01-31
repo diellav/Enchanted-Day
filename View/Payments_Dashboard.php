@@ -14,6 +14,7 @@ echo "<html><a href='Contact.php' id='cart'>View Contact</a></html>";
 echo "<html><a href='Cart_Dashboard.php' id='cart'>View Cart</a></html>"; 
 echo "<html><a href='../lista_venues.php' id='cart'>View Venues</a></html>"; 
 echo "<html><a href='Venues_Dashboard.php' id='contact'>View Booked Venues</a></html>";
+echo "<html><a href='Measurements_dashboard.php' id='contact'>View Measurements</a></html>";
 
 echo "<table border='1'>
 <tr>
