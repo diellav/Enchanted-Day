@@ -113,6 +113,12 @@ button a{
     font-size: small;
 }
 }
+@media(max-width:675px){
+    #update{
+        width: 250px;
+        margin-left:20px;
+    }
+}
     </style>
 </head>
 <body>

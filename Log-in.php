@@ -24,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         }
             header("Location: HomePage.php"); 
             exit();
-        setcookie("logged_out", "", time() - 3600, "/", "", true, true);
     } 
     else{
         echo "<script>alert('" . $_SESSION['error'] . "');</script>";

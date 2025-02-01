@@ -6,7 +6,7 @@ echo " <link rel='stylesheet' href='../Dashboard.css'>";
     if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
         echo "<script>
             alert('Please sign up or log in to access this page.');
-            window.location.href = 'SignUp.php';
+            window.location.href = '../SignUp.php';
         </script>";
         exit;
     }

@@ -21,10 +21,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     $venue=$_SESSION['venue'];
     if ($book->book($first_name, $last_name, $email, $event_date, $guest_number,$additional_details)) {
         echo "<script>alert('Venue booked successfully!');</script>";
+        echo "<style>.rev{margin-top:400px}</style>";
     } 
     else{
         echo "<script>alert('" . $_SESSION['error'] . "');</script>";
-        
+        echo "<style>.rev{margin-top:400px}</style>";
     }
    
 }
@@ -157,12 +158,11 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
             <p> <i><b>Venue capacity: </b></i>
                 <p>Max - 300 guests</p>
             <p><i><b>Price: </b></i>
-          <p> Up to 200 guests:    9,800 $ </p>
-            <p>Up to 300 guests:  10,800 $</p></p>
+          <h3>9,800 $</h3>
         </div>
         <div class="booking">
             <h3>Book Your Venue</h3>
-            <form action="venue_nr1.php#form" method="POST" class="regjistrimi" id="form">
+            <form action="venue_nr1.php" method="POST" class="regjistrimi" id="form">
                 <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
                 <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
@@ -173,7 +173,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
             </form>
         </div>
     </div>
-
+<div class="rev">
     <div class="reviews">
         <h3><i>Reviews: </i></h3>
         <h3>4.8 out of 5<img src="Fotot/star.png"></h3>
@@ -213,6 +213,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
         </div>
     
         
+    </div>
     </div>
     </main>
 

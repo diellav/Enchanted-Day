@@ -9,7 +9,7 @@ echo "<h2 style='italic'>Welcome, admin!</h2>";
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
     echo "<script>
         alert('Please sign up or log in to access this page.');
-        window.location.href = 'SignUp.php';
+        window.location.href = '../SignUp.php';
     </script>";
     exit;
 }

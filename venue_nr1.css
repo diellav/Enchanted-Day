@@ -75,6 +75,7 @@ p{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    min-height: 500px;
     width:50%;
     height:60%;
     margin:2% 4%;
@@ -105,9 +106,10 @@ h3{
     justify-content: space-around;
     flex-wrap: wrap;
     width:100%;
-    height: 30%;
+    height: 50%;
     font-size: larger;
     line-height: 1.5;
+    margin-top: 50px;
 }
 .vendi{
     display: flex;
@@ -177,12 +179,12 @@ h3{
 .regjistrimi .button:hover {
     background-color: #303233;
 }
-
 .reviews{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width:60%;
+    min-height: 500px;
     height:auto;
     margin:5% 0%;
     justify-self: center;

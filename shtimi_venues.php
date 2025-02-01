@@ -1,18 +1,11 @@
 <?php
-   $servername = "localhost";
-   $username = "root";
-   $password = "";
-   $dbname = "weddingplanner";
+   include_once 'Database/Databaza.php';
+   include_once 'Database/VenuesDatabase.php';
    
    
-   $conn = new mysqli($servername, $username, $password, $dbname);
+   $db = new Databaza();
+   $connection = $db->getConnection();
    
-   
-   if ($conn->connect_error) {
-       die("Lidhja dështoi: " . $conn->connect_error);
-   }
-
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST['name'];
         $category=$_POST['category'];
@@ -20,19 +13,11 @@
         $photo = $_POST['photo'];
         $link = $_POST['link'];
     
-      
-        $stmt = $conn->prepare("INSERT INTO venues (name,category, location, photo, link) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssss", $name, $category,$location, $photo, $link);
-    
-        if ($stmt->execute()) {
-            echo "Venue added successfully<a href='lista_venues.php'>Add venues</a>";
-        } else {
-            echo "Error!" . $stmt->error;
-        }
-    
-        $stmt->close();
+        $venue = new VenuesDatabase($connection);
+        $venues = $venue->addVenue($name, $category, $location, $photo, $link);
+        
+        echo $venues;
     }
-    $conn->close();
     ?>
     
     <!DOCTYPE html>
@@ -54,12 +39,14 @@
             <input type="text" name="location" id="location" required><br><br>
     
             <label for="photo">Photo:</label>
-            <input type="text" name="photo" id="photo"><br><br>
+            <input type="text" name="photo" id="photo" required><br><br>
     
             <label for="link">Page link:</label>
             <input type="text" name="link" id="link"><br><br>
     
             <button type="submit">Add Venue</button>
+            <br><br>
+            <a href="Venues.php">Go to Venues</a>
         </form>
     </body>
     </html>

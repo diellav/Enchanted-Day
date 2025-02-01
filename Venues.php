@@ -46,37 +46,29 @@
         </script>";
     }
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "weddingplanner";
+include_once 'Database/Databaza.php';
+include_once 'Database/VenuesDatabase.php';
+$db = new Databaza();
+$connection = $db->getConnection();
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+$venues = new VenuesDatabase($connection);
+$result=$venues->getVenues();
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT * FROM venues";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $kategoria = '';
-        
-        if(isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
+ if(isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
             echo "<a href='shtimi_venues.php' id='edit'>Edit Venues +</a>";
         }
-      
+    if ($result) {
+        $kategoria = '';
         echo "<div class='about_venue'><h1>Wedding Venues</h1><h4>
                 Explore our handpicked selection of stunning hotels,
                 exclusive estates, elegant venues, and fine dining restaurants perfect for your wedding celebration.</h4></div>";
-        while ($venue = $result->fetch_assoc()) {
+            foreach ($result as $venue) {
             if ($kategoria !== $venue['category']) {
                 if ($kategoria !== '') {
                     echo "</div><br><br>";
                 }
                 $kategoria = $venue['category'];
-                echo "<h2 id='h2'>" . $kategoria. "</h2>";
+                echo "<h2 id='h2'>" .htmlspecialchars($kategoria). "</h2>";
                 echo "<div class='container2'>";
             }
 
@@ -91,8 +83,6 @@
     } else {
         echo "No venues found.";
     }
-
-    $conn->close();
     ?>
 
     <footer>
