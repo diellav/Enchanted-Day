@@ -33,7 +33,51 @@
         return $venues; 
     } catch (PDOException $e) {
         die("Error fetching venues: " . $e->getMessage());
+        }
     }
+    public function getVenueById($id) {
+        $sql = "SELECT * FROM venues WHERE id = ?"; 
+        $statement = $this->conn->prepare($sql);
+    
+        if (!$statement) {
+            die("Error in SQL preparation.");
+        }
+    
+        $statement->execute([$id]); 
+        $venue = $statement->fetch(PDO::FETCH_ASSOC);
+        return $venue ? $venue : false; 
     }
+
+    
+    public function updateVenue($id, $name, $category, $location, $photo, $link) {
+        $conn = $this->conn;
+
+
+        $sql = "UPDATE venues SET name=?, category=?, location=?, photo=?, link=? WHERE id=?";
+
+        $statement = $conn->prepare($sql); 
+
+      
+        $statement->execute([ $name, $category, $location, $photo, $link, $id]);
+
+      
+        echo "<script>alert('Update was successful');</script>";
     }
+
+    
+    public function deleteVenue($id) {
+        $conn = $this->conn;
+
+      
+        $sql = "DELETE FROM venues WHERE id=?";
+
+        $statement = $conn->prepare($sql); 
+
+       
+        $statement->execute([$id]);
+
+       
+        echo "<script>alert('Delete was successful');</script>";
+    }
+}
 ?>

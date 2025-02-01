@@ -27,6 +27,7 @@ echo "<html><a href='Cart_Dashboard.php' id='cart'>View cart</a></html>";
 echo "<html><a href='../shtimi_venues.php' id='cart'>Add venues</a></html>";
 echo "<html><a href='Measurements_dashboard.php' id='contact'>View Measurements</a></html>";
 
+
 echo "<h2>Venues list</h2>";
 if ($result) {
     echo "<table border='1'>
@@ -37,6 +38,8 @@ if ($result) {
                 <th>Location</th>
                 <th>Photo</th>
                 <th>Link</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>";
             foreach($result as $perdoruesi){
                 echo 
@@ -48,6 +51,8 @@ if ($result) {
                     <td>$perdoruesi[location]</td> 
                     <td>$perdoruesi[photo]</td> 
                     <td>$perdoruesi[link]</td> 
+                    <td><a href='Edit_Venue.php?id=$perdoruesi[id]' id='edit'>Edit</a></td> 
+                    <td><a href='Delete_Venue.php?id=$perdoruesi[id]' id='delete'>Delete</a></td>
                 </tr>
                 ";}
     echo "</table>";
