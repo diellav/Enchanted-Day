@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function(ngjarja){
     };
 
     const messageValid=(message)=>{
-        const messageRegex = /^[a-zA-Z0-9_.-?!&$#+'" "]{10,}$/;
+        const messageRegex = /^[a-zA-Z0-9_.,-?!&$#+'" "]{10,}$/;
         return messageRegex.test(message);
     };
        

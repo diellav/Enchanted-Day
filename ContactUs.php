@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         </script>";
     }
     
-if (!isset($_SESSION['username']) || $_SESSION['username'] == "admin") {
+if (!isset($_SESSION['username']) && $_SESSION['username'] == "admin") {
     echo "<script>alert('You are the admin!');</script>";
     echo "<script>window.location.href='HomePage.php';</script>";
     exit; 

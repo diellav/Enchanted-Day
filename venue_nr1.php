@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     $additional_details = $_POST['additional_details'];
     $venue=$_SESSION['venue'];
     if ($book->book($first_name, $last_name, $email, $event_date, $guest_number,$additional_details)) {
-        echo "<script>alert('Venue booked successfully!');</script>";
+        echo "<script>alert('Venue booked successfully! \n The payment will be done the day of the event.');</script>";
         echo "<style>.rev{margin-top:400px}</style>";
     } 
     else{

@@ -18,8 +18,6 @@ $connection = $db->getConnection();
 
 $venue = new VenuesDatabase($connection);
 
-var_dump($venueId);
-
 $venueEdit  = $venue->getVenueById($venueId);
 
 if(isset($_POST['edit'])){

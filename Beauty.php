@@ -366,10 +366,10 @@ $bridesmaids_bust,$bridesmaids_waist,$bridesmaids_hips,$groomsmen_chest,$groomsm
 document.getElementById('saveCart').addEventListener('click', function () {
     const itemsSelektuara = [];
 
+    let paketaId =400;
+    
     document.querySelectorAll('.package').forEach(divPaketes => {
         const button = divPaketes.querySelector('.butoni'); 
-
-        let paketaId =400;
 
         if (button && button.classList.contains('selected')) { 
             const idpaketes = paketaId++;

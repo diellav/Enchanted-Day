@@ -155,14 +155,10 @@ hr{
     margin:1% 0%;
 }
 .fill img{
-    width:55%;
+    width:50%;
     height:25vh;
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.fill input[type="radio"]{
-    margin:20px;
 }
 .tiers{
     display: flex;
@@ -194,7 +190,6 @@ input[type="checkbox"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: 8%;
     background-color: white; 
 }
 
