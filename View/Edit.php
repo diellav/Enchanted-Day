@@ -7,7 +7,18 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
     </script>";
     exit;
 }
-$userId = $_GET['id'];
+if (isset($_SESSION['username']) && $_SESSION['username']=="admin") {
+    echo "<h2 style='italic'>Welcome, admin!</h2>";
+    }else{
+        header("Location: ../HomePage.php");
+        exit();
+    }
+    if (isset($_GET['id'])) {
+        $userId = $_GET['id'];
+    } else {
+        echo "Error: ID is missing.";
+        exit();
+    }
 
 include_once '../Database/Databaza.php';
 include_once '../User.php';

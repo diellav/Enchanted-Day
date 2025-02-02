@@ -10,6 +10,12 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
     </script>";
     exit;
 }
+if (isset($_SESSION['username']) && $_SESSION['username']=="admin") {
+    echo "<h2 style='italic'>Welcome, admin!</h2>";
+    }else{
+        header("Location: ../HomePage.php");
+        exit();
+    }
 $db = new Databaza();
 $connection = $db->getConnection();
 

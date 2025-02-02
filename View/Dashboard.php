@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if (isset($_SESSION['username']) || $_SESSION['username']=="admin") {
+if (isset($_SESSION['username']) && $_SESSION['username']=="admin") {
 echo "<h2 style='italic'>Welcome, admin!</h2>";
 }else{
     header("Location: ../HomePage.php");
